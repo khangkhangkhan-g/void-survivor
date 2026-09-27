@@ -1,0 +1,9 @@
+/* Ally HUD structural ceiling: max 3 cards, no scrollbar. Settings policy later selects 2/3 and auto-compacts long recruitment guidance to 1. */
+#vsxAllyHud{overflow:hidden!important;overscroll-behavior:none!important;scrollbar-width:none!important;max-height:none!important}
+#vsxAllyHud::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}
+#vsxAllyHud .vsxAllyCollapsed{display:block!important;margin-top:5px;padding:5px 7px;border:1px solid rgba(113,201,255,.12);border-radius:6px;background:rgba(5,16,29,.40);font-size:8px;color:#87a9c2;letter-spacing:.06em;text-align:center}
+#vsxAllyHud .vsxAllyHead + .vsxRecruitObjective{margin:0 0 6px!important;padding:5px 6px!important}
+#vsxGameplayClarityAdmin .vsxPatchBadges{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+#vsxGameplayClarityAdmin .vsxPatchBadges span{font-size:9px;padding:4px 7px;border:1px solid rgba(104,205,255,.18);border-radius:99px;color:#bfeaff;background:rgba(38,113,150,.10)}
+#vsxGameplayClarityAdmin pre{white-space:pre-wrap!important;overflow-wrap:anywhere!important;word-break:break-word!important;max-width:100%!important;overflow:hidden!important;font-size:9px!important;line-height:1.35!important}
+@media(max-height:680px) and (min-width:931px){#vsxAllyHud{padding:6px 8px!important}#vsxAllyHud .vsxAllyHead{margin-bottom:3px!important}#vsxAllyHud .vsxAllyCard{padding:2px 4px!important;margin:1px 0!important}#vsxAllyHud .vsxAllyRole{display:none!important}#vsxAllyHud .vsxAllyCollapsed{margin-top:3px!important;padding:3px 5px!important}#vsxAllyHud .vsxRecruitObjective{margin-top:3px!important;padding:3px 5px!important;font-size:8px!important;line-height:1.25!important}}

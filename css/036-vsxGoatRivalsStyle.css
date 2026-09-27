@@ -1,0 +1,46 @@
+#vsxGoatPackage{margin:0 0 18px}
+.vsxGoatPackage{display:grid;gap:12px}
+.vsxGoatHero{padding:14px;border:1px solid rgba(224,182,75,.22);border-radius:16px;background:linear-gradient(155deg,rgba(31,14,14,.90),rgba(8,18,32,.96));box-shadow:0 10px 34px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.035)}
+.vsxGoatHeroHead{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.vsxGoatHero h3{margin:3px 0 7px;font:900 21px/1.05 Arial;color:#f4f8ff;letter-spacing:.05em}
+.vsxGoatHero p{margin:0;color:#99b3c8;font-size:11px;line-height:1.55;max-width:760px}
+.vsxGoatKicker{color:#f0c96a;font:900 8px/1 Arial;letter-spacing:.18em;text-transform:uppercase}
+.vsxGoatBundlePrice{min-width:160px;padding:10px 12px;border-radius:12px;border:1px solid rgba(240,201,106,.18);background:rgba(11,20,35,.70);text-align:right}
+.vsxGoatBundlePrice small,.vsxGoatBundlePrice span{display:block}
+.vsxGoatBundlePrice small{color:#8aa0b7;font:800 8px/1 Arial;letter-spacing:.10em;text-transform:uppercase}
+.vsxGoatBundlePrice b{display:block;margin:4px 0 5px;color:#fff3bf;font:900 18px/1.05 Arial}
+.vsxGoatBundlePrice span{color:#f0c96a;font:800 9px/1 Arial;letter-spacing:.08em}
+.vsxGoatDuel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+.vsxGoatFighter{position:relative;min-height:168px;padding:13px;border-radius:14px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(135deg,rgba(10,18,31,.88),rgba(8,12,22,.92));overflow:hidden}
+.vsxGoatFighter:before{content:"";position:absolute;inset:auto -14% -22% auto;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle at center,var(--j1),transparent 68%);opacity:.18;pointer-events:none}
+.vsxGoatFighter:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,color-mix(in srgb,var(--j1) 78%, transparent),transparent 32%,color-mix(in srgb,var(--j2) 86%, transparent));opacity:.18;pointer-events:none}
+.vsxGoatFighter.owned{border-color:rgba(240,201,106,.25);box-shadow:0 0 0 1px rgba(240,201,106,.10) inset,0 10px 24px rgba(0,0,0,.16)}
+.vsxGoatNumber{position:absolute;right:12px;top:8px;color:rgba(255,255,255,.10);font:900 52px/1 Arial;letter-spacing:-.05em;pointer-events:none}
+.vsxGoatFighter h4{position:relative;margin:0 0 5px;color:#fff;font:900 18px/1.05 Arial}
+.vsxGoatFighter small{position:relative;color:#f0c96a;font:800 8px/1 Arial;letter-spacing:.14em;text-transform:uppercase}
+.vsxGoatFighter p{position:relative;margin:10px 0 0;color:#a4bfd4;font-size:10.5px;line-height:1.5}
+.vsxGoatTags{position:relative;display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.vsxGoatTags span,.vsxGoatMiniMeta span{display:inline-flex;align-items:center;padding:4px 7px;border-radius:999px;border:1px solid rgba(255,255,255,.10);background:rgba(10,18,32,.68);color:#dcecf8;font:800 7px/1 Arial;letter-spacing:.08em;text-transform:uppercase}
+.vsxGoatActions{display:flex;justify-content:flex-start;gap:10px;margin-top:12px}
+#vsxBuyGoatBundle,.vsxGoatBuyOne{min-height:42px;padding:0 16px;border-radius:11px;border:1px solid rgba(240,201,106,.20);background:linear-gradient(180deg,#f0c96a,#c5902a);color:#1f1400;font:900 10px/1 Arial;letter-spacing:.08em}
+#vsxBuyGoatBundle[disabled],.vsxGoatBuyOne[disabled]{opacity:.55;filter:saturate(.5);cursor:not-allowed}
+.vsxGoatBonus{margin-top:10px;padding:9px 10px;border-radius:11px;border:1px solid rgba(240,201,106,.15);background:rgba(240,201,106,.06);color:#d3e0ea;font-size:10px;line-height:1.5}
+.vsxGoatBonus b{color:#fff2bd}
+.vsxGoatIndividualGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.vsxGoatBuyCard{padding:12px;border-radius:14px;border:1px solid rgba(97,173,220,.14);background:linear-gradient(150deg,rgba(9,22,38,.92),rgba(7,14,25,.92));min-height:180px}
+.vsxGoatBuyCard.owned{border-color:rgba(240,201,106,.22)}
+.vsxGoatBuyHead{display:flex;justify-content:space-between;gap:8px;align-items:flex-start;margin-bottom:8px}
+.vsxGoatBuyHead b{display:block;color:#fff;font-size:16px}
+.vsxGoatBuyHead span{display:inline-flex;padding:3px 6px;border-radius:999px;background:rgba(240,201,106,.12);border:1px solid rgba(240,201,106,.14);color:#f0c96a;font:800 7px/1 Arial;letter-spacing:.1em;text-transform:uppercase;text-align:right}
+.vsxGoatBuyCard p{margin:0;color:#9eb7cb;font-size:10.5px;line-height:1.5}
+.vsxGoatMiniMeta{display:grid;gap:6px;margin:10px 0 12px}
+.vsxGoatMiniMeta b{color:#fff4c5}
+#vsxGoatUltMeta{display:none;align-items:center;justify-content:space-between;gap:8px;margin-top:5px;padding-top:5px;border-top:1px solid rgba(240,201,106,.12);font:800 7px/1 Arial;letter-spacing:.08em;color:#8fa5bb;text-transform:uppercase}
+#vsxGoatUltMeta b{color:#fff1bc;font:900 8px/1 Arial}
+.vsxGoatSetupBadge{display:flex;align-items:center;gap:8px;margin-top:8px;padding:7px 9px;border:1px solid rgba(240,201,106,.18);border-radius:9px;background:rgba(240,201,106,.055);color:#d6e5ef;font:700 9px/1.2 Arial}
+.vsxGoatSetupBadge .shirt{position:relative;display:grid;place-items:center;flex:0 0 24px;width:24px;height:24px;border-radius:50%;overflow:hidden;border:1px solid rgba(255,255,255,.55);box-shadow:0 0 12px rgba(240,201,106,.12);background:linear-gradient(180deg,var(--j1) 0 68%,var(--j2) 68% 100%)}
+.vsxGoatSetupBadge .shirt b{position:relative;color:var(--accent);font:900 10px/1 Arial;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+.vsxGoatSetupBadge small{color:#f0c96a;font-size:8px;font-weight:800;letter-spacing:.06em}
+.vsxGoatCollectionBadge{display:inline-flex;align-items:center;gap:6px;margin:5px 0 0;padding:3px 7px;border-radius:999px;border:1px solid rgba(240,201,106,.16);background:rgba(240,201,106,.08);color:#f0c96a;font:900 6.8px/1 Arial;letter-spacing:.12em;text-transform:uppercase}
+#vsxAdminGoatCard select{width:100%;min-height:40px;margin:7px 0 10px}
+@media(max-width:900px){.vsxGoatHeroHead{display:block}.vsxGoatBundlePrice{text-align:left;margin-top:10px}.vsxGoatDuel,.vsxGoatIndividualGrid{grid-template-columns:1fr}}

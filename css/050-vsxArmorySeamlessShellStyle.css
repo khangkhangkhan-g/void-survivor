@@ -1,0 +1,105 @@
+/* ARMORY / SHOP — one continuous shell. Removes the old inset side gutters
+   so sticky header, catalog body and footer read as a single HUD surface. */
+#vsxArmoryScreen .panel{
+  width:min(1100px,96vw)!important;
+  max-height:94vh!important;
+  padding:0!important;
+  overflow-x:hidden!important;
+  overflow-y:auto!important;
+  overscroll-behavior:contain;
+  scrollbar-gutter:auto!important;
+  scrollbar-width:thin;
+  scrollbar-color:rgba(105,215,255,.42) transparent;
+  border-radius:20px!important;
+  background:
+    radial-gradient(circle at 18% -12%,rgba(76,176,255,.08),transparent 34%),
+    linear-gradient(165deg,rgba(12,27,47,.985),rgba(6,14,27,.99) 58%,rgba(5,12,23,.995))!important;
+  border:1px solid rgba(107,210,255,.25)!important;
+  box-shadow:0 30px 100px rgba(0,0,0,.56),inset 0 1px rgba(255,255,255,.035)!important;
+}
+#vsxArmoryScreen .panel::-webkit-scrollbar{width:8px}
+#vsxArmoryScreen .panel::-webkit-scrollbar-track{background:transparent}
+#vsxArmoryScreen .panel::-webkit-scrollbar-thumb{
+  border:2px solid transparent;
+  border-radius:999px;
+  background:linear-gradient(180deg,rgba(116,220,255,.58),rgba(80,135,202,.42));
+  background-clip:padding-box;
+}
+#vsxArmoryScreen .panel::-webkit-scrollbar-thumb:hover{
+  background:linear-gradient(180deg,rgba(139,232,255,.78),rgba(92,157,226,.62));
+  background-clip:padding-box;
+}
+#vsxArmoryScreen .vsxArmoryStickyHeader{
+  position:sticky!important;
+  top:0!important;
+  z-index:40!important;
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  padding:18px 22px 11px!important;
+  border-radius:19px 19px 0 0!important;
+  background:
+    linear-gradient(180deg,rgba(12,28,48,.995),rgba(9,21,37,.985))!important;
+  border:0!important;
+  border-bottom:1px solid rgba(105,192,243,.17)!important;
+  box-shadow:0 12px 26px rgba(0,0,0,.18)!important;
+  backdrop-filter:blur(10px);
+  box-sizing:border-box!important;
+}
+#vsxArmoryScreen .vsxArmoryStickyHeader:after{
+  content:"";
+  position:absolute;
+  left:22px;right:22px;bottom:-1px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(108,231,255,.34),transparent);
+  pointer-events:none;
+}
+#vsxArmoryScreen .vsxArmoryStickyHeader .vsxMetaHeader{margin:0 0 7px!important}
+#vsxArmoryScreen .vsxArmoryStickyHeader .vsxShopTabs{margin:7px 0 0!important}
+#vsxArmoryContent{
+  width:100%!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:14px 22px 20px!important;
+  border:0!important;
+  box-sizing:border-box!important;
+  background:transparent!important;
+}
+#vsxArmoryContent>*,#vsxUnifiedSurvivorShop{min-width:0!important;max-width:100%!important}
+#vsxArmoryScreen .vsxArmoryStickyBack{
+  position:sticky!important;
+  bottom:0!important;
+  z-index:45!important;
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  padding:11px 22px 15px!important;
+  border-radius:0 0 19px 19px!important;
+  background:linear-gradient(180deg,rgba(8,19,33,.88),rgba(9,21,37,.995) 32%)!important;
+  border:0!important;
+  border-top:1px solid rgba(105,192,243,.15)!important;
+  box-shadow:0 -10px 24px rgba(0,0,0,.16)!important;
+  backdrop-filter:blur(9px)!important;
+  box-sizing:border-box!important;
+}
+#vsxArmoryScreen .vsxArmoryStickyBack:before{
+  content:"";
+  position:absolute;
+  left:22px;right:22px;top:-1px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(108,231,255,.26),transparent);
+  pointer-events:none;
+}
+#vsxArmoryScreen .vsxArmoryStickyBack #vsxArmoryBack{margin:0!important;min-width:145px}
+/* Catalog sections visually belong to the same shell rather than looking like
+   panels nested inside another padded panel. */
+#vsxUnifiedSurvivorShop.vsxFullSurvivorCatalog .vsxRarityBlock{
+  box-shadow:inset 0 1px rgba(255,255,255,.018),0 8px 24px rgba(0,0,0,.10)!important;
+}
+#vsxUnifiedSurvivorShop.vsxFullSurvivorCatalog .vsxSectionTitle{margin-top:0!important}
+@media(max-width:760px){
+  #vsxArmoryScreen .panel{width:min(100vw - 10px,1100px)!important;max-height:calc(100vh - 10px)!important;border-radius:16px!important}
+  #vsxArmoryScreen .vsxArmoryStickyHeader{padding:14px 14px 9px!important;border-radius:15px 15px 0 0!important}
+  #vsxArmoryScreen .vsxArmoryStickyHeader:after{left:14px;right:14px}
+  #vsxArmoryContent{padding:11px 14px 15px!important}
+  #vsxArmoryScreen .vsxArmoryStickyBack{padding:10px 14px 12px!important;border-radius:0 0 15px 15px!important}
+  #vsxArmoryScreen .vsxArmoryStickyBack:before{left:14px;right:14px}
+}

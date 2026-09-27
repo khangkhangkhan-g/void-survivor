@@ -1,0 +1,11 @@
+/* Separate systems: World Event stays in the combat HUD; Minigame owns a full-screen challenge HUD. */
+#vsxStandaloneMiniTimer{display:inline-flex;align-items:center;justify-content:center;min-width:78px;height:32px;padding:0 10px;border:1px solid rgba(112,222,255,.28);border-radius:999px;background:#0a1a2b;color:#e9fbff;font:900 12px Arial;letter-spacing:.06em;box-shadow:inset 0 1px rgba(255,255,255,.05)}
+#vsxEventMinigame[data-system="standalone"] .vsxMiniBadge{border-color:rgba(86,225,255,.36);background:#092237;color:#9deeff}
+#vsxEventMinigame[data-system="standalone"] .vsxMiniHeader{align-items:center}
+#vsxEventMinigame[data-system="standalone"] #vsxEventMiniCanvas{background:#06101d}
+.vsxWorldEventHudTag{display:inline-flex;align-items:center;gap:6px;font:900 8px Arial;letter-spacing:.13em;color:#9bdfff}
+.vsxWorldEventHudTag:before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 9px currentColor}
+#vsxBlackoutProtocolOverlay{position:fixed;inset:0;z-index:4;pointer-events:none;display:none;background:radial-gradient(circle at 50% 50%,rgba(0,0,0,0) 0 90px,rgba(1,4,12,.45) 145px,rgba(0,0,0,.92) 390px);mix-blend-mode:multiply;transition:opacity .12s linear}
+.vsxEventLabCard{grid-column:1/-1!important}.vsxEventLabGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.vsxEventLabGrid>div{min-width:0}.vsxEventLabStatus{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}.vsxEventLabStatus span{padding:4px 7px;border-radius:999px;border:1px solid rgba(99,199,242,.18);background:#071828;color:#83a7c2;font:800 8px Arial}
+.vsxCodexSystemMeta{display:flex;flex-wrap:wrap;gap:6px;margin:7px 0 0}.vsxCodexSystemMeta span{padding:4px 7px;border-radius:999px;background:#0a1c2d;border:1px solid rgba(98,191,238,.16);color:#91b8d3;font:800 8px Arial}.vsxCodexSystemMeta .duration{color:#ffe29a;border-color:rgba(255,210,95,.22)}.vsxCodexSystemMeta .perfect{color:#7ff0b7;border-color:rgba(93,240,169,.28);background:rgba(18,70,51,.28)}.vsxCodexSystemMeta .pending{color:#7894aa;border-color:rgba(120,160,190,.16)}
+@media(max-width:720px){.vsxEventLabGrid{grid-template-columns:1fr}#vsxStandaloneMiniTimer{height:28px;font-size:10px}.vsxWorldEventHudTag{font-size:7px}}

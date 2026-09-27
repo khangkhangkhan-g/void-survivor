@@ -1,0 +1,7 @@
+#vsxAdminWorldObjects38 .vsxWorldObjectBadges{display:flex;gap:5px;flex-wrap:wrap;margin:7px 0}
+#vsxAdminWorldObjects38 .vsxWorldObjectBadges span{font-size:8px;padding:4px 6px;border:1px solid rgba(108,215,255,.16);border-radius:99px;color:#c4efff;background:rgba(30,90,130,.12)}
+#vsxAdminWorldObjects38 select{width:100%;min-width:0}
+#vsxAdminWorldObjects38 .row{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-start;align-items:stretch}
+#vsxAdminWorldObjects38 .row button{flex:1 1 150px;min-width:0;white-space:normal;line-height:1.25}
+#vsxAdminWorldObjects38 pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:230px;overflow:auto;font:9px/1.35 monospace}
+@media(max-width:720px){#vsxAdminWorldObjects38 .row{display:grid;grid-template-columns:1fr}#vsxAdminWorldObjects38 .row button{width:100%}}

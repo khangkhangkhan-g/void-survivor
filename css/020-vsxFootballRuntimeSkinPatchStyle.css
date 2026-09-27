@@ -1,0 +1,13 @@
+/* Football package skins: visible in Character Select as well as in-game. */
+.vsxFbSetupSkin{
+  display:flex;align-items:center;gap:8px;margin:8px 0 2px;padding:7px 9px;
+  border:1px solid rgba(250,204,21,.22);border-radius:9px;background:rgba(250,204,21,.055);
+  color:#d9e9f5;font:700 9px/1.2 'Inter',Arial,sans-serif;letter-spacing:.03em
+}
+.vsxFbSetupJersey{position:relative;flex:0 0 24px;width:24px;height:24px;border-radius:50%;overflow:hidden;border:1px solid rgba(255,255,255,.55);box-shadow:0 0 13px rgba(250,204,21,.14)}
+.vsxFbSetupJersey.brazil{background:linear-gradient(to bottom,#f4d72c 0 64%,#2468a8 64% 100%)}
+.vsxFbSetupJersey.brazil:before{content:"";position:absolute;left:-2px;right:-2px;top:3px;height:5px;border-top:3px solid #208b4c;border-radius:50%}
+.vsxFbSetupJersey.barca{background:repeating-linear-gradient(90deg,#174a9c 0 5px,#9d173c 5px 10px)}
+.vsxFbSetupJersey b{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font:900 10px Arial;text-shadow:0 1px 2px #000}
+.vsxFbSetupJersey.brazil b{color:#0d673c;text-shadow:0 1px rgba(255,255,255,.25)}
+.vsxFbSetupSkin small{color:#f7d75f;font-size:8px;font-weight:800;letter-spacing:.06em}

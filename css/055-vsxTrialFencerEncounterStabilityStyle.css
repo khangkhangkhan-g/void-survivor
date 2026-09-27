@@ -1,0 +1,11 @@
+#vsxEncounterStack{position:absolute;top:78px;left:50%;transform:translateX(-50%);z-index:8;width:min(620px,calc(100vw - 28px));display:none;flex-direction:column;gap:7px;align-items:stretch;pointer-events:none}
+#vsxEncounterStack>#vsxEventHud,#vsxEncounterStack>#bossWrap,#vsxEncounterStack>#vsxMiniBossHud{box-sizing:border-box!important;flex:0 0 auto!important;margin:0!important}
+#vsxEncounterStack>#vsxEventHud{order:1!important}
+#vsxEncounterStack>#bossWrap{order:2!important}
+#vsxEncounterStack>#vsxMiniBossHud{order:3!important}
+#vsxEncounterStack>#vsxEventHud,#vsxEncounterStack>#vsxMiniBossHud{padding:7px 11px!important;contain:layout paint;transition:none!important}
+#vsxEncounterStack>#vsxEventHud{min-height:68px!important}
+#vsxEncounterStack>#bossWrap{padding:0 8px!important;min-height:34px;contain:layout paint;transition:none!important}
+body.vsxCenterHudDense #vsxEncounterStack>#vsxEventHud{max-width:100%!important}
+body.vsxStandaloneMiniActive #vsxEncounterStack{visibility:hidden!important}
+@media(max-width:720px){#vsxEncounterStack{top:72px;width:calc(100vw - 20px);gap:5px}#vsxEncounterStack>#vsxEventHud,#vsxEncounterStack>#vsxMiniBossHud{padding:6px 8px!important}}

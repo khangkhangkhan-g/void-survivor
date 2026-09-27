@@ -1,0 +1,12 @@
+/* MUTATION V3 · explicit per-weapon registry — modal/admin/collection only; no new permanent gameplay HUD */
+#vsxMutationV3Admin select{width:100%;min-height:42px;margin:8px 0 10px;background:#071526;color:#e7f8ff;border:1px solid rgba(104,205,255,.28);border-radius:8px;padding:8px 10px}
+#vsxMutationV3Admin .row{flex-wrap:wrap;align-items:stretch}
+#vsxMutationV3Admin .row>button{flex:1 1 180px;min-width:0}
+#vsxMutationV3Admin pre{max-height:220px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;background:rgba(2,9,18,.72);border:1px solid rgba(104,205,255,.12);padding:9px;border-radius:8px;color:#9edfff;font-size:10px}
+#vsxMutationV3Note{grid-column:1/-1;border-color:rgba(202,114,255,.34)!important;background:linear-gradient(145deg,rgba(42,20,70,.38),rgba(7,17,31,.86))!important}
+#vsxMutationV3Note b{color:#e1b5ff!important}
+#vsxMutationV3Note .vsxMutSummary{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px}
+#vsxMutationV3Note .vsxMutSummary span{font-size:8px;padding:3px 6px;border-radius:999px;border:1px solid rgba(202,114,255,.22);color:#d7b3ee;background:rgba(133,72,172,.10)}
+#vsxMetaModal .vsxMetaCard{min-width:0;overflow:hidden}
+#vsxMetaModal .vsxMetaCard h3,#vsxMetaModal .vsxMetaCard p{overflow-wrap:break-word;word-break:normal}
+@media(max-width:760px){#vsxMutationV3Admin .row>button{flex:1 1 100%}#vsxMetaChoices{grid-template-columns:1fr!important}#vsxMetaModal .vsxMetaCard{min-height:132px!important}}

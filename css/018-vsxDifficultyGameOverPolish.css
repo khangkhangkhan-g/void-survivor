@@ -1,0 +1,168 @@
+/* === Difficulty order + Game Over dashboard polish === */
+#vsxDifficulty{
+  display:flex!important;
+  justify-content:center!important;
+  align-items:stretch!important;
+  gap:9px!important;
+  flex-wrap:wrap!important;
+}
+#vsxDifficulty button{
+  min-width:118px!important;
+  min-height:40px!important;
+  padding:10px 16px!important;
+}
+
+#gameOverScreen .vsxGameOverPanel{
+  width:min(980px,96vw)!important;
+  max-height:94vh!important;
+  padding:26px 28px 24px!important;
+  overflow:auto!important;
+}
+#gameOverScreen .vsxOverlayCopy{
+  margin-top:7px!important;
+  color:#88a0b8!important;
+}
+#gameOverStats.vsxGameOverStats{
+  display:block!important;
+  margin:20px 0 18px!important;
+  line-height:1.35!important;
+}
+.vsxDeathSummary{display:grid;gap:12px;text-align:left}
+.vsxDeathHero{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:9px;
+}
+.vsxDeathMetric{
+  min-width:0;
+  padding:12px 12px 11px;
+  border:1px solid rgba(34,211,238,.14);
+  border-radius:13px;
+  background:linear-gradient(155deg,rgba(8,22,42,.76),rgba(3,10,23,.75));
+}
+.vsxDeathMetric small{
+  display:block;
+  color:#68839c;
+  font-family:'Inter',Arial,sans-serif!important;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin-bottom:5px;
+}
+.vsxDeathMetric strong{
+  display:block;
+  color:#e8fbff;
+  font-family:'Orbitron','Inter',Arial,sans-serif!important;
+  font-size:clamp(15px,2.1vw,22px);
+  font-weight:800;
+  letter-spacing:.035em;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.vsxDeathMetric.primary{
+  border-color:rgba(103,232,249,.34);
+  background:linear-gradient(155deg,rgba(20,70,115,.44),rgba(4,16,32,.78));
+  box-shadow:inset 0 1px rgba(255,255,255,.025),0 0 22px rgba(34,211,238,.05);
+}
+.vsxDeathBody{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(300px,.86fr);
+  gap:12px;
+  align-items:start;
+}
+.vsxDeathPanel{
+  min-width:0;
+  padding:14px;
+  border:1px solid rgba(34,211,238,.12);
+  border-radius:14px;
+  background:rgba(2,9,22,.54);
+}
+.vsxDeathPanelTitle{
+  margin-bottom:10px;
+  color:#67e8f9;
+  font-family:'Orbitron','Inter',Arial,sans-serif!important;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.vsxDeathStatsGrid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:7px;
+}
+.vsxDeathStat{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+  padding:8px 9px;
+  border:1px solid rgba(34,211,238,.075);
+  border-radius:9px;
+  background:rgba(8,22,39,.43);
+  font-family:'Inter',Arial,sans-serif!important;
+  font-size:10px;
+  color:#8ea6bb;
+}
+.vsxDeathStat span{min-width:0;overflow-wrap:break-word}
+.vsxDeathStat b{
+  flex:0 0 auto;
+  color:#dff7ff;
+  font-family:'Orbitron','Inter',Arial,sans-serif!important;
+  font-size:10px;
+  letter-spacing:.02em;
+}
+.vsxDeathActions{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:7px;
+  margin-top:8px;
+}
+.vsxDeathAction{
+  padding:8px 6px;
+  border:1px solid rgba(103,232,249,.10);
+  border-radius:9px;
+  background:rgba(34,211,238,.035);
+  text-align:center;
+}
+.vsxDeathAction small{display:block;color:#637d94;font-size:7px;font-weight:800;letter-spacing:.10em;text-transform:uppercase}
+.vsxDeathAction b{display:block;margin-top:3px;color:#bff7ff;font-family:'Orbitron','Inter',Arial,sans-serif!important;font-size:11px}
+.vsxDamageList{display:grid;gap:7px}
+.vsxDamageRow{min-width:0}
+.vsxDamageHead{display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:8px;align-items:center;margin-bottom:4px}
+.vsxDamageRank{color:#5e7890;font-family:'Orbitron','Inter',Arial,sans-serif!important;font-size:9px}
+.vsxDamageName{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#cfe8f5;font-family:'Inter',Arial,sans-serif!important;font-size:10px;font-weight:700}
+.vsxDamageValue{color:#80eaff;font-family:'Orbitron','Inter',Arial,sans-serif!important;font-size:9px;white-space:nowrap}
+.vsxDamageBar{height:5px;border-radius:99px;background:#07111f;overflow:hidden;border:1px solid rgba(34,211,238,.06)}
+.vsxDamageBar i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#2563eb,#22d3ee);box-shadow:0 0 10px rgba(34,211,238,.22)}
+.vsxDeathCurrency{
+  display:grid;
+  grid-template-columns:auto 1fr 1fr;
+  gap:8px;
+  align-items:center;
+  padding:11px 13px;
+  border:1px solid rgba(250,204,21,.16);
+  border-radius:12px;
+  background:linear-gradient(90deg,rgba(161,98,7,.10),rgba(8,22,39,.46));
+}
+.vsxDeathCurrencyTitle{color:#facc15;font-family:'Orbitron','Inter',Arial,sans-serif!important;font-size:8px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.vsxDeathCurrencyValue{display:flex;justify-content:space-between;gap:8px;color:#9eb4c6;font-family:'Inter',Arial,sans-serif!important;font-size:10px}
+.vsxDeathCurrencyValue b{color:#ffe38b;font-family:'Orbitron','Inter',Arial,sans-serif!important}
+#gameOverScreen .vsxOverlayActions{margin-top:2px!important}
+
+@media(max-width:820px){
+  #gameOverScreen .vsxGameOverPanel{padding:20px 16px!important}
+  .vsxDeathHero{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .vsxDeathBody{grid-template-columns:1fr}
+  .vsxDeathActions{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:520px){
+  #vsxDifficulty button{min-width:calc(50% - 6px)!important;flex:1 1 calc(50% - 6px)!important}
+  .vsxDeathHero{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .vsxDeathStatsGrid{grid-template-columns:1fr}
+  .vsxDeathCurrency{grid-template-columns:1fr 1fr}
+  .vsxDeathCurrencyTitle{grid-column:1/-1}
+}

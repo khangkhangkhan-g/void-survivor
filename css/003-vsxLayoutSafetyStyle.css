@@ -1,0 +1,72 @@
+/* BILINGUAL LAYOUT SAFETY — EN/VI collision guard */
+html,body,button,input,select,textarea,canvas,*{font-family:Arial!important}
+.screen>.panel,.modal>.panel{
+  max-width:calc(100vw - 24px)!important;
+  max-height:calc(100vh - 24px)!important;
+  overflow:auto!important;
+  overscroll-behavior:contain;
+  scrollbar-width:thin;
+}
+#titleScreen .panel,#vsxSetupScreen .panel,#vsxCollectionScreen .panel{min-height:0}
+#titleScreen .panel>* ,#vsxSetupScreen .panel>* ,#vsxCollectionScreen .panel>* ,#vsxMetaModal .panel>*{min-width:0}
+.controls,.records,.choices,.vsxGrid,#vsxMetaChoices,.vsxCodexList,.vsxTitleIntel{grid-template-columns:repeat(3,minmax(0,1fr))}
+.controls>div,.records>div,.card,.vsxPick,.vsxMetaCard,.vsxCodexItem,.vsxTitleIntel>div{min-width:0}
+.controls div,.controls b,.records small,.records strong,.card h3,.card p,.card .effect,
+.vsxPick h3,.vsxPick p,.vsxMetaCard h3,.vsxMetaCard p,.vsxCodexItem,.vsxCodexItem b,
+.vsxTitleIntel small,.vsxTitleIntel b,.vsxBootBadge span,.vsxRecruitObjective,.vsxHudTitle,
+.vsxInvHead,.vsxAbilityLine,#vsxInteractHint,#vsxAnnouncement small,#vsxAnnouncement strong{
+  overflow-wrap:break-word;word-break:normal;hyphens:none;
+}
+.vsxBootBadge{flex-wrap:wrap;row-gap:5px}.vsxBootBadge span{min-width:0}
+.vsxTitleIntel small{line-height:1.25;min-height:2.45em;display:flex;align-items:center;justify-content:center}
+#titleScreen .sub{max-width:100%;overflow-wrap:normal;white-space:normal;line-height:1.45}
+.levelActions{align-items:stretch}.levelActions>button{min-width:min(270px,100%)!important;max-width:100%;white-space:normal;line-height:1.25}
+.skipBtn .boost,.rerollBtn .boost{white-space:normal;line-height:1.35}
+.card,.vsxMetaCard,.vsxPick{height:auto}.card p,.vsxMetaCard p,.vsxPick p{white-space:normal}
+#vsxCodexTabs{align-items:stretch}#vsxCodexTabs button{white-space:normal;line-height:1.2;min-width:0}
+.vsxCodexList{align-items:start}.vsxCodexItem{height:auto}
+#inventoryHud{overflow:hidden!important}.vsxInvItem{min-width:0}.vsxInvHead span{min-width:0}
+#vsxAllyHud{overflow:auto!important;overscroll-behavior:contain}.vsxAllyCard{min-width:0}.vsxAllyCard>div{min-width:0}
+.vsxAllyName{min-width:0}
+#vsxEventHud,#vsxMiniBossHud,#bossWrap{max-width:calc(100vw - 28px);box-sizing:border-box}
+#vsxEventHud small,#vsxMiniBossHud,#bossName{overflow-wrap:break-word;white-space:normal}
+#vsxActionHud{box-sizing:border-box}
+#xpWrap{z-index:6}
+html[lang="vi"] #titleScreen .sub{letter-spacing:.18em!important}
+html[lang="vi"] .controls div{line-height:1.35}
+html[lang="vi"] .vsxInvHead,html[lang="vi"] .vsxHudTitle,html[lang="vi"] .vsxAllyHead b{letter-spacing:.08em}
+html[lang="vi"] button{line-height:1.25}
+@media(max-width:1100px){
+  #titleScreen .panel{width:min(920px,96vw)!important}
+  .controls{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .vsxTitleIntel{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .vsxGrid,#vsxMetaChoices,.vsxCodexList{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:720px){
+  .screen>.panel,.modal>.panel{max-width:calc(100vw - 12px)!important;max-height:calc(100vh - 12px)!important;padding:18px 14px!important}
+  #titleScreen h1{font-size:clamp(34px,12vw,54px)!important;letter-spacing:.10em!important}
+  #titleScreen .sub{font-size:10px!important;letter-spacing:.12em!important;margin-bottom:14px!important}
+  .controls,.vsxGrid,#vsxMetaChoices,.vsxCodexList{grid-template-columns:1fr!important}
+  .records,.vsxTitleIntel{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  #vsxTopActions{flex-wrap:wrap}#vsxTopActions button{flex:1 1 140px;min-width:0}
+  #inventoryHud{display:none!important}
+  #vsxAllyHud{display:none!important}
+  #statsHud{clip-path:none!important;border-radius:8px!important}
+  #vsxActionHud{clip-path:none!important}
+  #xpWrap{width:calc(100vw - 16px)!important}
+  #vsxAnnouncement{width:calc(100vw - 28px)}
+}
+@media(max-width:420px){
+  .records,.vsxTitleIntel{grid-template-columns:1fr 1fr!important}
+  .vsxTitleIntel small{min-height:auto}
+  #titleScreen .panel{padding:16px 12px!important}
+  .controls div{padding:9px 10px!important}
+  button{font-size:14px!important;padding:11px 13px!important}
+}
+@media(max-height:700px) and (min-width:721px){
+  #titleScreen .panel{padding-top:20px!important;padding-bottom:18px!important}
+  #titleScreen h1{font-size:clamp(38px,6vw,62px)!important}
+  #titleScreen .sub{margin-bottom:12px!important}
+  .controls{margin:8px 0 10px!important}.controls div{padding:8px 10px!important}
+  .records{margin:8px 0!important}
+}

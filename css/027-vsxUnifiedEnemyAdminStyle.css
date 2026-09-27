@@ -1,0 +1,47 @@
+/* ===== Unified Admin Enemy Spawner ===== */
+#vsxAdminBtn{
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+  line-height:1!important;
+  vertical-align:middle!important;
+}
+.vsxAdminCard.vsxEnemySpawnerWide{grid-column:1/-1!important;padding:12px!important}
+.vsxEnemySpawnToolbar{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.vsxEnemySpawnToolbar input[type="search"]{flex:1 1 230px;min-width:180px;margin:0!important}
+.vsxEnemySpawnToolbar button{flex:0 0 auto}
+.vsxEnemySelectMeta{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;font-size:9px;color:#7f99b2;margin:5px 0 8px}
+.vsxEnemySelectGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;max-height:292px;overflow:auto;padding:4px;border:1px solid rgba(101,191,255,.12);border-radius:9px;background:rgba(3,12,23,.46);scrollbar-width:thin}
+.vsxEnemyPick{display:flex;align-items:center;gap:7px;min-width:0;padding:7px 8px;border:1px solid rgba(104,197,255,.12);border-radius:7px;background:rgba(7,21,37,.72);cursor:pointer;transition:.14s ease;color:#bcd7e9;font-size:9px;line-height:1.25}
+.vsxEnemyPick:hover{border-color:rgba(117,224,255,.38);background:rgba(12,39,61,.74)}
+.vsxEnemyPick.selected{border-color:rgba(106,224,255,.46);background:rgba(21,83,112,.34);color:#ecfbff;box-shadow:inset 0 0 18px rgba(64,203,255,.06)}
+.vsxEnemyPick input{width:auto!important;margin:0!important;flex:0 0 auto}
+.vsxEnemyPick span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.vsxEnemyPick small{display:block;color:#6e91ac;font-size:7px;margin-top:2px}
+.vsxEnemySpawnControls{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:9px;margin-top:9px}
+.vsxEnemyTuneBox{border:1px solid rgba(101,191,255,.13);border-radius:9px;background:rgba(3,12,23,.43);padding:9px;min-width:0}
+.vsxEnemyTuneBox>strong{display:block;font-size:9px;letter-spacing:.1em;color:#8be5ff;margin-bottom:7px;text-transform:uppercase}
+.vsxAdminEnemyRange{margin:7px 0 9px}
+.vsxAdminEnemyRange>div{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:2px}
+.vsxAdminEnemyRange label{font-size:9px;color:#acc8dd}
+.vsxAdminEnemyRange output{font-size:9px;color:#dffaff;font-weight:800}
+.vsxAdminEnemyRange input[type="range"]{margin:0!important;padding:0!important;height:20px}
+.vsxEnemySpawnActions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:8px}
+.vsxEnemySpawnActions button{width:100%}
+.vsxEnemyTuningSummary{margin-top:6px;padding:7px 8px;border-radius:7px;background:rgba(74,181,255,.06);border:1px solid rgba(74,181,255,.10);font-size:8px;line-height:1.5;color:#8eabc0}
+.vsxEnemyDiagnostics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:8px}
+.vsxEnemyDiagnostics div{padding:7px;border:1px solid rgba(99,184,241,.12);border-radius:7px;background:rgba(4,13,24,.48)}
+.vsxEnemyDiagnostics small{display:block;color:#6e89a1;font-size:7px;text-transform:uppercase;letter-spacing:.08em}
+.vsxEnemyDiagnostics b{display:block;color:#e6f8ff;font-size:13px;margin-top:2px}
+/* Enemy Collection cards: same information architecture for old + new enemies */
+#vsxCodexList .vsxEnemyCodexItem{position:relative;padding:11px 12px!important;min-height:0}
+.vsxEnemyCodexHead{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:6px}
+.vsxEnemyCodexHead b{display:block!important;margin:0!important;color:#e8f8ff!important}
+.vsxEnemyCodexWave{font-size:8px;padding:3px 6px;border-radius:999px;border:1px solid rgba(117,218,255,.18);color:#89dfff;white-space:nowrap}
+.vsxEnemyCodexMechanic{font-size:9px!important;color:#9db8cb!important;line-height:1.5;margin-bottom:7px}
+.vsxEnemyCodexLabel{color:#70dcff;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.vsxEnemyCodexStats{display:flex;gap:5px;flex-wrap:wrap}
+.vsxEnemyCodexStats span{font-size:7px;padding:3px 5px;border-radius:5px;background:rgba(89,169,225,.07);border:1px solid rgba(89,169,225,.11);color:#7896ad}
+@media(max-width:980px){.vsxEnemySelectGrid{grid-template-columns:repeat(3,minmax(0,1fr))}.vsxEnemySpawnControls{grid-template-columns:1fr}}
+@media(max-width:700px){.vsxEnemySelectGrid{grid-template-columns:repeat(2,minmax(0,1fr));max-height:330px}.vsxEnemyDiagnostics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:430px){.vsxEnemySelectGrid{grid-template-columns:1fr}.vsxEnemySpawnActions{grid-template-columns:1fr}.vsxEnemySpawnToolbar button{flex:1 1 120px}.vsxEnemySpawnToolbar input[type="search"]{flex-basis:100%}}

@@ -1,0 +1,5 @@
+/* Six new EPIC survivors reuse the established unified Survivor Shop layout. */
+#vsxAdminEpicSixCard select{width:100%;min-height:40px;margin:7px 0 10px}
+#vsxAdminEpicSixCard .row{flex-wrap:wrap}
+.vsxEpicSixHudTag{color:#d9a7ff!important}
+@media(max-width:680px){#vsxAdminEpicSixCard .row>button{flex:1 1 100%!important}}

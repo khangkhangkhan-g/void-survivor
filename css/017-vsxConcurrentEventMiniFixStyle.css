@@ -1,0 +1,6 @@
+#vsxEventMiniButtons{display:flex;justify-content:center;gap:10px;align-items:center;margin-top:10px;pointer-events:auto}
+#vsxEventMiniButtons button{min-width:100px;padding:8px 13px!important;font-size:10px!important;touch-action:none;user-select:none}
+#vsxEventMiniButtons button.vsxMiniPressed{transform:translateY(1px) scale(.97)!important;border-color:#ffe27a!important;box-shadow:0 0 22px rgba(255,210,96,.22)!important}
+#vsxEventMinigame[data-mini="void_pinball"] #vsxMiniAction{display:none}
+#vsxEventMinigame:not([data-mini="void_pinball"]) #vsxMiniLeft,#vsxEventMinigame:not([data-mini="void_pinball"]) #vsxMiniRight{display:none}
+@media(max-width:720px){#vsxEventMiniButtons{gap:6px}#vsxEventMiniButtons button{flex:1 1 0;min-width:0}}

@@ -1,0 +1,6 @@
+#vsxAdminContent .vsxAdminRangeRow{display:grid;gap:5px;margin:8px 0 12px}
+#vsxAdminContent .vsxAdminRangeRow>div{display:flex;align-items:center;justify-content:space-between;gap:10px}
+#vsxAdminContent .vsxAdminRangeRow label{margin:0!important;font-size:10.5px!important;color:#b9d7e8}
+#vsxAdminContent .vsxAdminRangeRow output{min-width:54px;text-align:right;color:#7fe8ff;font:800 10px/1 Arial;letter-spacing:.04em}
+#vsxAdminContent .vsxAdminRangeRow input[type="range"]{min-height:20px!important;height:20px!important;padding:0!important;margin:0!important;accent-color:#22d3ee;cursor:pointer}
+#vsxAdminContent .vsxAdmTuneHint{color:#6e91a8;font-size:9px}

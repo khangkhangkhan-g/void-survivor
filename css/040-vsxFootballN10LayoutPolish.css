@@ -1,0 +1,35 @@
+/* Shared football micro-layout: reusable for future football survivors. */
+#vsxCharacterGrid .vsxGoatSetupBadge,
+#vsxCharacterGrid .vsxGoatPickSkillset,
+#vsxCollectionScreen .vsxGoatCollectionBadge,
+#vsxCollectionScreen .vsxGoatSkillsetInfo,
+#vsxUnifiedSurvivorShop .vsxFootballShopUltRow,
+#vsxUnifiedSurvivorShop .vsxFootballShopSkin,
+#vsxUnifiedSurvivorShop .vsxFootballShopSkill{
+  box-sizing:border-box;max-width:100%;min-width:0;overflow-wrap:anywhere;
+}
+#vsxCharacterGrid .vsxGoatSetupBadge{width:100%}
+#vsxCharacterGrid .vsxGoatPickSkillset{width:100%}
+#vsxCollectionScreen .vsxCharacterCodexHead{display:flex;align-items:flex-start;gap:6px;flex-wrap:wrap}
+#vsxCollectionScreen .vsxGoatCollectionBadge.neymar,
+#vsxCharacterGrid .vsxGoatSetupBadge.neymar .shirt{box-shadow:0 0 12px rgba(244,217,75,.16)}
+#vsxCharacterGrid .vsxGoatSetupBadge.neymar{border-color:rgba(244,217,75,.20);background:linear-gradient(180deg,rgba(244,217,75,.06),rgba(31,140,88,.08))}
+#vsxCharacterGrid .vsxGoatSetupBadge.neymar small{color:#f4d94b}
+#vsxCharacterGrid .vsxGoatPickSkillset.neymar,
+#vsxCollectionScreen .vsxGoatSkillsetInfo.neymar{border-color:rgba(244,217,75,.14);background:rgba(244,217,75,.045)}
+#vsxCharacterGrid .vsxGoatPickSkillset.neymar b,
+#vsxCollectionScreen .vsxGoatSkillsetInfo.neymar b,
+#vsxCollectionScreen .vsxGoatCollectionBadge.neymar{color:#f4d94b}
+
+#vsxUnifiedSurvivorShop #vsxN10SurvivorCard.vsxFootballShopCard{min-height:350px!important}
+#vsxUnifiedSurvivorShop #vsxN10SurvivorCard .vsxUnifiedSurvivorDesc{min-height:60px}
+#vsxUnifiedSurvivorShop #vsxN10SurvivorCard .vsxUnifiedSurvivorMeta{min-height:0;padding:7px 9px;margin:9px 0 8px!important}
+#vsxUnifiedSurvivorShop #vsxN10SurvivorCard .vsxUnifiedSurvivorMeta span{white-space:normal}
+#vsxUnifiedSurvivorShop .vsxFootballShopUltRow{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 8px;border-radius:8px;border:1px solid rgba(147,109,255,.14);background:rgba(76,43,122,.08);font:800 7px/1 Arial;letter-spacing:.08em;color:#b9acd9;text-transform:uppercase}
+#vsxUnifiedSurvivorShop .vsxFootballShopUltRow b{font:900 8px/1 Arial;color:#d9bfff;white-space:nowrap}
+#vsxUnifiedSurvivorShop .vsxFootballShopSkin{margin-top:8px}
+#vsxUnifiedSurvivorShop .vsxFootballShopSkin .shirt{width:22px;height:22px;flex-basis:22px}
+#vsxUnifiedSurvivorShop .vsxFootballShopSkill{margin-top:8px;font-size:7.3px}
+#vsxUnifiedSurvivorShop #vsxN10SurvivorCard .vsxUnifiedSurvivorFooter{margin-top:auto}
+#vsxUnifiedSurvivorShop #vsxN10SurvivorCard .n10SmallNote{color:#8fb7d0;font-size:9px;line-height:1.35;margin-top:5px}
+@media(max-width:900px){#vsxUnifiedSurvivorShop #vsxN10SurvivorCard{min-height:0!important}}

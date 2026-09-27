@@ -1,0 +1,13 @@
+#vsxN10Package{display:block!important;overflow:hidden!important;clear:both!important;margin:12px 0 22px!important;padding-bottom:14px!important}
+#vsxN10Package .n10SingleCard{margin-bottom:0!important}
+#vsxN10Package + .vsxPackageHero,
+#vsxN10Package + .vsxPackageIndividuals,
+#vsxN10Package + .vsxShopCard,
+#vsxN10Package + section,
+#vsxN10Package + div{margin-top:18px!important;position:relative;z-index:0}
+#vsxN10Package .n10BundleVisual,
+#vsxN10Package .n10Detail,
+#vsxN10Package .n10SingleCard,
+#vsxN10Package .n10Hero{min-width:0!important}
+#vsxN10Package .n10SingleCard>*{min-width:0}
+@media(max-width:900px){#vsxN10Package{margin-bottom:18px!important;padding-bottom:10px!important}#vsxN10Package + *{margin-top:14px!important}}

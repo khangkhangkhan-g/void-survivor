@@ -1,0 +1,19 @@
+/* ODDBALL UNCOMMONS + center HUD collision guard */
+#vsxAdminOddballCard select{width:100%;min-height:40px;margin:7px 0 9px}
+#vsxAdminOddballCard .row{flex-wrap:wrap}
+#vsxAdminOddballCard .vsxOddballMeta{display:flex;flex-wrap:wrap;gap:5px;margin:7px 0}
+#vsxAdminOddballCard .vsxOddballMeta span{display:inline-flex;align-items:center;padding:4px 7px;border:1px solid rgba(126,240,191,.18);border-radius:999px;background:rgba(35,115,83,.09);color:#83eabd;font:800 7px Arial;letter-spacing:.07em}
+#vsxCharacterGrid .vsxPickOddUltimate{margin-top:6px;color:#a6bdd0;font-size:8px;line-height:1.35;border-top:1px solid rgba(113,180,222,.08);padding-top:6px}
+#vsxCharacterGrid .vsxPickOddUltimate b{color:#bda8ec}
+#bossWrap,#vsxEventHud,#vsxMiniBossHud{transition:width .12s ease}
+body.vsxStandaloneMiniActive #bossWrap,body.vsxStandaloneMiniActive #vsxEventHud,body.vsxStandaloneMiniActive #vsxMiniBossHud{visibility:hidden!important;pointer-events:none!important}
+body.vsxCenterHudDense #vsxEventHud{padding:7px 11px!important;max-width:min(500px,48vw)!important}
+body.vsxCenterHudDense #vsxEventHud .vsxEvtStatus{font-size:8px!important;line-height:1.25!important}
+body.vsxCenterHudDense #vsxEventHud .vsxWorldEventHudFoot{margin-top:3px!important}
+body.vsxCenterHudDense #vsxMiniBossHud{padding:7px 10px!important}
+@media(max-width:720px){
+ #hint{display:none!important}
+ #vsxAdminOddballCard .row>button{flex:1 1 100%!important}
+ body.vsxCenterHudDense #vsxEventHud{width:calc(100vw - 24px)!important;max-width:calc(100vw - 24px)!important;padding:6px 9px!important}
+ #vsxEventHud .vsxWorldEventHudFoot{gap:6px!important;flex-wrap:wrap!important}
+}

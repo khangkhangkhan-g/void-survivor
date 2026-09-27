@@ -1,0 +1,42 @@
+/* ENCOUNTER HUD V3 — one authoritative visual rail below the timer. */
+#vsxEncounterStack{display:none!important;visibility:hidden!important;pointer-events:none!important}
+#vsxEncounterRail{
+  position:absolute!important;
+  left:50%;
+  top:var(--vsx-encounter-top,96px)!important;
+  transform:translateX(-50%)!important;
+  z-index:12!important;
+  width:min(620px,calc(100vw - 28px));
+  display:none;
+  flex-direction:column;
+  align-items:stretch;
+  gap:7px;
+  pointer-events:none;
+  transition:none!important;
+  contain:layout paint;
+}
+#vsxEncounterRail.active{display:flex!important}
+#vsxEncounterRail .vsxEncounterProxy{position:relative!important;inset:auto!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;width:100%!important;max-width:100%!important;min-width:0!important;margin:0!important;box-sizing:border-box!important;transition:none!important;pointer-events:none!important}
+#vsxEncounterRail .vsxEventProxy{padding:10px 14px!important;border:1px solid rgba(34,211,238,.22)!important;background:linear-gradient(155deg,rgba(7,18,37,.94),rgba(2,9,21,.90))!important;border-radius:15px!important;backdrop-filter:blur(13px)!important;-webkit-backdrop-filter:blur(13px)!important;text-align:left!important;box-shadow:0 8px 28px rgba(0,0,0,.28)}
+#vsxEncounterRail .vsxEventProxy .vsxEvtTop,#vsxEncounterRail .vsxEventProxy .vsxEvtName,#vsxEncounterRail .vsxEventProxy .vsxEvtStatus{font-family:'Inter',Arial,sans-serif!important}
+#vsxEncounterRail .vsxEventProxy .vsxEvtTop{display:flex;align-items:center;justify-content:flex-start;gap:7px;margin-bottom:2px;color:#7998b2!important;font-size:8px!important;font-weight:800!important;letter-spacing:.13em!important;text-transform:uppercase}
+#vsxEncounterRail .vsxEventProxy .vsxEvtGlyph{flex:0 0 auto!important;width:21px!important;height:21px!important;border-radius:7px!important;font-family:'Orbitron','Inter',Arial,sans-serif!important;font-size:9px!important}
+#vsxEncounterRail .vsxEventProxy .vsxEvtName{color:#effbff!important;font-size:12px!important;font-weight:800!important;line-height:1.3!important;letter-spacing:.015em!important;text-align:left!important}
+#vsxEncounterRail .vsxEventProxy .vsxEvtStatus{color:#9fb5c9!important;font-size:9px!important;line-height:1.45!important;text-align:left!important;margin-top:2px}
+#vsxEncounterRail .vsxEventProxy .vsxEvtStatus b{color:#67e8f9!important;font-size:7px!important;letter-spacing:.10em!important;margin-right:4px}
+#vsxEncounterRail .vsxEventProxy .vsxEvtProgress{height:4px!important;margin-top:7px!important;border:1px solid rgba(34,211,238,.08)!important;background:#07101e!important;border-radius:99px;overflow:hidden}
+#vsxEncounterRail .vsxEventProxy .vsxEvtProgress i{display:block;height:100%;box-shadow:0 0 9px currentColor}
+#vsxEncounterRail .vsxEventProxy .vsxWorldEventHudHead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:3px}
+#vsxEncounterRail .vsxEventProxy .vsxWorldEventHudTag{display:inline-flex;align-items:center;gap:6px;font:900 8px Arial;letter-spacing:.13em;color:#9bdfff}
+#vsxEncounterRail .vsxEventProxy .vsxWorldEventHudTag:before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 9px currentColor}
+#vsxEncounterRail .vsxEventProxy .vsxWorldEventHudTime{display:inline-flex;align-items:center;justify-content:center;min-width:58px;height:24px;padding:0 8px;border:1px solid rgba(126,226,255,.24);border-radius:999px;background:#081a2b;color:#f1fbff;font:900 10px 'Orbitron','Inter',Arial,sans-serif;letter-spacing:.04em;box-shadow:inset 0 1px rgba(255,255,255,.035)}
+#vsxEncounterRail .vsxEventProxy .vsxWorldEventHudFoot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:5px;color:#718da5;font:800 7px 'Inter',Arial,sans-serif;letter-spacing:.075em;text-transform:uppercase}
+#vsxEncounterRail .vsxEventProxy .vsxWorldEventHudFoot span:last-child{color:#9bb4c7}
+#vsxEncounterRail .vsxBossProxy,#vsxEncounterRail .vsxMiniProxy{padding:8px 11px!important;border:1px solid rgba(255,93,121,.22)!important;border-radius:12px!important;background:linear-gradient(155deg,rgba(24,10,18,.91),rgba(8,11,21,.92))!important;box-shadow:0 8px 24px rgba(0,0,0,.24);text-align:center!important}
+#vsxEncounterRail .vsxBossProxy{border-color:rgba(255,75,105,.28)!important}
+#vsxEncounterRail .vsxProxyTitle{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#eef8ff;font:900 10px 'Orbitron','Inter',Arial,sans-serif;letter-spacing:.055em;text-transform:uppercase}
+#vsxEncounterRail .vsxProxyTitle small{flex:0 0 auto;color:#8fa5bc;font:800 7px 'Inter',Arial,sans-serif;letter-spacing:.10em}
+#vsxEncounterRail .vsxProxyBar{height:8px;margin-top:5px;background:#24111b;border:1px solid rgba(255,102,128,.12);border-radius:999px;overflow:hidden}
+#vsxEncounterRail .vsxProxyBar i{display:block;height:100%;background:linear-gradient(90deg,#ff385f,#ff7d66);box-shadow:0 0 14px rgba(255,70,94,.35);transition:width .10s linear}
+body.vsxStandaloneMiniActive #vsxEncounterRail,body.vsxEncounterRailSuppressed #vsxEncounterRail{display:none!important}
+@media(max-width:720px){#vsxEncounterRail{width:calc(100vw - 16px);gap:5px}#vsxEncounterRail .vsxEventProxy{padding:7px 9px!important}#vsxEncounterRail .vsxBossProxy,#vsxEncounterRail .vsxMiniProxy{padding:7px 9px!important}#vsxEncounterRail .vsxEventProxy .vsxWorldEventHudFoot{gap:6px;flex-wrap:wrap}#vsxEncounterRail .vsxEventProxy .vsxWorldEventHudTime{min-width:51px;height:22px;font-size:9px}}

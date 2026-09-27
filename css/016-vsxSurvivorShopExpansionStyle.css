@@ -1,0 +1,22 @@
+/* ===== Survivor / Shop Expansion UI ===== */
+.vsxRarityBadge{display:inline-flex;align-items:center;gap:5px;padding:3px 7px;border-radius:999px;border:1px solid rgba(116,212,255,.22);font:800 8px/1 'Inter',Arial,sans-serif;letter-spacing:.08em;margin-bottom:6px}
+.vsxRarityBadge.uncommon{color:#7ef0bf;border-color:rgba(126,240,191,.28);background:rgba(30,120,84,.12)}
+.vsxRarityBadge.rare{color:#7dc7ff;border-color:rgba(125,199,255,.30);background:rgba(27,95,154,.12)}
+.vsxRarityBadge.epic{color:#dca5ff;border-color:rgba(220,165,255,.32);background:rgba(115,53,157,.14)}
+.vsxRarityBadge.legendary{color:#ffd96d;border-color:rgba(255,217,109,.34);background:rgba(133,91,17,.14);box-shadow:0 0 16px rgba(255,206,78,.07)}
+.vsxSurvivorShopCard{position:relative;overflow:hidden;min-height:235px;display:flex;flex-direction:column}
+.vsxSurvivorShopCard:before{content:"";position:absolute;inset:0 0 auto;height:1px;background:linear-gradient(90deg,transparent,var(--surv-color,#63dfff),transparent);opacity:.7}
+.vsxSurvivorShopCard h3{font-size:15px!important;line-height:1.25!important}.vsxSurvivorShopCard .row{margin-top:auto!important}
+.vsxSurvivorMeta{display:grid;grid-template-columns:1fr;gap:5px;margin:9px 0;font-size:10px;color:#9fb4c8}.vsxSurvivorMeta b{color:#dff7ff}
+.vsxSkinPreview{height:62px;border-radius:10px;border:1px solid rgba(112,205,255,.13);position:relative;overflow:hidden;background:radial-gradient(circle at 50% 50%,color-mix(in srgb,var(--skin) 28%,transparent),rgba(3,9,20,.9))}
+.vsxSkinPreview i{position:absolute;left:50%;top:50%;width:26px;height:26px;transform:translate(-50%,-50%);border-radius:50%;background:var(--skin);box-shadow:0 0 18px var(--skin)}
+.vsxSkinPreview:after{content:"";position:absolute;inset:9px;border:1px solid color-mix(in srgb,var(--skin) 62%,transparent);border-radius:50%;animation:vsxSkinPulse 2.2s linear infinite}
+@keyframes vsxSkinPulse{50%{transform:scale(.74) rotate(90deg);opacity:.42}}
+.vsxShopCard.skinEpic{border-color:rgba(190,129,255,.22)}.vsxShopCard.skinLegendary{border-color:rgba(255,211,91,.27)}
+#vsxCharacterGrid .vsxPick[data-rarity="epic"]{border-color:rgba(195,126,255,.28)}#vsxCharacterGrid .vsxPick[data-rarity="legendary"]{border-color:rgba(255,211,91,.30);box-shadow:inset 0 0 24px rgba(255,211,91,.025)}
+#vsxAdminExpansionCard select{width:100%;min-height:40px;margin:7px 0 10px}
+#vsxAdminExpansionCard .row{gap:8px!important}
+#vsxCharacterGrid{max-height:54vh;overflow:auto;padding-right:4px;align-content:start}
+#vsxCharacterGrid .vsxPick{min-height:150px}
+.vsxSkinCollectionSwatch{height:48px;border-radius:9px;margin:7px 0;border:1px solid rgba(103,232,249,.13);background:radial-gradient(circle at 50% 50%,var(--skin),rgba(3,9,20,.88) 62%);box-shadow:inset 0 0 20px rgba(255,255,255,.025)}
+@media(max-width:900px){.vsxSurvivorShopCard{min-height:210px}#vsxCharacterGrid{max-height:50vh}}

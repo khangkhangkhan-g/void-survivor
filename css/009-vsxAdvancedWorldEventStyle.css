@@ -1,0 +1,14 @@
+#vsxEventHud{min-width:300px!important;max-width:min(560px,58vw)!important;padding:8px 13px!important;transition:border-color .2s,box-shadow .2s}
+.vsxEvtTop{display:flex;align-items:center;justify-content:center;gap:7px;font-size:8px;letter-spacing:.14em;color:#7899b7;text-transform:uppercase;margin-bottom:2px}
+.vsxEvtGlyph{display:inline-grid;place-items:center;width:19px;height:19px;border-radius:5px;font-size:10px;font-weight:900;color:#07111d;border:1px solid rgba(255,255,255,.45);box-shadow:0 0 13px currentColor}
+.vsxEvtName{font-size:12px;letter-spacing:.08em;color:#f2fbff}.vsxEvtStatus{font-size:9px;color:#a9bfd5;line-height:1.35;margin-top:2px}
+.vsxEvtProgress{height:3px;background:#132033;border-radius:99px;overflow:hidden;margin-top:5px}.vsxEvtProgress i{display:block;height:100%;box-shadow:0 0 9px currentColor}
+#vsxEventMinigame{z-index:36;background:radial-gradient(circle at 50% 30%,rgba(30,48,86,.55),rgba(2,6,13,.97) 68%);backdrop-filter:blur(13px)}
+#vsxEventMinigame .panel{width:min(920px,96vw);padding:18px 20px 16px;overflow:hidden;max-height:96vh}
+.vsxMiniHeader{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:9px}.vsxMiniHeader h2{margin:0;color:#eaf9ff;letter-spacing:.08em;font-size:20px}.vsxMiniHeader small{display:block;color:#85a7c5;margin-top:3px;line-height:1.35}.vsxMiniBadge{font-size:9px;letter-spacing:.12em;padding:5px 9px;border:1px solid rgba(177,123,255,.35);border-radius:99px;color:#d7c0ff;background:rgba(105,56,160,.14);white-space:nowrap}
+#vsxEventMiniCanvas{display:block;width:100%;height:auto;max-height:62vh;border:1px solid rgba(104,210,255,.18);border-radius:12px;background:#07101c;box-shadow:inset 0 0 40px rgba(0,0,0,.45)}
+#vsxEventMiniFooter{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:9px;color:#89a8c4;font-size:10px}#vsxEventMiniFooter b{color:#eaf7ff}
+.vsxEventWorldLabel{font:900 9px Arial;text-align:center;text-shadow:0 1px 4px #000}
+@media(max-width:720px){#vsxEventHud{max-width:calc(100vw - 28px)!important;min-width:0!important}.vsxMiniHeader{flex-direction:column;gap:6px}#vsxEventMinigame .panel{padding:13px 12px}.vsxMiniHeader h2{font-size:16px}#vsxEventMiniFooter{font-size:9px;flex-wrap:wrap}}
+@media(max-width:760px){#vsxMinimapWrap{width:178px!important;right:8px!important;bottom:44px!important;padding:7px!important}#vsxMinimapMeta{font-size:8px!important;line-height:1.3!important}#vsxMinimapLegend{gap:3px 5px!important}.vsxMapChip{font-size:7px!important}}
+@media(max-height:650px) and (min-width:761px){#vsxMinimapWrap{width:190px!important;bottom:46px!important}#vsxMinimapMeta{font-size:8px!important}}

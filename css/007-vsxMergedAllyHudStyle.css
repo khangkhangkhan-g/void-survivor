@@ -1,0 +1,4 @@
+#vsxAllyHud{max-height:38vh!important;overflow:auto!important}
+.vsxAllyCard.vsxDown{grid-template-columns:22px 1fr auto;opacity:.58;padding-top:3px;padding-bottom:3px}
+.vsxAllyCard.vsxDown .vsxAllyName{color:#8294aa}
+.vsxAllyRole{display:block;color:#718ca7;font-size:7px;margin-top:1px;line-height:1.1}

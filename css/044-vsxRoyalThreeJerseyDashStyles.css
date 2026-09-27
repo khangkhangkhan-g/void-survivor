@@ -1,0 +1,49 @@
+#vsxRoyalThreePackage.rmJerseyPatched{background:
+  radial-gradient(circle at 10% 0%,rgba(255,255,255,.08),transparent 34%),
+  radial-gradient(circle at 100% 0%,rgba(233,204,120,.18),transparent 28%),
+  linear-gradient(140deg,rgba(244,242,238,.06),rgba(8,18,38,.95) 34%,rgba(12,35,68,.96) 74%,rgba(30,18,74,.94));
+  border-color:rgba(233,204,120,.34);
+  box-shadow:0 28px 68px rgba(0,0,0,.35), inset 0 1px rgba(255,255,255,.06), inset 0 0 0 1px rgba(255,255,255,.02)
+}
+#vsxRoyalThreePackage.rmJerseyPatched:before{width:680px;height:420px;right:-10%;top:-16%;transform:rotate(-11deg);background:linear-gradient(115deg,transparent 8%,rgba(255,255,255,.13) 28%,rgba(233,204,120,.14) 44%,rgba(111,82,217,.18) 62%,transparent 85%)}
+#vsxRoyalThreePackage.rmJerseyPatched .rmHeroHead p{max-width:920px;color:#bfd0e0}
+#vsxRoyalThreePackage.rmJerseyPatched .rmPrice{background:linear-gradient(155deg,rgba(255,255,255,.08),rgba(3,18,42,.88));border-color:rgba(233,204,120,.26)}
+#vsxRoyalThreePackage.rmJerseyPatched .rmRole{background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(4,16,33,.76))}
+#vsxRoyalThreePackage.rmJerseyPatched .rmFighter{background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(3,14,28,.78));border-color:rgba(255,255,255,.10)}
+#vsxRoyalThreePackage.rmJerseyPatched .rmBuyCard{background:linear-gradient(165deg,rgba(255,255,255,.06),rgba(4,14,29,.82));border-color:rgba(255,255,255,.10)}
+#vsxRoyalThreePackage .rmRoster .rmFighterTop,
+#vsxUnifiedSurvivorShop [data-rm-card] .vsxUnifiedSurvivorHead{align-items:flex-start}
+.rmJerseyCard{--ink:#171717;--glow:rgba(255,255,255,.12);--accent:#d8d6ff;--stripe:linear-gradient(90deg,#0b234e,#ffffff,#d1193d);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:5px;width:74px;height:92px;flex:0 0 74px;padding:8px 6px 6px;border-radius:16px;border:1px solid rgba(255,255,255,.62);background:linear-gradient(180deg,#fcfbf8 0%,#f0efe9 100%);box-shadow:0 14px 30px rgba(0,0,0,.18), inset 0 1px rgba(255,255,255,.75);color:var(--ink)}
+.rmJerseyCard:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 18%,rgba(255,255,255,.86),transparent 30%),linear-gradient(180deg,rgba(255,255,255,.22),transparent 35%);pointer-events:none}
+.rmJerseyCard:after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:var(--stripe);opacity:.98}
+.rmJerseyCard .rmJerseyName{position:relative;z-index:1;text-align:center;font:900 8px/1.05 Arial,sans-serif;letter-spacing:.06em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
+.rmJerseyCard .rmJerseyNo{position:relative;z-index:1;text-align:center;font:900 50px/.84 Arial,sans-serif;letter-spacing:-.04em;color:var(--ink);text-shadow:0 1px 0 rgba(255,255,255,.22)}
+.rmJerseyCard .rmJerseyMeta{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;font:800 6.5px/1 Arial,sans-serif;letter-spacing:.08em;color:#6f7a8a;text-transform:uppercase}
+.rmJerseyCard .rmJerseyMeta b{font-size:8px;color:#b28a2f}
+.rmJerseyCard.k10 .rmJerseyNo,.rmJerseyCard.v7 .rmJerseyNo{text-shadow:1px 0 0 rgba(0,0,0,.10),2px 0 0 rgba(0,0,0,.08),3px 0 0 rgba(0,0,0,.06),4px 0 0 rgba(0,0,0,.05)}
+.rmJerseyCard.j5{--ink:#1a245a;background:linear-gradient(180deg,#fbfbf9 0%,#efefea 100%)}
+.rmJerseyCard.v7{--stripe:linear-gradient(90deg,#009b3a,#ffdf00,#002776)}
+.rmJerseyCard.k10{--stripe:linear-gradient(90deg,#082c5c,#f5f3ee,#d20f35)}
+.rmJerseyCard.j5{--stripe:linear-gradient(90deg,#1a245a,#f5f3ee,#ce1138)}
+.rmJerseyCard.mini{width:44px;height:56px;flex-basis:44px;padding:5px 4px 4px;border-radius:11px}
+.rmJerseyCard.mini .rmJerseyName{font-size:5.5px}
+.rmJerseyCard.mini .rmJerseyNo{font-size:28px}
+.rmJerseyCard.mini .rmJerseyMeta{font-size:5px}
+.rmBuyCard .rmJerseyHead{display:flex;gap:9px;align-items:flex-start;margin-bottom:8px}
+.rmBuyCard .rmJerseyHead .rmBuyHead{flex:1 1 auto;min-width:0}
+.rmDashLine{margin-top:7px;padding-top:7px;border-top:1px solid rgba(255,255,255,.08);font-size:7.7px;color:#c9d7e4;line-height:1.35}
+.rmDashLine b{color:#eedb9f}
+.rmSurvJerseyRow{display:flex;align-items:center;gap:8px;margin:10px 0 6px}
+.rmSurvJerseyRow .rmJerseyText{min-width:0}
+.rmSurvJerseyRow .rmJerseyText b{display:block;color:#fff;font-size:11px;line-height:1.1}
+.rmSurvJerseyRow .rmJerseyText span{display:block;color:#d7caff;font-size:7px;line-height:1.25}
+.vsxGoatSetupBadge.real.rmJerseyBadge{align-items:flex-start}
+.vsxGoatSetupBadge.real.rmJerseyBadge .rmJerseyCard{margin-top:1px}
+.vsxGoatSetupBadge.real.rmJerseyBadge small{display:block;margin-bottom:1px}
+.vsxGoatPickSkillset.real.rmDashSkill b{display:inline-block;margin-right:5px}
+.rmCollectionPanel{display:flex;gap:10px;align-items:flex-start;margin:9px 0 0;padding:8px 9px;border-radius:12px;border:1px solid rgba(180,162,255,.16);background:linear-gradient(160deg,rgba(255,255,255,.035),rgba(111,82,217,.07))}
+.rmCollectionPanel .copy{min-width:0}
+.rmCollectionPanel .copy b{display:block;color:#fff;font-size:10px;margin-bottom:3px}
+.rmCollectionPanel .copy span{display:block;color:#b9c9d7;font-size:8px;line-height:1.4}
+@media(max-width:980px){.rmJerseyCard{width:68px;height:84px;flex-basis:68px}.rmJerseyCard .rmJerseyNo{font-size:44px}.rmBuyCard .rmJerseyHead{align-items:center}}
+@media(max-width:620px){.rmBuyCard .rmJerseyHead{flex-direction:row}.rmSurvJerseyRow .rmJerseyText b{font-size:10px}.rmCollectionPanel{flex-direction:column;align-items:stretch}}

@@ -1,0 +1,4 @@
+#vsxMetaModal[data-vsx-batch01="1"] .vsxMetaCard{border-color:rgba(202,114,255,.32)!important;background:linear-gradient(155deg,rgba(38,20,58,.96),rgba(8,15,30,.98))!important}
+#vsxMetaModal[data-vsx-batch01="1"] .vsxMetaCard h3{color:#f0d7ff!important}
+#vsxMetaModal[data-vsx-batch01="1"] .vsxMetaCard p{line-height:1.42!important}
+body:has(#vsxMetaModal.active) #vsxAnnouncement{opacity:0!important;pointer-events:none!important}

@@ -1,0 +1,325 @@
+/* =========================================================
+   REQUESTED UI POLISH — visual only, no gameplay changes
+   ========================================================= */
+
+/* MAIN MENU TAGLINES */
+#titleScreen .vsxPanelEyebrow{
+  font-family:'Orbitron','Inter',Arial,sans-serif!important;
+  font-size:9px!important;
+  font-weight:800!important;
+  letter-spacing:.30em!important;
+  color:#67e8f9!important;
+}
+#titleScreen .sub{
+  font-family:'Orbitron','Inter',Arial,sans-serif!important;
+  font-size:10px!important;
+  font-weight:700!important;
+  letter-spacing:.42em!important;
+  color:#67e8f9!important;
+  text-transform:uppercase!important;
+}
+html[lang="vi"] #titleScreen .sub{letter-spacing:.42em!important}
+
+/* ADMIN: keep futuristic headings, but use Inter for controls/content.
+   This prevents Orbitron/Vietnamese fallback metrics from squeezing labels/buttons. */
+#vsxAdminScreen .vsxAdminHeader h2,
+#vsxAdminScreen #vsxAdminTabs button,
+#vsxAdminScreen .vsxAdminCard h3{
+  font-family:'Orbitron','Inter',Arial,sans-serif!important;
+}
+#vsxAdminContent,
+#vsxAdminContent .vsxAdminCard,
+#vsxAdminContent .vsxAdminCard p,
+#vsxAdminContent .vsxAdminCard small,
+#vsxAdminContent .vsxAdminCard label,
+#vsxAdminContent .vsxAdminToggle,
+#vsxAdminContent input,
+#vsxAdminContent select,
+#vsxAdminContent textarea,
+#vsxAdminContent button,
+#vsxAdminScreen .vsxAdminFooter,
+#vsxAdminScreen .vsxAdminFooter button{
+  font-family:'Inter',Arial,sans-serif!important;
+  font-kerning:normal!important;
+  text-rendering:optimizeLegibility!important;
+}
+#vsxAdminContent button,
+#vsxAdminScreen .vsxAdminFooter button{
+  letter-spacing:.015em!important;
+  line-height:1.25!important;
+  white-space:nowrap!important;
+  padding:8px 11px!important;
+}
+#vsxAdminContent .vsxAdminCard .row{
+  column-gap:7px!important;
+  row-gap:8px!important;
+  align-items:center!important;
+}
+#vsxAdminContent .vsxAdminCard label,
+#vsxAdminContent .vsxAdminToggle{
+  line-height:1.4!important;
+  letter-spacing:0!important;
+}
+#vsxAdminContent input,
+#vsxAdminContent select,
+#vsxAdminContent textarea{
+  font-size:11px!important;
+  line-height:1.35!important;
+  letter-spacing:0!important;
+}
+#vsxAdminTabs button{
+  letter-spacing:.025em!important;
+  line-height:1.2!important;
+}
+html[lang="vi"] #vsxAdminTabs button,
+html[lang="vi"] #vsxAdminScreen .vsxAdminHeader h2,
+html[lang="vi"] #vsxAdminScreen .vsxAdminCard h3{
+  letter-spacing:.015em!important;
+}
+
+/* EVENT BRIEFING — same glass/cyan language as the modern HUD */
+#vsxEventBriefing{
+  z-index:44!important;
+  padding:18px!important;
+  background:
+    radial-gradient(circle at 50% 18%,rgba(14,165,233,.18),transparent 34%),
+    radial-gradient(circle at 15% 80%,rgba(37,99,235,.10),transparent 28%),
+    rgba(2,6,15,.94)!important;
+  backdrop-filter:blur(18px)!important;
+  -webkit-backdrop-filter:blur(18px)!important;
+}
+#vsxEventBriefing .vsxBriefPanel{
+  position:relative!important;
+  width:min(860px,95vw)!important;
+  max-height:92vh!important;
+  overflow:auto!important;
+  padding:24px 26px 22px!important;
+  border:1px solid rgba(34,211,238,.32)!important;
+  border-radius:24px!important;
+  background:
+    linear-gradient(165deg,rgba(8,18,38,.975),rgba(3,9,20,.975))!important;
+  box-shadow:
+    0 30px 100px rgba(0,0,0,.58),
+    inset 0 1px 0 rgba(255,255,255,.035),
+    0 0 42px rgba(34,211,238,.065)!important;
+}
+#vsxEventBriefing .vsxBriefPanel:before{
+  content:"";
+  position:absolute;
+  left:26px;
+  right:26px;
+  top:0;
+  height:1px;
+  pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(103,232,249,.72),transparent);
+  box-shadow:0 0 20px rgba(34,211,238,.32);
+}
+#vsxEventBriefing .vsxBriefScan{
+  opacity:.16!important;
+  border-radius:24px!important;
+  background:
+    repeating-linear-gradient(to bottom,rgba(255,255,255,.010) 0,rgba(255,255,255,.010) 1px,transparent 2px,transparent 5px)!important;
+}
+#vsxEventBriefing .vsxBriefHeader{
+  grid-template-columns:58px minmax(0,1fr) auto!important;
+  gap:15px!important;
+  padding-bottom:15px!important;
+  border-bottom:1px solid rgba(34,211,238,.15)!important;
+}
+#vsxEventBriefing .vsxBriefIcon{
+  width:54px!important;
+  height:54px!important;
+  border-radius:14px!important;
+  border:1px solid color-mix(in srgb,var(--briefColor) 72%,#67e8f9)!important;
+  background:linear-gradient(145deg,color-mix(in srgb,var(--briefColor) 18%,transparent),rgba(34,211,238,.045))!important;
+  color:#ecfeff!important;
+  font-family:'Orbitron','Inter',Arial,sans-serif!important;
+  font-size:14px!important;
+  font-weight:900!important;
+  letter-spacing:.04em!important;
+  box-shadow:0 0 24px color-mix(in srgb,var(--briefColor) 20%,transparent)!important;
+}
+#vsxEventBriefing .vsxBriefHeader small{
+  font-family:'Inter',Arial,sans-serif!important;
+  color:#7dd3fc!important;
+  font-size:9px!important;
+  font-weight:800!important;
+  letter-spacing:.20em!important;
+  text-transform:uppercase!important;
+}
+#vsxEventBriefing .vsxBriefHeader h2{
+  margin:2px 0 0!important;
+  font-family:'Inter',Arial,sans-serif!important;
+  font-size:clamp(25px,4vw,36px)!important;
+  font-weight:500!important;
+  line-height:1.08!important;
+  letter-spacing:.015em!important;
+  color:#f1f8ff!important;
+  text-wrap:balance;
+}
+#vsxEventBriefing .vsxBriefPause{
+  align-self:start!important;
+  padding:6px 10px!important;
+  border:1px solid rgba(52,211,153,.21)!important;
+  border-radius:999px!important;
+  background:rgba(16,185,129,.075)!important;
+  color:#76e7bf!important;
+  font-family:'Inter',Arial,sans-serif!important;
+  font-size:8px!important;
+  font-weight:800!important;
+  letter-spacing:.08em!important;
+}
+#vsxEventBriefing .vsxBriefHook{
+  margin:16px 0 14px!important;
+  padding:2px 0 2px 14px!important;
+  border-left:2px solid #22d3ee!important;
+  color:#d7e9f8!important;
+  font-family:'Inter',Arial,sans-serif!important;
+  font-size:15px!important;
+  line-height:1.55!important;
+  font-weight:700!important;
+}
+#vsxEventBriefing .vsxBriefGrid{
+  gap:10px!important;
+}
+#vsxEventBriefing .vsxBriefGrid section{
+  padding:13px 14px!important;
+  border:1px solid rgba(34,211,238,.12)!important;
+  border-radius:13px!important;
+  background:linear-gradient(155deg,rgba(8,22,42,.67),rgba(2,10,23,.58))!important;
+}
+#vsxEventBriefing .vsxBriefGrid b,
+#vsxEventBriefing .vsxBriefMap>span{
+  font-family:'Inter',Arial,sans-serif!important;
+  color:#67e8f9!important;
+  font-size:8px!important;
+  font-weight:800!important;
+  letter-spacing:.14em!important;
+  text-transform:uppercase!important;
+}
+#vsxEventBriefing .vsxBriefGrid p{
+  margin:0!important;
+  color:#afc3d5!important;
+  font-family:'Inter',Arial,sans-serif!important;
+  font-size:11px!important;
+  line-height:1.55!important;
+}
+#vsxEventBriefing .vsxBriefMap{
+  margin-top:10px!important;
+  padding:10px 13px!important;
+  border:1px solid rgba(34,211,238,.10)!important;
+  border-radius:12px!important;
+  background:rgba(2,9,22,.60)!important;
+}
+#vsxEventBriefing .vsxBriefMap>span{color:#fbbf24!important}
+#vsxEventBriefing .vsxBriefMap strong{
+  color:#d2e3f1!important;
+  font-family:'Inter',Arial,sans-serif!important;
+  font-size:10px!important;
+  line-height:1.45!important;
+  font-weight:700!important;
+}
+#vsxEventBriefing .vsxBriefControls{
+  margin-top:16px!important;
+  padding-top:15px!important;
+  border-top:1px solid rgba(34,211,238,.10)!important;
+  gap:16px!important;
+}
+#vsxEventBriefing .vsxBriefControls>span{
+  color:#7892a9!important;
+  font-family:'Inter',Arial,sans-serif!important;
+  font-size:9px!important;
+  font-weight:800!important;
+  letter-spacing:.08em!important;
+}
+#vsxEventBriefing #vsxBriefConfirm{
+  min-width:236px!important;
+  padding:12px 18px!important;
+  border:1px solid rgba(103,232,249,.54)!important;
+  border-radius:14px!important;
+  background:linear-gradient(90deg,#2563eb,#0891d1)!important;
+  color:#fff!important;
+  font-family:'Inter',Arial,sans-serif!important;
+  font-size:12px!important;
+  font-weight:800!important;
+  line-height:1.25!important;
+  letter-spacing:.02em!important;
+  box-shadow:0 12px 30px rgba(37,99,235,.22),0 0 24px rgba(34,211,238,.10)!important;
+}
+#vsxEventBriefing #vsxBriefConfirm:hover{
+  transform:translateY(-1px) scale(1.012)!important;
+  border-color:rgba(165,243,252,.88)!important;
+  box-shadow:0 0 32px rgba(34,211,238,.20),0 14px 32px rgba(0,0,0,.22)!important;
+}
+
+/* COMPACT IN-GAME EVENT HUD */
+#vsxEventHud{
+  padding:10px 14px!important;
+  border:1px solid rgba(34,211,238,.22)!important;
+  background:linear-gradient(155deg,rgba(7,18,37,.92),rgba(2,9,21,.86))!important;
+  border-radius:15px!important;
+  backdrop-filter:blur(13px)!important;
+  -webkit-backdrop-filter:blur(13px)!important;
+}
+#vsxEventHud .vsxEvtTop,
+#vsxEventHud .vsxEvtName,
+#vsxEventHud .vsxEvtStatus{
+  font-family:'Inter',Arial,sans-serif!important;
+}
+#vsxEventHud .vsxEvtTop{
+  justify-content:flex-start!important;
+  color:#7998b2!important;
+  font-size:8px!important;
+  font-weight:800!important;
+  letter-spacing:.13em!important;
+}
+#vsxEventHud .vsxEvtGlyph{
+  flex:0 0 auto!important;
+  width:21px!important;
+  height:21px!important;
+  border-radius:7px!important;
+  font-family:'Orbitron','Inter',Arial,sans-serif!important;
+  font-size:9px!important;
+}
+#vsxEventHud .vsxEvtName{
+  color:#effbff!important;
+  font-size:12px!important;
+  font-weight:800!important;
+  line-height:1.3!important;
+  letter-spacing:.015em!important;
+  text-align:left!important;
+}
+#vsxEventHud .vsxEvtStatus{
+  color:#9fb5c9!important;
+  font-size:9px!important;
+  line-height:1.45!important;
+  text-align:left!important;
+}
+#vsxEventHud .vsxEvtStatus b{
+  color:#67e8f9!important;
+  font-family:'Inter',Arial,sans-serif!important;
+  font-size:7px!important;
+  letter-spacing:.10em!important;
+}
+#vsxEventHud .vsxEvtProgress{
+  height:4px!important;
+  margin-top:7px!important;
+  border:1px solid rgba(34,211,238,.08)!important;
+  background:#07101e!important;
+}
+
+@media(max-width:720px){
+  #titleScreen .vsxPanelEyebrow{letter-spacing:.20em!important}
+  #titleScreen .sub{letter-spacing:.28em!important}
+  #vsxEventBriefing .vsxBriefPanel{padding:18px 15px 15px!important;border-radius:18px!important}
+  #vsxEventBriefing .vsxBriefHeader{grid-template-columns:46px minmax(0,1fr)!important;gap:10px!important}
+  #vsxEventBriefing .vsxBriefIcon{width:44px!important;height:44px!important;font-size:11px!important}
+  #vsxEventBriefing .vsxBriefPause{grid-column:1/-1!important;justify-self:start!important}
+  #vsxEventBriefing .vsxBriefHeader h2{font-size:23px!important}
+  #vsxEventBriefing .vsxBriefGrid{grid-template-columns:1fr!important}
+  #vsxEventBriefing .vsxBriefHook{font-size:13px!important}
+  #vsxEventBriefing .vsxBriefControls{flex-direction:column!important;align-items:stretch!important}
+  #vsxEventBriefing .vsxBriefControls>span{text-align:center!important}
+  #vsxEventBriefing #vsxBriefConfirm{width:100%!important;min-width:0!important}
+  #vsxAdminContent button{white-space:normal!important}
+}

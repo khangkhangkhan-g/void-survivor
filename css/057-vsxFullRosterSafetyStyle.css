@@ -1,0 +1,5 @@
+#vsxRuntimeSafetyBadge{position:fixed;right:12px;bottom:12px;z-index:9998;display:none;pointer-events:none;padding:5px 8px;border-radius:999px;border:1px solid rgba(255,188,95,.25);background:rgba(22,15,8,.88);color:#ffd38d;font:800 8px/1 Arial;letter-spacing:.08em}
+#vsxRuntimeSafetyBadge.show{display:block}
+#vsxAdminFullRosterSafety pre{max-height:280px;overflow:auto;font:9px/1.35 monospace;white-space:pre-wrap;background:#06101d;border:1px solid rgba(108,231,255,.12);border-radius:9px;padding:8px}
+#vsxAdminFullRosterSafety .vsxSafetyStats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin:7px 0}
+#vsxAdminFullRosterSafety .vsxSafetyStats span{padding:5px 7px;border:1px solid rgba(108,231,255,.10);border-radius:7px;color:#9fc8da;font-size:8px;text-align:center}

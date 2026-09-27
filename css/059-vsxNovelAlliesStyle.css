@@ -1,0 +1,10 @@
+#vsxAllyHud .vsxAllyCollapsed{margin-top:5px;padding:4px 6px;border:1px solid rgba(113,201,255,.12);border-radius:6px;background:rgba(5,16,29,.40);font-size:8px;color:#87a9c2;letter-spacing:.06em;text-align:center}
+#vsxAllyHud .vsxRecruitObjective.vsxNovelObjective{border-left-color:#7ce7ff;background:linear-gradient(90deg,rgba(70,174,220,.12),rgba(99,75,180,.09));color:#c8eafa}
+#vsxNovelAlliesAdmin .vsxNovelGrid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:8px}
+#vsxNovelAlliesAdmin select{width:100%;min-width:0}
+#vsxNovelAlliesAdmin .vsxNovelBadges{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+#vsxNovelAlliesAdmin .vsxNovelBadges span{font-size:8px;padding:4px 6px;border:1px solid rgba(124,221,255,.14);border-radius:99px;color:#93c8dd;background:rgba(20,71,98,.14)}
+.vsxNovelAllyCodex{margin-top:7px;padding-top:7px;border-top:1px solid rgba(106,198,255,.12);font-size:9px;line-height:1.45;color:#9ec1d5}
+.vsxNovelAllyCodex b{display:inline!important;color:#d9f3ff!important;font-size:9px!important}
+#vsxNovelRecruitMobile{display:none;position:absolute;z-index:8;left:50%;top:205px;transform:translateX(-50%);width:min(350px,calc(100vw - 28px));padding:7px 10px;border:1px solid rgba(124,231,255,.25);border-radius:8px;background:linear-gradient(145deg,rgba(5,17,31,.94),rgba(30,18,62,.90));box-shadow:0 8px 28px rgba(0,0,0,.28);color:#d8f5ff;text-align:center;font:800 9px/1.35 Arial;letter-spacing:.04em;pointer-events:none}
+@media(max-width:760px){#vsxNovelAlliesAdmin .vsxNovelGrid{grid-template-columns:1fr}#vsxAllyHud .vsxAllyCollapsed{display:none}#vsxNovelRecruitMobile.active{display:block}#vsxAnnouncement{top:35%!important;width:calc(100vw - 32px)!important}#vsxAnnouncement strong{font-size:clamp(20px,7vw,30px)!important;line-height:1.08!important}}

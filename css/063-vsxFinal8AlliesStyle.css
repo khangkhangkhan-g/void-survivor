@@ -1,0 +1,7 @@
+#vsxFinal8AlliesAdmin .vsxFinal8Grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:8px}
+#vsxFinal8AlliesAdmin select{width:100%;min-width:0}
+#vsxFinal8AlliesAdmin .vsxPatchBadges{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+#vsxFinal8AlliesAdmin .vsxPatchBadges span{font-size:8px;padding:4px 6px;border:1px solid rgba(124,221,255,.14);border-radius:99px;color:#bfeaff;background:rgba(20,71,98,.14)}
+#vsxFinal8AlliesAdmin pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:180px;overflow:auto;font:9px/1.35 monospace}
+.vsxFinal8Codex{margin-top:6px;padding-top:6px;border-top:1px solid rgba(106,198,255,.12);font-size:9px;line-height:1.45;color:#9ec1d5}
+@media(max-width:760px){#vsxFinal8AlliesAdmin .vsxFinal8Grid{grid-template-columns:1fr}}

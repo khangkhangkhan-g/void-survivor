@@ -1,0 +1,7 @@
+.vsxExperiencePresetRow{grid-template-columns:repeat(5,minmax(0,1fr))!important;margin-bottom:12px}.vsxExperiencePresetRow .vsxPresetBtn{min-height:42px;white-space:normal;line-height:1.25}
+body.vsxBossClaritySmart #inventoryHud{opacity:.46!important}body.vsxBossClaritySmart #vsxAllyHud{opacity:.80!important}body.vsxBossClarityStrong #inventoryHud{opacity:.18!important}body.vsxBossClarityStrong #vsxAllyHud{opacity:.52!important}body.vsxBossClarityStrong #vsxMinimapMeta,body.vsxBossClarityStrong #vsxMinimapLegend{display:none!important}
+body.vsxBossClaritySmart #vsxAllyHud .vsxAllyRole,body.vsxBossClarityStrong #vsxAllyHud .vsxAllyRole,body.vsxBossClarityStrong #vsxAllyHud .vsxAllyState{display:none!important}
+body.vsxMinigameGraceActive #vsxEventMinigame.active,body.vsxMinigameGraceActive #vsxTrialScreen.active{visibility:visible!important;opacity:1!important;pointer-events:auto!important}
+body.vsxMinigameFocusEnabled:has(#vsxEventMinigame.active) #game,body.vsxMinigameFocusEnabled:has(#vsxTrialScreen.active) #game{filter:brightness(.42) saturate(.72)}
+body.vsxPerfLevel1 #game{image-rendering:auto}body.vsxPerfLevel2.vsxNoBackgroundAnim #game{image-rendering:auto}
+@media(max-width:900px){.vsxExperiencePresetRow{grid-template-columns:repeat(2,minmax(0,1fr))!important}}@media(max-width:520px){.vsxExperiencePresetRow{grid-template-columns:1fr!important}}

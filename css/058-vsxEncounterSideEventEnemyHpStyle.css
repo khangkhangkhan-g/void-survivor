@@ -1,0 +1,46 @@
+/* Encounter HUD V4 — boss stays centered; world event lives beside the minimap. */
+#vsxEncounterRail,#vsxEncounterStack{display:none!important;visibility:hidden!important;pointer-events:none!important}
+
+#vsxBossSoloStack{
+  position:absolute;left:50%;top:var(--vsx-boss-solo-top,86px);transform:translateX(-50%);
+  z-index:13;width:min(620px,46vw);display:none;flex-direction:column;gap:6px;pointer-events:none;
+}
+#vsxBossSoloStack.active{display:flex}
+.vsxBossSoloCard{box-sizing:border-box;width:100%;padding:7px 10px;border:1px solid rgba(251,113,133,.28);border-radius:12px;background:linear-gradient(155deg,rgba(24,10,18,.92),rgba(8,11,21,.94));box-shadow:0 10px 26px rgba(0,0,0,.24);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.vsxBossSoloTitle{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#f7edf0;font:900 10px/1.2 'Orbitron','Inter',Arial,sans-serif;letter-spacing:.055em;text-transform:uppercase}
+.vsxBossSoloTitle small{flex:0 0 auto;color:#95a9bc;font:800 7px/1.2 'Inter',Arial,sans-serif;letter-spacing:.06em}
+.vsxBossSoloBar{height:8px;margin-top:5px;border:1px solid rgba(255,100,128,.14);border-radius:999px;overflow:hidden;background:#24111b}
+.vsxBossSoloBar i{display:block;height:100%;background:linear-gradient(90deg,#e11d48,#fb7185,#f59e0b);box-shadow:0 0 13px rgba(251,113,133,.28);transition:width .1s linear}
+.vsxBossSoloMini{border-color:rgba(255,177,92,.23);background:linear-gradient(155deg,rgba(25,16,9,.91),rgba(8,12,21,.94))}
+.vsxBossSoloMini .vsxBossSoloBar i{background:linear-gradient(90deg,#ff8b5e,#ffd061)}
+
+#vsxWorldEventSideHud{
+  position:absolute;z-index:12;display:none;pointer-events:none;box-sizing:border-box;
+  width:min(330px,calc(100vw - 24px));max-width:330px;padding:10px 11px;
+  border:1px solid rgba(34,211,238,.22);border-radius:15px;
+  background:linear-gradient(155deg,rgba(7,18,37,.95),rgba(2,9,21,.92));
+  box-shadow:0 12px 34px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.025);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#b8cede;
+}
+#vsxWorldEventSideHud.active{display:block}
+#vsxWorldEventSideHud .vsxEvtTop{display:flex;align-items:center;gap:6px;margin-bottom:3px;color:#7e9bb2;font:900 7px/1.2 'Inter',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+#vsxWorldEventSideHud .vsxEvtGlyph{flex:0 0 auto;width:19px!important;height:19px!important;border-radius:6px!important;display:grid!important;place-items:center;font:900 8px/1 'Orbitron','Inter',Arial,sans-serif!important}
+#vsxWorldEventSideHud .vsxEvtName{color:#f0fbff!important;font:900 11px/1.25 'Orbitron','Inter',Arial,sans-serif!important;letter-spacing:.02em!important;text-align:left!important;overflow-wrap:anywhere}
+#vsxWorldEventSideHud .vsxEvtStatus{margin-top:3px;color:#9fb6c8!important;font:700 8px/1.35 'Inter',Arial,sans-serif!important;text-align:left!important;overflow-wrap:anywhere}
+#vsxWorldEventSideHud .vsxEvtStatus b{color:#67e8f9!important;font-size:7px!important;letter-spacing:.08em!important;margin-right:3px}
+#vsxWorldEventSideHud .vsxWorldEventHudLive{margin-top:3px;color:#9fb6c8!important;font:700 8px/1.35 'Inter',Arial,sans-serif!important;text-align:left!important;overflow-wrap:anywhere}
+#vsxWorldEventSideHud .vsxWorldEventHudLive b{color:#67e8f9!important;font:800 7px/1.2 'Inter',Arial,sans-serif!important;letter-spacing:.08em!important;margin-right:3px}
+#vsxEventHud .vsxWorldEventHudLive{margin-top:3px;color:#9fb5c9!important;font:700 9px/1.4 'Inter',Arial,sans-serif!important;text-align:left!important;overflow-wrap:anywhere}
+#vsxEventHud .vsxWorldEventHudLive b{color:#67e8f9!important;font:800 7px/1.2 'Inter',Arial,sans-serif!important;letter-spacing:.09em!important;margin-right:4px}
+#vsxWorldEventSideHud .vsxEvtProgress{height:4px!important;margin-top:7px!important;border:1px solid rgba(34,211,238,.08)!important;border-radius:999px;overflow:hidden;background:#07101e!important}
+#vsxWorldEventSideHud .vsxEvtProgress i{display:block;height:100%;box-shadow:0 0 9px currentColor}
+#vsxWorldEventSideHud .vsxWorldEventHudTag{display:inline-flex;align-items:center;gap:5px;color:#9bdfff;font:900 7px/1 Arial;letter-spacing:.11em}
+#vsxWorldEventSideHud .vsxWorldEventHudTag:before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor;box-shadow:0 0 8px currentColor}
+#vsxWorldEventSideHud .vsxWorldEventHudHead{display:flex;align-items:center;justify-content:space-between;gap:7px;margin-bottom:3px}
+#vsxWorldEventSideHud .vsxWorldEventHudTime{display:inline-flex;align-items:center;justify-content:center;min-width:48px;height:20px;padding:0 6px;border:1px solid rgba(126,226,255,.20);border-radius:999px;background:#081a2b;color:#f1fbff;font:900 8px/1 'Orbitron','Inter',Arial,sans-serif}
+#vsxWorldEventSideHud .vsxWorldEventHudFoot,#vsxWorldEventSideHud .vsxSideEventFoot{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:5px;color:#728da3;font:800 6.5px/1.2 'Inter',Arial,sans-serif;letter-spacing:.055em;text-transform:uppercase;flex-wrap:wrap}
+#vsxWorldEventSideHud .vsxSideEventFoot b{color:#b8d5e4;font-size:6.5px}
+body.vsxStandaloneMiniActive #vsxWorldEventSideHud,body.vsxSideEncounterSuppressed #vsxWorldEventSideHud,body.vsxSideEncounterSuppressed #vsxBossSoloStack{display:none!important}
+
+@media(max-width:930px){#vsxBossSoloStack{width:min(430px,48vw)}#vsxWorldEventSideHud{width:min(290px,calc(100vw - 16px));max-width:290px;padding:8px 9px}}
+@media(max-width:720px){#vsxBossSoloStack{width:calc(100vw - 24px);gap:4px}#vsxWorldEventSideHud{width:min(268px,calc(100vw - 16px));max-width:268px;padding:7px 8px;border-radius:12px}#vsxWorldEventSideHud .vsxEvtName{font-size:10px!important}#vsxWorldEventSideHud .vsxEvtStatus{font-size:7.5px!important}#vsxWorldEventSideHud .vsxWorldEventHudLive{font-size:7.5px!important;line-height:1.35!important}}

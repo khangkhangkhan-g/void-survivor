@@ -1,0 +1,38 @@
+/* CLEAN FUTURISTIC MAIN SCREEN */
+#vsxBootBadge,#vsxTitleIntel{display:none!important}
+#titleScreen .panel{
+  width:min(860px,94vw)!important;
+  padding:46px 42px 34px!important;
+  background:
+    radial-gradient(circle at 50% -15%,rgba(83,181,255,.12),transparent 38%),
+    linear-gradient(155deg,rgba(12,25,45,.97),rgba(5,11,22,.98))!important;
+  border:1px solid rgba(107,210,255,.24)!important;
+  border-radius:18px!important;
+  box-shadow:0 34px 110px rgba(0,0,0,.58),inset 0 1px rgba(255,255,255,.035)!important;
+}
+#titleScreen .panel:before,#titleScreen .panel:after{width:92px!important;opacity:.75}
+#titleScreen h1{margin-top:2px!important;font-size:clamp(46px,7vw,78px)!important;letter-spacing:.145em!important}
+#titleScreen .sub{margin:13px auto 30px!important;color:#8edfff!important;font-size:11px!important;letter-spacing:.24em!important;opacity:.9}
+#titleScreen .controls{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:9px!important;margin:0 0 22px!important}
+#titleScreen .controls div{
+  min-height:62px;display:flex;flex-direction:column;justify-content:center;
+  padding:11px 13px!important;background:rgba(6,17,32,.48)!important;
+  border:1px solid rgba(102,196,255,.12)!important;border-radius:8px!important;
+}
+#titleScreen .controls b{font-size:9px!important;letter-spacing:.12em!important;margin-bottom:4px!important}
+#titleScreen .records{margin:0 0 20px!important;gap:7px!important}
+#titleScreen .records div{padding:9px 8px!important;background:rgba(4,14,27,.48)!important;border-color:rgba(91,167,230,.12)!important}
+#titleScreen>.panel>.row{margin-top:2px}
+#titleScreen #startBtn{min-width:230px;padding:14px 28px!important;font-size:15px!important;background:linear-gradient(180deg,#1c86f3,#1556ad)!important;border-color:rgba(126,224,255,.46)!important;box-shadow:0 12px 34px rgba(34,131,244,.22)!important}
+#vsxTopActions{margin-top:11px!important;gap:8px!important}
+#vsxTopActions button{min-width:145px;background:rgba(8,22,39,.72)!important;border-color:rgba(107,210,255,.16)!important;box-shadow:none!important}
+@media(max-width:900px){#titleScreen .panel{padding:34px 26px 26px!important}#titleScreen .controls{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:620px){
+ #titleScreen .panel{padding:25px 16px 20px!important}
+ #titleScreen h1{font-size:clamp(38px,12vw,56px)!important;letter-spacing:.10em!important}
+ #titleScreen .sub{margin-bottom:19px!important;letter-spacing:.13em!important}
+ #titleScreen .controls{grid-template-columns:1fr!important;gap:6px!important}
+ #titleScreen .controls div{min-height:52px}
+ #titleScreen .records{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ #titleScreen #startBtn{width:min(260px,100%);min-width:0}
+}

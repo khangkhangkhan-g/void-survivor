@@ -1,0 +1,117 @@
+:root{
+  --ui-bg:#020617;--ui-panel:rgba(5,13,29,.84);--ui-panel2:rgba(3,9,20,.76);
+  --ui-cyan:#22d3ee;--ui-cyan2:#67e8f9;--ui-blue:#2563eb;--ui-blue2:#3b82f6;
+  --ui-line:rgba(34,211,238,.28);--ui-text:#e6f7ff;--ui-muted:#7890a8;--ui-danger:#fb7185;
+  color-scheme:dark;
+}
+html,body{background:#020617!important}
+body,body *,button,input,select,textarea{font-family:'Inter',Arial,sans-serif!important}
+#game{background:#020617!important}
+body:before{content:""!important;position:fixed!important;inset:0!important;pointer-events:none!important;z-index:1!important;background:radial-gradient(circle at 50% 18%,rgba(14,165,233,.11),transparent 32%),radial-gradient(circle at 15% 80%,rgba(37,99,235,.10),transparent 28%),radial-gradient(circle at 85% 75%,rgba(6,182,212,.08),transparent 26%),linear-gradient(rgba(34,211,238,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(34,211,238,.018) 1px,transparent 1px)!important;background-size:auto,auto,auto,36px 36px,36px 36px!important}
+body:after{content:"";position:fixed;inset:0;z-index:2;pointer-events:none;background:repeating-linear-gradient(to bottom,rgba(255,255,255,.009) 0,rgba(255,255,255,.009) 1px,transparent 2px,transparent 4px)}
+
+/* typography */
+#titleScreen h1,#titleScreen .sub,.screen h2,.modal h2,.vsxPanelEyebrow,.vsxHudTitle,.vsxInvHead,#timerHud,#bossName,#vsxMinimapHead b,#vsxEventHud .vsxEvtName,#vsxEventHud .vsxEvtTop,.vsxAllyHead b,.vsxAbilityLine,.vsxWeaponSlot .vsxSlotLv,.vsxCurrencyValue,.vsxKeyGuide kbd,.vsxChestGlyph,.vsxAdminTitle,.vsxAdminTab,.vsxAdminSection h3{font-family:'Orbitron','Inter',Arial,sans-serif!important}
+html[lang="vi"] #titleScreen h1,html[lang="vi"] .screen h2,html[lang="vi"] .modal h2,html[lang="vi"] .vsxHudTitle,html[lang="vi"] .vsxEvtName{letter-spacing:.035em!important}
+
+/* common panels */
+.screen,.modal{z-index:20!important;background:radial-gradient(circle at 50% 24%,rgba(14,45,79,.42),rgba(2,6,15,.90) 55%,rgba(2,6,15,.96))!important;backdrop-filter:blur(14px)!important;-webkit-backdrop-filter:blur(14px)!important;padding:18px!important}
+.panel,.vsxModernPanel{border:1px solid rgba(34,211,238,.27)!important;background:linear-gradient(165deg,rgba(8,18,38,.96),rgba(3,9,20,.96))!important;border-radius:24px!important;box-shadow:0 28px 95px rgba(0,0,0,.54),inset 0 1px 0 rgba(255,255,255,.035),0 0 36px rgba(34,211,238,.055)!important;overflow:auto!important}
+.panel:before,.panel:after{background:linear-gradient(90deg,transparent,var(--ui-cyan))!important;height:1px!important;opacity:.78!important}
+.vsxPanelEyebrow{font-size:9px;font-weight:800;letter-spacing:.28em;color:#67e8f9;text-transform:uppercase}
+.vsxPanelEyebrow.vsxDanger{color:#fda4af}.vsxPulseDot{display:inline-block;width:7px;height:7px;border-radius:99px;background:#67e8f9;box-shadow:0 0 14px #22d3ee;margin-right:8px;vertical-align:1px}
+.vsxOverlayCopy{color:#8da2b8!important;font-size:13px;line-height:1.65;margin:9px 0 0!important}
+
+button{font-family:'Orbitron','Inter',Arial,sans-serif!important;border:1px solid rgba(34,211,238,.30)!important;border-radius:14px!important;background:linear-gradient(180deg,rgba(22,111,215,.92),rgba(18,74,154,.92))!important;color:white!important;padding:12px 17px!important;font-size:12px!important;font-weight:800!important;letter-spacing:.055em!important;box-shadow:0 10px 28px rgba(37,99,235,.15),inset 0 1px rgba(255,255,255,.10)!important;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease,filter .3s ease,background .3s ease!important}
+button:hover:not(:disabled){transform:translateY(-1px) scale(1.012);border-color:rgba(103,232,249,.88)!important;box-shadow:0 0 30px rgba(34,211,238,.18),0 12px 28px rgba(0,0,0,.18)!important;filter:brightness(1.1)!important}
+button:disabled{opacity:.42!important;cursor:not-allowed!important}
+.vsxPrimaryButton,#startBtn,#resumeBtn,#restartBtn,#chestContinue{background:linear-gradient(90deg,#2563eb,#06b6d4)!important;border-color:rgba(103,232,249,.52)!important;box-shadow:0 12px 32px rgba(37,99,235,.22),0 0 28px rgba(34,211,238,.09)!important}
+
+/* title */
+#titleScreen .panel{width:min(920px,94vw)!important;padding:44px 42px 34px!important;text-align:center!important;overflow:auto!important}
+#titleScreen h1{font-size:clamp(46px,7.2vw,82px)!important;font-weight:900!important;line-height:.98!important;letter-spacing:.145em!important;margin:10px 0 0!important;background:linear-gradient(180deg,#fff 5%,#c5f6ff 46%,#60a5fa 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;text-shadow:0 0 36px rgba(34,211,238,.11)!important}
+#titleScreen .sub{font-size:10px!important;letter-spacing:.34em!important;color:#67e8f9!important;margin:13px 0 23px!important}
+.vsxTitleRule{height:1px;background:linear-gradient(90deg,transparent,rgba(34,211,238,.38),transparent);margin:0 auto 20px;max-width:700px}
+#titleScreen .controls{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important;margin:0 0 16px!important}
+#titleScreen .controls div{min-width:0!important;min-height:63px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;gap:5px!important;padding:11px 13px!important;border:1px solid rgba(34,211,238,.13)!important;background:rgba(2,10,24,.55)!important;border-radius:12px!important;color:#8da2b8!important;text-align:left!important}
+#titleScreen .controls b{font-family:'Orbitron','Inter',sans-serif!important;color:#67e8f9!important;font-size:8px!important;letter-spacing:.18em!important;margin:0!important}
+#titleScreen .controls span{font-size:11px;line-height:1.3;color:#b6c8da}
+#titleScreen .records{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:8px!important;margin:0 0 18px!important}
+#titleScreen .records div{border:1px solid rgba(34,211,238,.12)!important;background:rgba(2,9,22,.52)!important;border-radius:11px!important;padding:10px 8px!important}
+#titleScreen .records small{font-size:8px!important;color:#657b91!important;letter-spacing:.08em!important}#titleScreen .records strong{font-family:'Orbitron','Inter',sans-serif!important;font-size:16px!important;color:#d9f8ff!important}
+#startBtn{min-width:250px!important;padding:14px 30px!important}
+#vsxTopActions{display:flex!important;gap:8px!important;justify-content:center!important;flex-wrap:wrap!important;margin-top:10px!important}#vsxTopActions button{min-width:145px!important;background:rgba(5,17,35,.82)!important;box-shadow:none!important}
+
+/* overlays */
+.vsxOverlayPanel{width:min(560px,94vw)!important;padding:30px!important;text-align:center}.vsxOverlayPanel h2,.vsxLevelPanel h2,.vsxChestPanel h2{font-size:clamp(28px,5vw,42px)!important;letter-spacing:.10em!important;margin:6px 0 0!important;color:#f0fbff!important}
+.vsxShortcutGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:22px 0}.vsxShortcutGrid>div{border:1px solid rgba(34,211,238,.15);background:rgba(2,9,22,.50);border-radius:14px;padding:13px;text-align:left}.vsxShortcutGrid small{display:block;color:#667c92;font-size:8px;letter-spacing:.14em}.vsxShortcutGrid strong{display:block;margin-top:6px;color:#cdeef8;font-family:'Orbitron','Inter',sans-serif;font-size:11px}.vsxButtonStack{display:grid;gap:9px}.vsxButtonStack button{width:100%}
+.vsxGameOverStats{margin:22px 0!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important;line-height:1.45!important}.vsxGameOverStats>div,.vsxGameOverStats span{min-width:0}.vsxOverlayActions{display:grid!important;grid-template-columns:1fr 1fr!important;gap:9px!important}.vsxOverlayActions button{min-width:0!important}
+.vsxLevelPanel{width:min(1120px,96vw)!important;padding:28px!important}.vsxLevelHeader{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:20px}.vsxLevelHeader p{margin:8px 0 0;color:#8398ad;font-size:12px}.vsxKeyGuide{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.vsxKeyGuide span{display:flex;align-items:center;gap:7px;padding:6px 9px;border:1px solid rgba(34,211,238,.13);border-radius:10px;background:rgba(2,9,22,.54);font-size:9px;color:#8da4b9}.vsxKeyGuide kbd{display:grid;place-items:center;min-width:29px;height:29px;border:1px solid rgba(34,211,238,.35);border-radius:8px;background:#0f172a;color:#cffafe;font-size:10px}
+#levelModal .choices{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important}#levelModal .card{min-width:0!important;min-height:250px!important;border:1px solid rgba(34,211,238,.20)!important;background:linear-gradient(180deg,rgba(14,34,63,.80),rgba(3,10,23,.86))!important;border-radius:20px!important;padding:18px!important;box-shadow:none!important;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease!important}#levelModal .card:hover{transform:translateY(-4px) scale(1.008)!important;border-color:rgba(103,232,249,.65)!important;box-shadow:0 0 32px rgba(34,211,238,.10)!important}#levelModal .card .key{font-family:'Orbitron','Inter',sans-serif!important;border:1px solid rgba(34,211,238,.30)!important;background:#0f172a!important;color:#cffafe!important;border-radius:9px!important}#levelModal .card h3{font-family:'Orbitron','Inter',sans-serif!important;font-size:18px!important;color:#effbff!important}#levelModal .card p{color:#8ca1b5!important;line-height:1.55!important}#levelModal .card .effect{border:1px solid rgba(34,211,238,.12);background:rgba(34,211,238,.055);border-radius:10px;padding:9px;color:#8be9ff!important}.levelActions{gap:9px!important}.skipBtn,.rerollBtn{min-width:0!important;flex:1 1 280px!important;background:rgba(7,18,34,.84)!important}
+.vsxChestPanel{width:min(530px,94vw)!important;text-align:center!important;padding:30px!important}.vsxChestGlyph{width:74px;height:74px;display:grid;place-items:center;margin:0 auto 15px;border-radius:22px;border:1px solid rgba(34,211,238,.30);background:linear-gradient(145deg,rgba(37,99,235,.26),rgba(34,211,238,.10));color:#a5f3fc;font-size:22px;font-weight:900;box-shadow:0 0 34px rgba(34,211,238,.13)}.vsxChestReward{font-size:16px!important;line-height:1.55!important;margin:20px 0!important;padding:18px!important;border:1px solid rgba(34,211,238,.14)!important;border-radius:15px!important;background:rgba(2,9,22,.52)!important;color:#d9f8ff!important}
+
+/* HUD */
+#hud{z-index:8!important;font-family:'Inter',sans-serif!important}#hud.active{display:block!important}.hudBox{border:1px solid rgba(34,211,238,.21)!important;background:linear-gradient(155deg,rgba(7,18,37,.88),rgba(2,9,21,.78))!important;border-radius:16px!important;backdrop-filter:blur(13px)!important;-webkit-backdrop-filter:blur(13px)!important;box-shadow:0 16px 48px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.025)!important;color:#c7d8e8!important}
+#statsHud{left:16px!important;top:16px!important;width:278px!important;min-width:278px!important;padding:14px!important;clip-path:none!important;border-radius:16px!important}
+.vsxHudTitle{font-size:9px!important;letter-spacing:.19em!important;color:#67e8f9!important;margin-bottom:9px!important}.vsxHpRow{font-size:10px!important;color:#8ca0b3!important}.vsxHpRow strong{font-family:'Orbitron','Inter',sans-serif!important;font-size:17px!important;color:#e8fbff!important}.miniBar{height:8px!important;border:1px solid rgba(34,211,238,.14)!important;background:#07101e!important;border-radius:99px!important}.miniFill{background:linear-gradient(90deg,#2563eb,#22d3ee)!important;box-shadow:0 0 16px rgba(34,211,238,.30)!important}.vsxUiShieldFill{background:linear-gradient(90deg,#1d4ed8,#67e8f9)!important}.vsxCoreGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:6px!important}.vsxCoreCell{border:1px solid rgba(34,211,238,.09)!important;background:rgba(2,9,22,.45)!important;border-radius:9px!important}.vsxCoreCell small{font-size:7px!important;color:#61778d!important}.vsxCoreCell b{font-family:'Orbitron','Inter',sans-serif!important;font-size:11px!important;color:#d8f6ff!important}.vsxStatusLine{gap:4px!important}.vsxStatusChip{font-size:8px!important;border-color:rgba(34,211,238,.13)!important;color:#9cdcf0!important;background:rgba(8,57,80,.12)!important}
+#timerHud{left:50%!important;right:auto!important;top:16px!important;transform:translateX(-50%)!important;width:min(510px,38vw)!important;min-width:260px!important;padding:11px 18px!important;text-align:center!important;font-size:13px!important;letter-spacing:.06em!important;color:#f0fbff!important}.vsxTimerTime{font-family:'Orbitron','Inter',sans-serif;font-size:25px;line-height:1;font-weight:900;letter-spacing:.12em}.vsxTimerMeta{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-top:7px}.vsxTimerChip{border:1px solid rgba(34,211,238,.15);background:rgba(34,211,238,.06);color:#a5f3fc;padding:3px 8px;border-radius:99px;font-family:'Orbitron','Inter',sans-serif;font-size:7px;letter-spacing:.12em}.vsxTimerChip.danger{border-color:rgba(251,113,133,.25);background:rgba(251,113,133,.07);color:#fda4af}
+#vsxCurrencyHud{display:block!important;right:16px!important;top:16px!important;width:288px!important;padding:10px!important}.vsxCurrencyGrid{display:grid;grid-template-columns:1fr 1fr;gap:7px}.vsxCurrencyCell{padding:9px 10px;border:1px solid rgba(34,211,238,.10);background:rgba(2,9,22,.47);border-radius:11px}.vsxCurrencyCell small{display:block;color:#657b91;font-size:7px;letter-spacing:.14em}.vsxCurrencyValue{display:block;margin-top:3px;color:#bff7ff;font-size:14px;font-weight:800;letter-spacing:.04em}
+#inventoryHud{right:16px!important;top:99px!important;width:288px!important;max-height:35vh!important;padding:11px!important;clip-path:none!important;border-radius:14px!important;overflow:auto!important}.vsxInvHead{font-size:8px!important;letter-spacing:.12em!important;color:#7de8f9!important}.vsxInvItem{font-size:9px!important;color:#9eb4c7!important}.vsxInvItem b{color:#e0f7ff!important}.vsxInvMore{font-size:8px!important}
+#bossWrap{top:86px!important;left:50%!important;transform:translateX(-50%)!important;width:min(620px,46vw)!important;z-index:12!important;font-family:'Orbitron','Inter',sans-serif!important;color:#fecdd3!important;letter-spacing:.07em!important}#bossBar{height:9px!important;border:1px solid rgba(251,113,133,.32)!important;background:#200d17!important}#bossFill{background:linear-gradient(90deg,#e11d48,#fb7185,#f59e0b)!important;box-shadow:0 0 16px rgba(251,113,133,.28)!important}
+#vsxEventHud,#vsxMiniBossHud{left:50%!important;transform:translateX(-50%)!important;width:min(560px,48vw)!important;min-width:310px!important;z-index:11!important;border-radius:14px!important}#vsxEventHud{top:132px!important}#vsxMiniBossHud{top:204px!important}
+#vsxAllyHud{left:16px!important;top:228px!important;width:278px!important;max-height:34vh!important;padding:10px!important;border-radius:14px!important}.vsxAllyHead b{font-size:8px!important;letter-spacing:.13em!important}.vsxAllyHead span{font-size:8px!important}.vsxAllyCard{border-color:rgba(34,211,238,.08)!important;background:rgba(2,9,22,.42)!important;border-radius:9px!important}.vsxAllyName{font-size:8px!important}.vsxAllyState,.vsxAllyRole{font-size:7px!important}.vsxAllyBar i{background:linear-gradient(90deg,#2563eb,#22d3ee)!important}
+#vsxActionHud{left:16px!important;bottom:48px!important;width:278px!important;border-radius:14px!important}.vsxAbilityLine{font-size:8px!important;letter-spacing:.11em!important}.vsxAbilityBar{height:6px!important}.vsxAbilityFill{background:linear-gradient(90deg,#2563eb,#22d3ee)!important}
+#vsxMinimapWrap{right:16px!important;bottom:50px!important;width:230px!important;padding:10px!important;border:1px solid rgba(34,211,238,.18)!important;border-radius:16px!important;background:linear-gradient(155deg,rgba(7,18,37,.88),rgba(2,9,21,.80))!important;backdrop-filter:blur(13px)!important;box-shadow:0 16px 48px rgba(0,0,0,.23)!important}#vsxMinimapHead b{font-size:9px!important;letter-spacing:.14em!important;color:#a5f3fc!important}#vsxMinimapHead span{font-size:8px!important}#vsxMinimapMeta{font-size:8px!important;color:#8ba8bd!important}
+#xpWrap{left:50%!important;right:auto!important;bottom:14px!important;transform:translateX(-50%)!important;width:min(760px,54vw)!important;height:13px!important;z-index:13!important;border:1px solid rgba(34,211,238,.18)!important;background:rgba(2,9,22,.84)!important}#xpFill{background:linear-gradient(90deg,#2563eb,#22d3ee,#67e8f9)!important;box-shadow:0 0 20px rgba(34,211,238,.28)!important}#xpText{font-family:'Orbitron','Inter',sans-serif!important;color:#031018!important;font-size:8px!important;font-weight:900!important}
+#muteBadge{right:16px!important;bottom:18px!important;font-size:8px!important;color:#657d92!important}
+#hint{font-family:'Orbitron','Inter',sans-serif!important;font-size:9px!important;border-color:rgba(34,211,238,.20)!important;background:rgba(2,9,22,.80)!important}
+
+/* new bottom weapon dock (presentation only) */
+#vsxWeaponDock{position:absolute;left:50%;bottom:42px;transform:translateX(-50%);width:min(760px,54vw);z-index:10;display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:5px;padding:7px;border:1px solid rgba(34,211,238,.17);border-radius:15px;background:linear-gradient(155deg,rgba(7,18,37,.78),rgba(2,9,21,.70));backdrop-filter:blur(11px);pointer-events:none;box-shadow:0 14px 42px rgba(0,0,0,.20)}
+.vsxWeaponSlot{min-width:0;height:48px;border:1px solid rgba(34,211,238,.11);border-radius:9px;background:linear-gradient(145deg,rgba(37,99,235,.10),rgba(34,211,238,.035));padding:5px 4px;text-align:center;display:flex;flex-direction:column;justify-content:center;gap:2px}.vsxWeaponSlot.empty{opacity:.32}.vsxWeaponSlot .vsxSlotName{font-size:7px;line-height:1.1;color:#b8cedf;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.vsxWeaponSlot .vsxSlotLv{font-size:7px;color:#67e8f9;letter-spacing:.04em}.vsxWeaponSlot.epic{border-color:rgba(192,132,252,.24)}.vsxWeaponSlot.rare{border-color:rgba(96,165,250,.26)}.vsxWeaponSlot.legendary{border-color:rgba(250,204,21,.32);background:linear-gradient(145deg,rgba(161,98,7,.14),rgba(34,211,238,.03))}
+
+/* meta / settings / collection / admin consistency */
+#vsxSetupScreen .panel,#vsxCollectionScreen .panel,#vsxArmoryScreen .panel,#vsxSettingsScreen .panel,#vsxAdminScreen .panel,#vsxMetaModal .panel{border-color:rgba(34,211,238,.23)!important;background:linear-gradient(165deg,rgba(8,18,38,.97),rgba(3,9,20,.97))!important}
+.vsxPick,.vsxMetaCard,.vsxCodexItem,.vsxAdminSection,.vsxAdminWeaponItem{border-color:rgba(34,211,238,.13)!important;background:linear-gradient(155deg,rgba(8,22,42,.78),rgba(3,10,23,.78))!important;border-radius:13px!important}.vsxPick:hover,.vsxMetaCard:hover,.vsxCodexItem:hover{border-color:rgba(103,232,249,.60)!important;box-shadow:0 0 26px rgba(34,211,238,.07)!important}.vsxAdminTab.active{border-color:rgba(103,232,249,.75)!important;box-shadow:0 0 22px rgba(34,211,238,.10)!important}
+input,select,textarea{border:1px solid rgba(34,211,238,.20)!important;background:#07101e!important;color:#d8f5ff!important;border-radius:10px!important;outline:none!important}input:focus,select:focus,textarea:focus{border-color:rgba(103,232,249,.70)!important;box-shadow:0 0 0 2px rgba(34,211,238,.08)!important}
+
+/* collision-safe responsive states */
+@media(max-width:1180px){
+  #statsHud,#vsxActionHud,#vsxAllyHud{width:236px!important;min-width:236px!important}
+  #vsxCurrencyHud,#inventoryHud{width:236px!important}
+  #timerHud{width:min(430px,38vw)!important}
+  #bossWrap{width:min(520px,46vw)!important}
+  #vsxEventHud,#vsxMiniBossHud{width:min(500px,46vw)!important}
+  #vsxWeaponDock,#xpWrap{width:min(640px,50vw)!important}
+  #vsxMinimapWrap{width:205px!important}
+}
+@media(max-width:930px){
+  #inventoryHud{display:none!important}
+  #vsxCurrencyHud{width:210px!important}
+  #statsHud{width:220px!important;min-width:220px!important}
+  #vsxAllyHud{display:none!important}
+  #vsxActionHud{width:220px!important}
+  #timerHud{left:50%!important;width:300px!important;min-width:0!important}
+  #bossWrap{width:360px!important}
+  #vsxEventHud,#vsxMiniBossHud{width:390px!important;min-width:0!important}
+  #vsxWeaponDock{width:min(540px,58vw)!important;grid-template-columns:repeat(5,minmax(0,1fr));bottom:42px!important}
+  #vsxWeaponDock .vsxWeaponSlot:nth-child(n+6){display:none}
+  #xpWrap{width:min(540px,58vw)!important}
+  #vsxMinimapWrap{width:180px!important}
+  #titleScreen .controls{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:720px){
+  .screen,.modal{padding:6px!important}.panel{max-width:calc(100vw - 12px)!important;max-height:calc(100vh - 12px)!important;padding:17px 14px!important;border-radius:17px!important}
+  #titleScreen .panel{padding:22px 14px!important}#titleScreen h1{font-size:clamp(38px,12vw,56px)!important;letter-spacing:.095em!important}#titleScreen .sub{letter-spacing:.16em!important}#titleScreen .controls{grid-template-columns:1fr!important;gap:6px!important}#titleScreen .controls div{min-height:48px!important}#titleScreen .records{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  #statsHud{left:8px!important;top:8px!important;width:178px!important;min-width:178px!important;padding:9px!important}.vsxCoreGrid{display:none!important}.vsxStatusLine{display:none!important}
+  #vsxCurrencyHud{right:8px!important;top:8px!important;width:168px!important;padding:7px!important}.vsxCurrencyCell{padding:6px!important}.vsxCurrencyValue{font-size:11px!important}
+  #timerHud{left:50%!important;top:106px!important;width:220px!important;font-size:10px!important;padding:7px 9px!important}.vsxTimerTime{font-size:18px!important}.vsxTimerMeta{margin-top:4px!important}
+  #bossWrap{top:160px!important;width:calc(100vw - 24px)!important}#vsxEventHud{top:207px!important;width:calc(100vw - 24px)!important}#vsxMiniBossHud{top:276px!important;width:calc(100vw - 24px)!important}
+  #vsxActionHud{left:8px!important;bottom:42px!important;width:165px!important;min-width:0!important;padding:7px!important}
+  #vsxMinimapWrap{right:8px!important;bottom:42px!important;width:150px!important;padding:6px!important}#vsxMinimapMeta,#vsxMinimapLegend{display:none!important}
+  #vsxWeaponDock{left:50%!important;bottom:93px!important;width:calc(100vw - 24px)!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;padding:5px!important;gap:4px!important}.vsxWeaponSlot{height:40px!important}.vsxWeaponSlot .vsxSlotName{font-size:6px!important}.vsxWeaponSlot .vsxSlotLv{font-size:6px!important}
+  #xpWrap{bottom:12px!important;width:calc(100vw - 16px)!important}
+  #muteBadge{display:none!important}
+  .vsxShortcutGrid,.vsxOverlayActions{grid-template-columns:1fr!important}.vsxLevelHeader{flex-direction:column;align-items:flex-start}.vsxKeyGuide{justify-content:flex-start}#levelModal .choices{grid-template-columns:1fr!important}.vsxGameOverStats{grid-template-columns:1fr 1fr!important}
+}
+@media(max-height:680px) and (min-width:721px){#statsHud{max-height:31vh!important;overflow:auto!important}#vsxAllyHud{top:190px!important;max-height:27vh!important}#inventoryHud{max-height:30vh!important}#vsxWeaponDock{bottom:36px!important}.vsxWeaponSlot{height:42px!important}#vsxMinimapWrap{width:175px!important;bottom:42px!important}}

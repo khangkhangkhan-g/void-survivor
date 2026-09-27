@@ -1,0 +1,10 @@
+#vsxSettingsScreen .panel{width:min(900px,94vw)}
+#vsxSettingsTabs{row-gap:7px}
+.vsxKeybindIntro{margin:0 0 10px;padding:10px 12px;border:1px solid rgba(108,231,255,.16);border-radius:9px;background:rgba(7,24,42,.46);color:#91abc2;font-size:11px;line-height:1.45}
+.vsxKeybindGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.vsxKeybindRow{display:grid;grid-template-columns:minmax(130px,1fr) auto;gap:9px;align-items:center;padding:9px 10px;border:1px solid rgba(104,205,255,.14);border-radius:9px;background:rgba(4,15,29,.52);min-width:0}
+.vsxKeybindName{min-width:0}.vsxKeybindName b{display:block;color:#dff7ff;font-size:11px}.vsxKeybindName small{display:block;color:#718aa3;font-size:9px;margin-top:2px;line-height:1.3}
+.vsxKeybindSlots{display:flex;gap:5px;justify-content:flex-end;flex-wrap:wrap}.vsxKeybindButton{min-width:72px!important;padding:8px 9px!important;font-size:10px!important;box-shadow:none!important;background:rgba(11,42,72,.86)!important}.vsxKeybindButton.capturing{border-color:#ffd766!important;color:#fff2b0!important;box-shadow:0 0 18px rgba(255,215,102,.14)!important}
+.vsxKeybindStatus{margin:9px 0 0;min-height:18px;color:#8fe3b5;font-size:10px}.vsxKeybindStatus.warn{color:#ff9caa}
+#vsxPauseSettingsBtn{background:linear-gradient(180deg,#1a516f,#10364d)!important}
+@media(max-width:720px){.vsxKeybindGrid{grid-template-columns:1fr}.vsxKeybindRow{grid-template-columns:1fr}.vsxKeybindSlots{justify-content:flex-start}.vsxKeybindButton{min-width:78px!important}}

@@ -1,0 +1,97 @@
+/* Royal Three package roster: fix jersey/title collision and tighten card hierarchy. */
+#vsxRoyalThreePackage .rmRoster{gap:12px!important}
+#vsxRoyalThreePackage .rmFighter{
+  --rmAccent:#b9afff;
+  isolation:isolate;
+  min-width:0!important;
+  overflow:hidden!important;
+  padding:13px!important;
+  border-radius:18px!important;
+  border-color:color-mix(in srgb,var(--rmAccent) 26%,rgba(255,255,255,.08))!important;
+  background:
+    radial-gradient(circle at 92% 4%,color-mix(in srgb,var(--rmAccent) 13%,transparent),transparent 38%),
+    linear-gradient(155deg,rgba(255,255,255,.075),rgba(5,16,32,.90))!important;
+  box-shadow:inset 0 1px rgba(255,255,255,.045),0 10px 24px rgba(0,0,0,.12)!important;
+}
+#vsxRoyalThreePackage .rmFighter:nth-child(1){--rmAccent:#aeb8ff}
+#vsxRoyalThreePackage .rmFighter:nth-child(2){--rmAccent:#e9cc78}
+#vsxRoyalThreePackage .rmFighter:nth-child(3){--rmAccent:#c9bdff}
+#vsxRoyalThreePackage .rmFighter::before{
+  content:"";position:absolute;left:14px;right:14px;top:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--rmAccent),transparent);opacity:.75;z-index:0
+}
+#vsxRoyalThreePackage .rmFighterTop{
+  display:grid!important;
+  grid-template-columns:78px minmax(0,1fr)!important;
+  gap:12px!important;
+  align-items:start!important;
+  min-width:0!important;
+}
+#vsxRoyalThreePackage .rmFighterTop>.rmJerseyCard{
+  width:70px!important;height:88px!important;min-width:70px!important;flex-basis:70px!important;
+  padding:7px 5px 5px!important;border-radius:14px!important;margin:0!important;
+  position:relative!important;inset:auto!important;transform:none!important;
+  box-shadow:0 12px 24px rgba(0,0,0,.18),inset 0 1px rgba(255,255,255,.75)!important;
+}
+#vsxRoyalThreePackage .rmFighterTop>.rmJerseyCard .rmJerseyName{font-size:7px!important;letter-spacing:.035em!important}
+#vsxRoyalThreePackage .rmFighterTop>.rmJerseyCard .rmJerseyNo{font-size:46px!important}
+#vsxRoyalThreePackage .rmFighterTop>.rmJerseyCard .rmJerseyMeta{font-size:6px!important}
+#vsxRoyalThreePackage .rmFighterTop>div:last-child{min-width:0!important;width:100%!important;padding-top:1px}
+#vsxRoyalThreePackage .rmFighter h4{
+  margin:0 0 5px!important;color:#f8fbff!important;font-size:14px!important;line-height:1.18!important;
+  font-weight:900!important;white-space:normal!important;overflow-wrap:anywhere!important;letter-spacing:-.01em
+}
+#vsxRoyalThreePackage .rmSub{
+  display:flex!important;align-items:center!important;gap:5px!important;flex-wrap:wrap!important;
+  min-width:0!important;margin-bottom:6px!important;color:var(--rmAccent)!important;font-size:7.5px!important;line-height:1.28!important
+}
+#vsxRoyalThreePackage .rmSub .rmFlag{flex:0 0 18px!important;margin-right:1px!important}
+#vsxRoyalThreePackage .rmTags{
+  display:flex!important;flex-wrap:wrap!important;gap:4px!important;margin-top:0!important;min-width:0!important
+}
+#vsxRoyalThreePackage .rmTags span{
+  max-width:100%!important;padding:3px 6px!important;border-radius:999px!important;
+  background:rgba(255,255,255,.055)!important;border:1px solid rgba(255,255,255,.075)!important;
+  color:#cbd9e6!important;font-size:6.7px!important;line-height:1.3!important;
+  white-space:normal!important;overflow-wrap:anywhere!important
+}
+#vsxRoyalThreePackage .rmTags span:first-child{color:#f2dc99!important;border-color:rgba(233,204,120,.18)!important;background:rgba(233,204,120,.07)!important}
+#vsxRoyalThreePackage .rmFighter>p{
+  margin:10px 0 0!important;color:#a8bacb!important;font-size:9px!important;line-height:1.5!important;
+  min-height:54px!important;overflow-wrap:anywhere!important
+}
+#vsxRoyalThreePackage .rmGrowth{
+  position:relative;margin-top:9px!important;padding:8px 9px 8px 10px!important;border-radius:11px!important;
+  border:1px solid color-mix(in srgb,var(--rmAccent) 18%,rgba(255,255,255,.06))!important;
+  background:linear-gradient(90deg,color-mix(in srgb,var(--rmAccent) 6%,transparent),rgba(9,20,40,.66))!important;
+  color:#b9c7d5!important;font-size:7.8px!important;line-height:1.45!important;overflow-wrap:anywhere!important
+}
+#vsxRoyalThreePackage .rmGrowth::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:2px;border-radius:99px;background:var(--rmAccent);opacity:.75}
+#vsxRoyalThreePackage .rmGrowth b{color:#efe0ac!important}
+#vsxRoyalThreePackage .rmDashLine{margin-top:6px!important;padding-top:6px!important;border-top:1px solid rgba(255,255,255,.07)!important;color:#aebfd0!important}
+#vsxRoyalThreePackage .rmDashLine b{color:#f0da92!important}
+/* Also make the individual purchase cards follow the same spacing discipline. */
+#vsxRoyalThreePackage .rmBuyCard{overflow:hidden!important}
+#vsxRoyalThreePackage .rmJerseyHead{display:grid!important;grid-template-columns:52px minmax(0,1fr)!important;gap:10px!important;align-items:start!important}
+#vsxRoyalThreePackage .rmJerseyHead>.rmJerseyCard{width:46px!important;height:58px!important;min-width:46px!important;flex-basis:46px!important;margin:0!important;position:relative!important;inset:auto!important;transform:none!important}
+#vsxRoyalThreePackage .rmJerseyHead>.rmJerseyCard .rmJerseyNo{font-size:29px!important}
+#vsxRoyalThreePackage .rmJerseyHead>.rmBuyHead{min-width:0!important;width:100%!important;display:flex!important;gap:6px!important;align-items:flex-start!important;flex-wrap:wrap!important}
+#vsxRoyalThreePackage .rmBuyHead b{min-width:0!important;white-space:normal!important;overflow-wrap:anywhere!important;line-height:1.22!important}
+#vsxRoyalThreePackage .rmBuyHead span{flex:0 0 auto!important}
+@media(max-width:1120px) and (min-width:981px){
+  #vsxRoyalThreePackage .rmFighterTop{grid-template-columns:68px minmax(0,1fr)!important;gap:10px!important}
+  #vsxRoyalThreePackage .rmFighterTop>.rmJerseyCard{width:62px!important;height:80px!important;min-width:62px!important;flex-basis:62px!important}
+  #vsxRoyalThreePackage .rmFighterTop>.rmJerseyCard .rmJerseyNo{font-size:40px!important}
+  #vsxRoyalThreePackage .rmFighter h4{font-size:13px!important}
+  #vsxRoyalThreePackage .rmTags span{font-size:6.2px!important;padding:3px 5px!important}
+}
+@media(max-width:980px){
+  #vsxRoyalThreePackage .rmFighterTop{grid-template-columns:70px minmax(0,1fr)!important}
+  #vsxRoyalThreePackage .rmFighter>p{min-height:0!important}
+}
+@media(max-width:520px){
+  #vsxRoyalThreePackage .rmFighterTop{grid-template-columns:62px minmax(0,1fr)!important;gap:9px!important}
+  #vsxRoyalThreePackage .rmFighterTop>.rmJerseyCard{width:56px!important;height:72px!important;min-width:56px!important;flex-basis:56px!important;padding:5px 4px!important}
+  #vsxRoyalThreePackage .rmFighterTop>.rmJerseyCard .rmJerseyNo{font-size:36px!important}
+  #vsxRoyalThreePackage .rmFighter h4{font-size:12.5px!important}
+}

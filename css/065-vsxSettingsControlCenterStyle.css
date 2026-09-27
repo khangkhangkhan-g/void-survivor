@@ -1,0 +1,60 @@
+#vsxSettingsScreen .panel{width:min(1040px,96vw)!important}
+#vsxSettingsContent{min-height:420px}
+.vsxSettingsIntro{padding:10px 12px;margin-bottom:10px;border:1px solid rgba(104,205,255,.14);border-radius:10px;background:rgba(5,18,34,.50);color:#89a8c1;font-size:10px;line-height:1.45}
+.vsxSettingsGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.vsxSettingRow.vsxCCRow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 11px;border:1px solid rgba(104,205,255,.13);border-radius:9px;background:rgba(4,15,29,.54);min-width:0}
+.vsxCCRow label{min-width:0;color:#dff7ff;font-size:11px;font-weight:700}.vsxCCRow label small{display:block;margin-top:3px;color:#718aa3;font-size:9px;line-height:1.35;font-weight:400}
+.vsxCCRow select,.vsxCCRow input[type="range"]{min-width:150px;max-width:220px}.vsxCCRow select{background:#071726;color:#dff7ff;border:1px solid rgba(104,205,255,.20);border-radius:8px;padding:8px 9px}
+.vsxCCRow input[type="checkbox"]{width:18px;height:18px;accent-color:#43d9ff}.vsxCCValue{font-size:9px;color:#8fe3b5;text-align:right}
+.vsxSettingsFooter{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap}.vsxSettingsFooter small{color:#6f8ca4;font-size:9px}
+.vsxSettingsFooter .row{margin:0!important}
+body.vsxHudOpacityLow #statsHud,body.vsxHudOpacityLow #inventoryHud,body.vsxHudOpacityLow #vsxActionHud,body.vsxHudOpacityLow #vsxAllyHud,body.vsxHudOpacityLow #vsxMinimapWrap,body.vsxHudOpacityLow #vsxWorldEventSideHud{opacity:.72}
+body.vsxHudOpacityMid #statsHud,body.vsxHudOpacityMid #inventoryHud,body.vsxHudOpacityMid #vsxActionHud,body.vsxHudOpacityMid #vsxAllyHud,body.vsxHudOpacityMid #vsxMinimapWrap,body.vsxHudOpacityMid #vsxWorldEventSideHud{opacity:.88}
+body.vsxHudDensityMinimal #inventoryHud{display:none!important}
+body.vsxHudDensityMinimal #vsxAllyHud .vsxAllyRole,body.vsxHudDensityMinimal #vsxAllyHud .vsxAllyState{display:none!important}
+body.vsxHudDensityDetailed #vsxAllyHud{max-height:38vh!important}
+body.vsxMinimapMinimal #vsxMinimapMeta,body.vsxMinimapMinimal #vsxMinimapLegend{display:none!important}
+body.vsxMinimapDetailed #vsxMinimapMeta{font-size:9px!important;line-height:1.5!important}
+body.vsxHideEventHow #vsxWorldEventSideHud .vsxWorldEventHudHow{display:none!important}
+body.vsxHideEventLive #vsxWorldEventSideHud .vsxWorldEventHudLive{display:none!important}
+body.vsxAnnouncementMinimal #vsxAnnouncement small{display:none!important}
+body.vsxAnnouncementMinimal #vsxAnnouncement{padding:8px 12px!important;width:auto!important;min-width:220px!important}
+body.vsxAnnouncementFull #vsxAnnouncement{width:min(620px,82vw)!important}
+body.vsxHighContrastHud .hudBox,body.vsxHighContrastHud #vsxMinimapWrap,body.vsxHighContrastHud #vsxWorldEventSideHud{border-color:rgba(150,238,255,.52)!important;background:rgba(3,10,20,.94)!important}
+body.vsxCombatClarity canvas#game{filter:contrast(1.07) saturate(.92)}
+body.vsxColorProtan canvas#game{filter:hue-rotate(12deg) saturate(.86) contrast(1.04)}
+body.vsxColorDeutan canvas#game{filter:hue-rotate(-12deg) saturate(.86) contrast(1.04)}
+body.vsxColorTritan canvas#game{filter:hue-rotate(35deg) saturate(.82) contrast(1.05)}
+body.vsxReduceFlash #vsxAnnouncement,body.vsxReduceFlash .vsxPulseDot{animation:none!important}
+body.vsxReduceMotion *{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
+body.vsxNoBackgroundAnim:before{display:none!important}
+body.vsxNoInputPrompts kbd,body.vsxNoInputPrompts .vsxKeyGuide{display:none!important}
+body.vsxSmartBoss #inventoryHud{opacity:.42!important}
+body.vsxSmartRecruit #vsxAllyHud{border-color:rgba(176,112,255,.42)!important}
+body.vsxEventHowCompact .vsxWorldEventHudHow{
+  display:-webkit-box!important;-webkit-box-orient:vertical;-webkit-line-clamp:2;
+  overflow:hidden!important;max-height:2.75em!important;line-height:1.3!important
+}
+body.vsxNoAutoCompact.vsxSmartBoss #inventoryHud{opacity:1!important}
+#vsxLowHpVignette{position:fixed;inset:0;z-index:4;pointer-events:none;opacity:0;transition:opacity .15s;background:radial-gradient(circle at center,transparent 58%,rgba(190,20,45,.30) 100%)}
+body.vsxLowHp #vsxLowHpVignette{opacity:1}
+html{--vsxUiFontScale:1;--vsxGridOpacity:1}
+body{font-size:calc(16px * var(--vsxUiFontScale))}
+body:before{opacity:var(--vsxGridOpacity)}
+@media(max-width:760px){.vsxSettingsGrid{grid-template-columns:1fr}.vsxCCRow{grid-template-columns:1fr!important}.vsxCCRow select,.vsxCCRow input[type="range"]{width:100%;max-width:none}.vsxSettingsFooter{align-items:stretch}.vsxSettingsFooter .row{width:100%}.vsxSettingsFooter button{flex:1}}
+
+/* VSX Settings Experience v3 */
+#vsxSettingsScreen .panel{width:min(1120px,97vw)!important}
+.vsxSettingsSectionTitle{grid-column:1/-1;color:#74dfff;font:800 9px/1.2 'Orbitron','Inter',Arial,sans-serif;letter-spacing:.14em;margin:5px 2px 0;padding-top:4px}
+.vsxPresetRow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin:10px 0}
+.vsxPresetBtn{padding:10px 8px!important;border-radius:9px!important;font-size:9px!important;white-space:normal!important;line-height:1.25!important}
+.vsxPresetBtn.selected{border-color:rgba(91,224,255,.58)!important;background:rgba(30,132,173,.22)!important;color:#dffaff!important;box-shadow:inset 0 0 18px rgba(61,220,255,.08)}
+.vsxSettingsLivePreview{margin-top:12px;border:1px solid rgba(102,216,255,.16);border-radius:14px;background:linear-gradient(145deg,rgba(5,18,33,.86),rgba(3,10,20,.78));padding:10px;overflow:hidden}
+.vsxPreviewHead{display:flex;gap:8px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:8px}.vsxPreviewHead b{font:800 9px/1 'Orbitron','Inter',Arial,sans-serif;color:#a7efff;letter-spacing:.12em}.vsxPreviewTabs{display:flex;gap:5px;flex-wrap:wrap}.vsxPreviewTabs button{padding:5px 8px!important;font-size:8px!important;border-radius:99px!important}.vsxPreviewTabs button.selected{border-color:rgba(116,226,255,.55)!important;color:#e7fbff!important;background:rgba(40,142,180,.20)!important}
+.vsxPreviewStage{height:245px;position:relative;overflow:hidden;border:1px solid rgba(86,177,225,.13);border-radius:11px;background:radial-gradient(circle at 50% 50%,rgba(12,39,65,.45),rgba(3,9,18,.96)),repeating-linear-gradient(0deg,transparent 0 31px,rgba(80,150,210,.045) 32px),repeating-linear-gradient(90deg,transparent 0 31px,rgba(80,150,210,.045) 32px)}
+.vsxPVBox{position:absolute;border:1px solid rgba(98,210,255,.18);border-radius:8px;background:rgba(4,14,27,.86);color:#c9eaff;font-size:7px;padding:6px;box-sizing:border-box;transition:opacity .14s,transform .14s}.vsxPVStats{left:8px;top:8px;width:104px;height:67px}.vsxPVInv{right:8px;top:8px;width:105px;height:58px}.vsxPVAlly{left:8px;top:82px;width:126px;min-height:52px}.vsxPVMap{right:8px;bottom:8px;width:94px;height:94px}.vsxPVAction{left:8px;bottom:8px;width:116px;height:38px}.vsxPVBoss{left:27%;right:27%;top:8px;height:27px;display:none}.vsxPVEvent{right:8px;top:73px;width:120px;height:52px;display:none}.vsxPVMinigame{position:absolute;inset:13px;display:none;align-items:center;justify-content:center;border:1px solid rgba(190,130,255,.28);border-radius:10px;background:rgba(8,8,24,.92);color:#e5d7ff;font:800 11px 'Orbitron','Inter',Arial,sans-serif;letter-spacing:.12em}.vsxPVBar{height:4px;border-radius:99px;background:rgba(100,170,220,.18);margin-top:5px;overflow:hidden}.vsxPVBar:before{content:'';display:block;width:72%;height:100%;background:#4bdfff}.vsxPVAllyRows{display:grid;gap:4px;margin-top:5px}.vsxPVAllyRow{height:8px;border-radius:4px;background:linear-gradient(90deg,#32cbff 64%,rgba(70,120,150,.16) 64%)}.vsxPVMore{font-size:6px;color:#829bb1;margin-top:4px;text-align:center}.vsxPVMapDots{position:absolute;inset:24px 8px 8px;border-radius:50%;border:1px solid rgba(100,214,255,.16)}.vsxPVMapDots i{position:absolute;width:5px;height:5px;border-radius:50%;background:#6fe5ff;box-shadow:0 0 6px currentColor}.vsxPVMapDots i:nth-child(1){left:25%;top:33%}.vsxPVMapDots i:nth-child(2){right:22%;top:50%;background:#ff6b80}.vsxPVMapDots i:nth-child(3){left:48%;bottom:18%;background:#ffd86b}
+.vsxPreviewStage[data-scenario="boss"] .vsxPVBoss{display:block}.vsxPreviewStage[data-scenario="boss"].boss-focus .vsxPVInv{opacity:.18}.vsxPreviewStage[data-scenario="boss"].boss-focus .vsxPVMap .vsxPVMeta{display:none}.vsxPreviewStage[data-scenario="event"] .vsxPVEvent{display:block}.vsxPreviewStage[data-scenario="minigame"] .vsxPVMinigame{display:flex}.vsxPreviewStage[data-scenario="minigame"].minigame-focus>.vsxPVBox,.vsxPreviewStage[data-scenario="minigame"].minigame-focus>.vsxPVBoss,.vsxPreviewStage[data-scenario="minigame"].minigame-focus>.vsxPVEvent{opacity:0;visibility:hidden}.vsxPreviewStage[data-scenario="allies"] .vsxPVAlly{min-height:112px}
+.vsxSettingsLayerGroup{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;grid-column:1/-1}.vsxSettingsLayerGroup .vsxSettingRow{min-height:42px}
+body.vsxBossFocusActive #inventoryHud{opacity:.22!important}body.vsxBossFocusActive #vsxAllyHud .vsxAllyRole,body.vsxBossFocusActive #vsxAllyHud .vsxAllyState{display:none!important}body.vsxBossFocusActive:not(.vsxBossFocusWithEvent) #vsxMinimapMeta,body.vsxBossFocusActive:not(.vsxBossFocusWithEvent) #vsxMinimapLegend{display:none!important}
+body.vsxMinigameFocusEnabled:has(#vsxEventMinigame.active) #hud,body.vsxMinigameFocusEnabled:has(#vsxTrialScreen.active) #hud{opacity:0!important;visibility:hidden!important;pointer-events:none!important}
+@media(max-width:760px){.vsxPresetRow{grid-template-columns:repeat(2,minmax(0,1fr))}.vsxSettingsLayerGroup{grid-template-columns:1fr}.vsxSettingsLivePreview{padding:7px}.vsxPreviewStage{height:210px}.vsxPVStats{width:90px}.vsxPVInv{width:90px}.vsxPVAlly{width:108px}.vsxPVMap{width:82px;height:82px}}

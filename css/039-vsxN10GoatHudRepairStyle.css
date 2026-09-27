@@ -1,0 +1,9 @@
+/* N10 uses the exact CR7/M10 in-run HUD architecture. The old standalone N10 HUD is retired. */
+#vsxN10Hud{display:none!important}
+#vsxGoatSkillHud.n10{border-color:rgba(244,217,75,.14);background:rgba(7,18,31,.82)}
+#vsxGoatSkillHud.n10 .head b{color:#f6df79}
+#vsxGoatSkillHud.n10 .bar i{background:linear-gradient(90deg,#188650,#f0d848 62%,#72d8ff)}
+#vsxGoatSkillHud.n10 .meta span:first-child{border-color:rgba(244,217,75,.14);color:#e9d97d}
+#vsxGoatSkillHud.n10 .meta span:last-child{border-color:rgba(114,216,255,.12);color:#9edfff}
+#vsxGoatUltMeta.n10 b{color:#f6df79}
+@media(max-width:560px){#vsxGoatSkillHud.n10 .meta{gap:4px}#vsxGoatSkillHud.n10 .meta span{font-size:6.2px}}

@@ -1,0 +1,19 @@
+#vsxCommon10Hud{display:none;margin-top:7px;padding:7px 8px;border:1px solid rgba(113,214,255,.14);border-radius:9px;background:linear-gradient(160deg,rgba(7,20,34,.86),rgba(5,13,25,.88));font:800 7px/1.25 Arial;letter-spacing:.055em;text-transform:uppercase;color:#8ea9be;overflow:hidden}
+#vsxCommon10Hud.active{display:block}
+#vsxCommon10Hud .c10Head{display:flex;align-items:center;justify-content:space-between;gap:7px;margin-bottom:5px;min-width:0}
+#vsxCommon10Hud .c10Head span{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#vsxCommon10Hud .c10Head b{flex:0 0 auto;color:#dff7ff;font:900 8px/1 Arial;letter-spacing:.06em}
+#vsxCommon10Hud .c10Meta{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:5px}
+#vsxCommon10Hud .c10Meta span{display:inline-flex;align-items:center;min-height:17px;padding:3px 5px;border-radius:999px;border:1px solid rgba(255,255,255,.075);background:rgba(255,255,255,.025);color:#9db8cc;font:800 6.2px/1 Arial;letter-spacing:.05em;max-width:100%;overflow-wrap:anywhere}
+#vsxCommon10Hud .c10Bar{height:4px;border-radius:999px;background:#102238;overflow:hidden}
+#vsxCommon10Hud .c10Bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#4ca9ff,#6ce7ff,#73f5bd);box-shadow:0 0 10px rgba(91,214,255,.32);transition:width .10s linear}
+#vsxCommon10Hud.ulting{border-color:rgba(255,213,102,.22);box-shadow:0 0 18px rgba(255,213,102,.06)}
+#vsxCommon10Hud.ulting .c10Head b{color:#ffe08a}
+.vsxCommon10ShopChip{margin:8px 0 0;padding:6px 7px;border-radius:8px;border:1px solid rgba(95,186,255,.12);background:rgba(49,116,159,.06);color:#8eb9d4;font-size:7.4px;line-height:1.4;overflow-wrap:anywhere}
+.vsxCommon10ShopChip b{color:#d8f2ff}
+.vsxCommon10PickInfo,.vsxCommon10CollectionInfo{margin-top:8px;padding:7px 8px;border-radius:9px;border:1px solid rgba(95,186,255,.12);background:rgba(39,103,147,.055);color:#91aec4;font-size:8px;line-height:1.45;overflow-wrap:anywhere}
+.vsxCommon10PickInfo b,.vsxCommon10CollectionInfo b{color:#d8f3ff}
+.vsxCommon10AdminGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:8px}
+.vsxCommon10AdminGrid button{min-height:34px;font-size:8.5px;line-height:1.25;padding:7px 8px;white-space:normal}
+#vsxAdminCommon10Card select{width:100%;min-width:0}
+@media(max-width:620px){.vsxCommon10AdminGrid{grid-template-columns:1fr}#vsxCommon10Hud{padding:6px 7px}}

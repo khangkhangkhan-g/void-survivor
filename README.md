@@ -1,6 +1,178 @@
+<div align="center">
+
 # VOID SURVIVOR
 
-> A game by **Nguyen Khang**
+### OUTLIVE THE VOID.
+
+A fast-paced browser survival roguelite built by **Nguyen Khang**.
+
+[![Play in Browser](https://img.shields.io/badge/PLAY-BROWSER-1769ff?style=for-the-badge)](#-play-the-game)
+[![HTML5](https://img.shields.io/badge/HTML5-HTML%20%2F%20CSS%20%2F%20JS-e34f26?style=for-the-badge&logo=html5&logoColor=white)](#-built-for-the-browser)
+[![License](https://img.shields.io/badge/LICENSE-PROPRIETARY-111827?style=for-the-badge)](#-license)
+
+**Survive. Build. Adapt. Repeat.**
+
+</div>
+
+---
+
+## About the Game
+
+**Void Survivor** is a browser-based survival roguelite built around fast movement, automatic combat, build experimentation, and increasingly chaotic encounters.
+
+You control your survivor while attacks fire automatically. Every level forces a decision: strengthen an existing weapon, add a new passive, reroll the choices, or skip the upgrade and invest in the run differently. As the timer climbs, normal enemies give way to elites, special encounters, world events, allies, and boss fights.
+
+The goal is simple: **stay alive while the Void keeps getting worse.**
+
+---
+
+## Core Gameplay
+
+- **Automatic combat** — focus on positioning, movement, timing, and build decisions.
+- **Large build system** — combine weapons, passives, defensive systems, summons, and special effects.
+- **Up to 10 Weapon + 10 Passive slots** per run.
+- **Level-up choices** with rerolls and skip mechanics.
+- **Character-specific identities and abilities** that change how a run feels.
+- **Allies and summons** that can fight alongside the player.
+- **Elites, bosses, special encounters, and world events** that interrupt normal survival loops.
+- **Shops, collections, unlocks, and progression systems** beyond a single run.
+- **English / Vietnamese interface support** across the game systems.
+- **Runs directly in a modern browser** — no game engine installation required.
+
+---
+
+## Controls
+
+| Action | Key |
+|---|---|
+| Move | `WASD` / Arrow Keys |
+| Attack | Automatic |
+| Pause | `ESC` / `P` |
+| Level-up choice | `1` / `2` / `3` |
+| Skip upgrade | `Q` |
+| Reroll choices | `E` |
+| Mute / Unmute | `M` |
+| Confirm / Continue | `SPACE` |
+
+---
+
+## The Build
+
+A run is not about finding one “correct” loadout. The game is designed around stacking systems together and seeing what survives.
+
+Weapons can cover rapid projectiles, area attacks, chain damage, crowd control, summons, defensive tools, explosives, melee-style effects, homing attacks, and more. Passive upgrades can push damage, attack speed, movement, critical stats, survivability, healing, XP economy, ally strength, defensive mechanics, and risk/reward builds.
+
+Some combinations are safe. Some are ridiculous. That is part of the point.
+
+---
+
+## Encounters Beyond Normal Waves
+
+The Void is not only an endless stream of enemies.
+
+During a run you may be forced into **boss cycles, elite threats, character encounters, side events, world events, minigames, ally interactions, special objectives, and reward opportunities**. These systems are designed to break up the normal survival loop and force the player to react instead of simply holding one direction forever.
+
+---
+
+## Built for the Browser
+
+The project is written as a standalone web game using:
+
+- **HTML5** for the game shell and UI structure
+- **CSS** for HUD, menus, responsive layouts, visual effects, and game presentation
+- **Vanilla JavaScript** for gameplay, entities, weapons, enemies, progression, events, settings, and runtime systems
+- **Canvas** for the main game rendering
+
+The current repository is separated into a GitHub-friendly source structure while preserving the execution order of the original build.
+
+```text
+void-survivor/
+├── index.html
+├── PLAY_GAME.bat
+├── css/
+├── js/
+├── legacy/
+├── README.md
+├── LICENSE
+├── SOURCE_MAP.md
+└── source-map.json
+```
+
+---
+
+## Play the Game
+
+### Windows
+
+1. Download the repository as a ZIP.
+2. Extract it.
+3. Open the project folder.
+4. Double-click **`PLAY_GAME.bat`**.
+
+You can also open **`index.html`** directly in your browser.
+
+### Local server
+
+If your browser blocks a feature when opening the file directly:
+
+```bash
+python -m http.server 8080
+```
+
+Then open:
+
+```text
+http://localhost:8080
+```
+
+Python is only required for this optional local-server method.
+
+---
+
+## About the Creator
+
+### Nguyen Khang
+
+I am a **Marketing and Public Relations student** with an interest in the space where communication, design, technology, automation, and interactive experiences overlap.
+
+Alongside my studies at **Van Lang University** and **Centria University of Applied Sciences**, I work on projects involving visual design, workflow automation, web experiments, and tools that turn ideas into something people can actually interact with.
+
+**Void Survivor** started as a browser-game experiment and gradually grew into a much larger system of characters, weapons, passives, enemies, allies, events, bosses, progression mechanics, and UI layers.
+
+<div align="center">
+
+### Connect with me
+
+[![GitHub](https://img.shields.io/badge/GitHub-khangkhangkhan--g-181717?style=for-the-badge&logo=github)](https://github.com/khangkhangkhan-g)
+[![Facebook](https://img.shields.io/badge/Facebook-Nguyen%20Khang-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/ngkph.m/)
+[![Instagram](https://img.shields.io/badge/Instagram-@ngkpham-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/ngkpham/)
+[![Email](https://img.shields.io/badge/Email-nguyenkhangpham1306%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nguyenkhangpham1306@gmail.com)
+
+</div>
+
+---
+
+## License
+
+**Copyright © 2026 Nguyen Khang. All Rights Reserved.**
+
+Void Survivor is distributed under the **Nguyen Khang Proprietary License** included in [`LICENSE`](./LICENSE).
+
+You may download, run, inspect, and privately modify this project for personal, non-commercial purposes. Redistribution, republication, commercial use, sublicensing, claiming authorship, or publishing derivative versions requires prior written permission from **Nguyen Khang**.
+
+Third-party names, likenesses, trademarks, characters, brands, or other referenced intellectual property, if present, remain the property of their respective owners. The license applies only to material for which Nguyen Khang holds the relevant rights.
+
+---
+
+<div align="center">
+
+### A GAME BY KH4NG
+
+**VOID SURVIVOR · 2026**
+
+Built to see how far a browser game can be pushed before the Void wins.
+
+</div>
 
 A browser-based survival game split into a clean, GitHub-ready project structure from the original single-file build.
 

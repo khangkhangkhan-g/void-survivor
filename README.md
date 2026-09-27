@@ -28,8 +28,8 @@ The goal is simple: **stay alive while the Void keeps getting worse.**
 
 ## Core Gameplay
 
-- **Automatic combat** — focus on positioning, movement, timing, and build decisions.
-- **Large build system** — combine weapons, passives, defensive systems, summons, and special effects.
+- **Automatic combat** - focus on positioning, movement, timing, and build decisions.
+- **Large build system** - combine weapons, passives, defensive systems, summons, and special effects.
 - **Up to 10 Weapon + 10 Passive slots** per run.
 - **Level-up choices** with rerolls and skip mechanics.
 - **Character-specific identities and abilities** that change how a run feels.
@@ -37,7 +37,7 @@ The goal is simple: **stay alive while the Void keeps getting worse.**
 - **Elites, bosses, special encounters, and world events** that interrupt normal survival loops.
 - **Shops, collections, unlocks, and progression systems** beyond a single run.
 - **English / Vietnamese interface support** across the game systems.
-- **Runs directly in a modern browser** — no game engine installation required.
+- **Runs directly in a modern browser** - no game engine installation required.
 
 ---
 

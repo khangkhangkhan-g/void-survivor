@@ -1,0 +1,1129 @@
+[
+  {
+    "order": 1,
+    "type": "style",
+    "index": 1,
+    "id": null,
+    "file": "css/001-inline-style-001.css"
+  },
+  {
+    "order": 2,
+    "type": "style",
+    "index": 2,
+    "id": "vsxAllyUiStyle",
+    "file": "css/002-vsxAllyUiStyle.css"
+  },
+  {
+    "order": 3,
+    "type": "style",
+    "index": 3,
+    "id": "vsxLayoutSafetyStyle",
+    "file": "css/003-vsxLayoutSafetyStyle.css"
+  },
+  {
+    "order": 4,
+    "type": "style",
+    "index": 4,
+    "id": "vsxCleanMainScreenStyle",
+    "file": "css/004-vsxCleanMainScreenStyle.css"
+  },
+  {
+    "order": 5,
+    "type": "script",
+    "index": 1,
+    "id": null,
+    "file": "js/001-inline-script-001.js"
+  },
+  {
+    "order": 6,
+    "type": "script",
+    "index": 2,
+    "id": null,
+    "file": "js/002-inline-script-002.js"
+  },
+  {
+    "order": 7,
+    "type": "script",
+    "index": 3,
+    "id": null,
+    "file": "js/003-inline-script-003.js"
+  },
+  {
+    "order": 8,
+    "type": "script",
+    "index": 4,
+    "id": "vsxAllyNetworkAddon",
+    "file": "js/004-vsxAllyNetworkAddon.js"
+  },
+  {
+    "order": 9,
+    "type": "script",
+    "index": 5,
+    "id": "vsxCharacterRelicTrialsAddon",
+    "file": "js/005-vsxCharacterRelicTrialsAddon.js"
+  },
+  {
+    "order": 10,
+    "type": "style",
+    "index": 5,
+    "id": "vsxArmorySettingsStyle",
+    "file": "css/005-vsxArmorySettingsStyle.css"
+  },
+  {
+    "order": 11,
+    "type": "script",
+    "index": 6,
+    "id": null,
+    "file": "js/006-inline-script-006.js"
+  },
+  {
+    "order": 12,
+    "type": "style",
+    "index": 6,
+    "id": null,
+    "file": "css/006-inline-style-006.css"
+  },
+  {
+    "order": 13,
+    "type": "script",
+    "index": 7,
+    "id": null,
+    "file": "js/007-inline-script-007.js"
+  },
+  {
+    "order": 14,
+    "type": "script",
+    "index": 8,
+    "id": null,
+    "file": "js/008-inline-script-008.js"
+  },
+  {
+    "order": 15,
+    "type": "script",
+    "index": 9,
+    "id": "vsxBigBossCycleAddon",
+    "file": "js/009-vsxBigBossCycleAddon.js"
+  },
+  {
+    "order": 16,
+    "type": "style",
+    "index": 7,
+    "id": "vsxMergedAllyHudStyle",
+    "file": "css/007-vsxMergedAllyHudStyle.css"
+  },
+  {
+    "order": 17,
+    "type": "script",
+    "index": 10,
+    "id": null,
+    "file": "js/010-inline-script-010.js"
+  },
+  {
+    "order": 18,
+    "type": "style",
+    "index": 8,
+    "id": "vsxMajorUpdateStyle",
+    "file": "css/008-vsxMajorUpdateStyle.css"
+  },
+  {
+    "order": 19,
+    "type": "script",
+    "index": 11,
+    "id": null,
+    "file": "js/011-inline-script-011.js"
+  },
+  {
+    "order": 20,
+    "type": "style",
+    "index": 9,
+    "id": "vsxAdvancedWorldEventStyle",
+    "file": "css/009-vsxAdvancedWorldEventStyle.css"
+  },
+  {
+    "order": 21,
+    "type": "script",
+    "index": 12,
+    "id": "vsxAdvancedWorldEventsAddon",
+    "file": "js/012-vsxAdvancedWorldEventsAddon.js"
+  },
+  {
+    "order": 22,
+    "type": "style",
+    "index": 10,
+    "id": "vsxEventBriefingFontPatch",
+    "file": "css/010-vsxEventBriefingFontPatch.css"
+  },
+  {
+    "order": 23,
+    "type": "script",
+    "index": 13,
+    "id": "vsxEventBriefingGlobalPatch",
+    "file": "js/013-vsxEventBriefingGlobalPatch.js"
+  },
+  {
+    "order": 24,
+    "type": "style",
+    "index": 11,
+    "id": "vsxVvdCombatHudStyle",
+    "file": "css/011-vsxVvdCombatHudStyle.css"
+  },
+  {
+    "order": 25,
+    "type": "script",
+    "index": 14,
+    "id": "vsxVvdCombatRevivePatch",
+    "file": "js/014-vsxVvdCombatRevivePatch.js"
+  },
+  {
+    "order": 26,
+    "type": "script",
+    "index": 15,
+    "id": "vsxSpaceQeHotkeyPatch",
+    "file": "js/015-vsxSpaceQeHotkeyPatch.js"
+  },
+  {
+    "order": 27,
+    "type": "style",
+    "index": 12,
+    "id": "vsxAdminCollectionWeaponStyle",
+    "file": "css/012-vsxAdminCollectionWeaponStyle.css"
+  },
+  {
+    "order": 28,
+    "type": "style",
+    "index": 13,
+    "id": "vsxCompleteCyberUiSkin",
+    "file": "css/013-vsxCompleteCyberUiSkin.css"
+  },
+  {
+    "order": 29,
+    "type": "script",
+    "index": 16,
+    "id": "vsxCompleteCyberUiBridge",
+    "file": "js/016-vsxCompleteCyberUiBridge.js"
+  },
+  {
+    "order": 30,
+    "type": "script",
+    "index": 17,
+    "id": "vsxCyberCollisionLayoutFinal",
+    "file": "js/017-vsxCyberCollisionLayoutFinal.js"
+  },
+  {
+    "order": 31,
+    "type": "style",
+    "index": 14,
+    "id": "vsxRequestedUiPolishPatch",
+    "file": "css/014-vsxRequestedUiPolishPatch.css"
+  },
+  {
+    "order": 32,
+    "type": "style",
+    "index": 15,
+    "id": "vsxAdminSpaciousLayoutPatch",
+    "file": "css/015-vsxAdminSpaciousLayoutPatch.css"
+  },
+  {
+    "order": 33,
+    "type": "script",
+    "index": 18,
+    "id": "vsxMbappeRevive60Patch",
+    "file": "js/018-vsxMbappeRevive60Patch.js"
+  },
+  {
+    "order": 34,
+    "type": "style",
+    "index": 16,
+    "id": "vsxSurvivorShopExpansionStyle",
+    "file": "css/016-vsxSurvivorShopExpansionStyle.css"
+  },
+  {
+    "order": 35,
+    "type": "script",
+    "index": 19,
+    "id": "vsxSurvivorShopExpansionPatch",
+    "file": "js/019-vsxSurvivorShopExpansionPatch.js"
+  },
+  {
+    "order": 36,
+    "type": "style",
+    "index": 17,
+    "id": "vsxConcurrentEventMiniFixStyle",
+    "file": "css/017-vsxConcurrentEventMiniFixStyle.css"
+  },
+  {
+    "order": 37,
+    "type": "script",
+    "index": 20,
+    "id": "vsxConcurrentEventMiniFixBridge",
+    "file": "js/020-vsxConcurrentEventMiniFixBridge.js"
+  },
+  {
+    "order": 38,
+    "type": "style",
+    "index": 18,
+    "id": "vsxDifficultyGameOverPolish",
+    "file": "css/018-vsxDifficultyGameOverPolish.css"
+  },
+  {
+    "order": 39,
+    "type": "script",
+    "index": 21,
+    "id": "vsxDifficultyGameOverBridge",
+    "file": "js/021-vsxDifficultyGameOverBridge.js"
+  },
+  {
+    "order": 40,
+    "type": "style",
+    "index": 19,
+    "id": "vsxFootballLegendsPackageStyle",
+    "file": "css/019-vsxFootballLegendsPackageStyle.css"
+  },
+  {
+    "order": 41,
+    "type": "script",
+    "index": 22,
+    "id": "vsxFootballLegendsPackagePatch",
+    "file": "js/022-vsxFootballLegendsPackagePatch.js"
+  },
+  {
+    "order": 42,
+    "type": "style",
+    "index": 20,
+    "id": "vsxFootballRuntimeSkinPatchStyle",
+    "file": "css/020-vsxFootballRuntimeSkinPatchStyle.css"
+  },
+  {
+    "order": 43,
+    "type": "script",
+    "index": 23,
+    "id": "vsxFootballRuntimeSkinPatch",
+    "file": "js/023-vsxFootballRuntimeSkinPatch.js"
+  },
+  {
+    "order": 44,
+    "type": "style",
+    "index": 21,
+    "id": "vsxMinimalSkinAndBackHotkeyStyle",
+    "file": "css/021-vsxMinimalSkinAndBackHotkeyStyle.css"
+  },
+  {
+    "order": 45,
+    "type": "script",
+    "index": 24,
+    "id": "vsxMinimalSkinPolicyAndLobbyBack",
+    "file": "js/024-vsxMinimalSkinPolicyAndLobbyBack.js"
+  },
+  {
+    "order": 46,
+    "type": "script",
+    "index": 25,
+    "id": "vsxOfflineReadyMarker",
+    "file": "js/025-vsxOfflineReadyMarker.js"
+  },
+  {
+    "order": 47,
+    "type": "script",
+    "index": 26,
+    "id": "vsxArcadeCultureExpansion",
+    "file": "js/026-vsxArcadeCultureExpansion.js"
+  },
+  {
+    "order": 48,
+    "type": "style",
+    "index": 22,
+    "id": "vsxAdminPlayerTuningStyle",
+    "file": "css/022-vsxAdminPlayerTuningStyle.css"
+  },
+  {
+    "order": 49,
+    "type": "script",
+    "index": 27,
+    "id": "vsxAdminPlayerTuningPatch",
+    "file": "js/027-vsxAdminPlayerTuningPatch.js"
+  },
+  {
+    "order": 50,
+    "type": "style",
+    "index": 23,
+    "id": "vsxCharacterSelectRarityPatchStyle",
+    "file": "css/023-vsxCharacterSelectRarityPatchStyle.css"
+  },
+  {
+    "order": 51,
+    "type": "script",
+    "index": 28,
+    "id": "vsxCharacterSelectRarityPatch",
+    "file": "js/028-vsxCharacterSelectRarityPatch.js"
+  },
+  {
+    "order": 52,
+    "type": "style",
+    "index": 24,
+    "id": "vsxEpicSixPatchStyle",
+    "file": "css/024-vsxEpicSixPatchStyle.css"
+  },
+  {
+    "order": 53,
+    "type": "script",
+    "index": 29,
+    "id": "vsxEpicSixExpansion",
+    "file": "js/029-vsxEpicSixExpansion.js"
+  },
+  {
+    "order": 54,
+    "type": "style",
+    "index": 25,
+    "id": "vsxEnemy10Styles",
+    "file": "css/025-vsxEnemy10Styles.css"
+  },
+  {
+    "order": 55,
+    "type": "script",
+    "index": 30,
+    "id": "vsxEnemy10Expansion",
+    "file": "js/030-vsxEnemy10Expansion.js"
+  },
+  {
+    "order": 56,
+    "type": "style",
+    "index": 26,
+    "id": "vsxEnemy31Styles",
+    "file": "css/026-vsxEnemy31Styles.css"
+  },
+  {
+    "order": 57,
+    "type": "script",
+    "index": 31,
+    "id": "vsxEnemy31ThreatDirectorExpansion",
+    "file": "js/031-vsxEnemy31ThreatDirectorExpansion.js"
+  },
+  {
+    "order": 58,
+    "type": "style",
+    "index": 27,
+    "id": "vsxUnifiedEnemyAdminStyle",
+    "file": "css/027-vsxUnifiedEnemyAdminStyle.css"
+  },
+  {
+    "order": 59,
+    "type": "script",
+    "index": 32,
+    "id": "vsxUnifiedEnemyAdminPatch",
+    "file": "js/032-vsxUnifiedEnemyAdminPatch.js"
+  },
+  {
+    "order": 60,
+    "type": "style",
+    "index": 28,
+    "id": "vsxDCHeroesStyle",
+    "file": "css/028-vsxDCHeroesStyle.css"
+  },
+  {
+    "order": 61,
+    "type": "script",
+    "index": 33,
+    "id": "vsxDCHeroesExpansion",
+    "file": "js/033-vsxDCHeroesExpansion.js"
+  },
+  {
+    "order": 62,
+    "type": "style",
+    "index": 29,
+    "id": "vsxCollectionUXFinalStyle",
+    "file": "css/029-vsxCollectionUXFinalStyle.css"
+  },
+  {
+    "order": 63,
+    "type": "script",
+    "index": 34,
+    "id": "vsxCollectionUXFinalPatch",
+    "file": "js/034-vsxCollectionUXFinalPatch.js"
+  },
+  {
+    "order": 64,
+    "type": "style",
+    "index": 30,
+    "id": "vsxShopCollectionPolishStyle",
+    "file": "css/030-vsxShopCollectionPolishStyle.css"
+  },
+  {
+    "order": 65,
+    "type": "script",
+    "index": 35,
+    "id": "vsxShopCollectionPolishPatch",
+    "file": "js/035-vsxShopCollectionPolishPatch.js"
+  },
+  {
+    "order": 66,
+    "type": "script",
+    "index": 36,
+    "id": "vsxSupermanManOfSteelInvulnerabilityPatch",
+    "file": "js/036-vsxSupermanManOfSteelInvulnerabilityPatch.js"
+  },
+  {
+    "order": 67,
+    "type": "style",
+    "index": 31,
+    "id": "vsxUltimateDurationSystemStyle",
+    "file": "css/031-vsxUltimateDurationSystemStyle.css"
+  },
+  {
+    "order": 68,
+    "type": "script",
+    "index": 37,
+    "id": "vsxUltimateDurationSystemPatch",
+    "file": "js/037-vsxUltimateDurationSystemPatch.js"
+  },
+  {
+    "order": 69,
+    "type": "style",
+    "index": 32,
+    "id": "vsxCharacterPickerSearchAndMinigameFit",
+    "file": "css/032-vsxCharacterPickerSearchAndMinigameFit.css"
+  },
+  {
+    "order": 70,
+    "type": "script",
+    "index": 38,
+    "id": "vsxCharacterPickerSearchAndSoccerSpeedPatch",
+    "file": "js/038-vsxCharacterPickerSearchAndSoccerSpeedPatch.js"
+  },
+  {
+    "order": 71,
+    "type": "style",
+    "index": 33,
+    "id": "vsxSeparatedMiniWorldStyles",
+    "file": "css/033-vsxSeparatedMiniWorldStyles.css"
+  },
+  {
+    "order": 72,
+    "type": "style",
+    "index": 34,
+    "id": "vsxWorldEventReliabilityStyle",
+    "file": "css/034-vsxWorldEventReliabilityStyle.css"
+  },
+  {
+    "order": 73,
+    "type": "script",
+    "index": 39,
+    "id": "vsxSeparatedMinigameWorldEventBigUpdate",
+    "file": "js/039-vsxSeparatedMinigameWorldEventBigUpdate.js"
+  },
+  {
+    "order": 74,
+    "type": "style",
+    "index": 35,
+    "id": "vsxOddballUncommonStyle",
+    "file": "css/035-vsxOddballUncommonStyle.css"
+  },
+  {
+    "order": 75,
+    "type": "script",
+    "index": 40,
+    "id": "vsxOddballUncommonPatch",
+    "file": "js/040-vsxOddballUncommonPatch.js"
+  },
+  {
+    "order": 76,
+    "type": "style",
+    "index": 36,
+    "id": "vsxGoatRivalsStyle",
+    "file": "css/036-vsxGoatRivalsStyle.css"
+  },
+  {
+    "order": 77,
+    "type": "script",
+    "index": 41,
+    "id": "vsxGoatRivalsPatch",
+    "file": "js/041-vsxGoatRivalsPatch.js"
+  },
+  {
+    "order": 78,
+    "type": "script",
+    "index": 42,
+    "id": "vsxGoatPatternAndDashPatch",
+    "file": "js/042-vsxGoatPatternAndDashPatch.js"
+  },
+  {
+    "order": 79,
+    "type": "style",
+    "index": 37,
+    "id": "vsxGoatSkillsetV2Style",
+    "file": "css/037-vsxGoatSkillsetV2Style.css"
+  },
+  {
+    "order": 80,
+    "type": "script",
+    "index": 43,
+    "id": "vsxGoatSkillsetV2Patch",
+    "file": "js/043-vsxGoatSkillsetV2Patch.js"
+  },
+  {
+    "order": 81,
+    "type": "style",
+    "index": 38,
+    "id": "vsxN10LastSambaStyles",
+    "file": "css/038-vsxN10LastSambaStyles.css"
+  },
+  {
+    "order": 82,
+    "type": "script",
+    "index": 44,
+    "id": "vsxN10LastSambaPatch",
+    "file": "js/044-vsxN10LastSambaPatch.js"
+  },
+  {
+    "order": 83,
+    "type": "style",
+    "index": 39,
+    "id": "vsxN10GoatHudRepairStyle",
+    "file": "css/039-vsxN10GoatHudRepairStyle.css"
+  },
+  {
+    "order": 84,
+    "type": "script",
+    "index": 45,
+    "id": "vsxN10GoatHudRepairPatch",
+    "file": "js/045-vsxN10GoatHudRepairPatch.js"
+  },
+  {
+    "order": 85,
+    "type": "style",
+    "index": 40,
+    "id": "vsxFootballN10LayoutPolish",
+    "file": "css/040-vsxFootballN10LayoutPolish.css"
+  },
+  {
+    "order": 86,
+    "type": "script",
+    "index": 46,
+    "id": "vsxFootballN10LayoutPolishScript",
+    "file": "js/046-vsxFootballN10LayoutPolishScript.js"
+  },
+  {
+    "order": 87,
+    "type": "script",
+    "index": 47,
+    "id": "vsxN10VietnameseLanguageSync",
+    "file": "js/047-vsxN10VietnameseLanguageSync.js"
+  },
+  {
+    "order": 88,
+    "type": "style",
+    "index": 41,
+    "id": "vsxN10BrazilsPridePolish",
+    "file": "css/041-vsxN10BrazilsPridePolish.css"
+  },
+  {
+    "order": 89,
+    "type": "script",
+    "index": 48,
+    "id": "vsxN10BrazilsPrideAndLanguageRepair",
+    "file": "js/048-vsxN10BrazilsPrideAndLanguageRepair.js"
+  },
+  {
+    "order": 90,
+    "type": "style",
+    "index": 42,
+    "id": "vsxN10PackageOverlapFix",
+    "file": "css/042-vsxN10PackageOverlapFix.css"
+  },
+  {
+    "order": 91,
+    "type": "style",
+    "index": 43,
+    "id": "vsxRoyalThreeStyles",
+    "file": "css/043-vsxRoyalThreeStyles.css"
+  },
+  {
+    "order": 92,
+    "type": "script",
+    "index": 49,
+    "id": "vsxRoyalThreePatch",
+    "file": "js/049-vsxRoyalThreePatch.js"
+  },
+  {
+    "order": 93,
+    "type": "style",
+    "index": 44,
+    "id": "vsxRoyalThreeJerseyDashStyles",
+    "file": "css/044-vsxRoyalThreeJerseyDashStyles.css"
+  },
+  {
+    "order": 94,
+    "type": "script",
+    "index": 50,
+    "id": "vsxRoyalThreeJerseyDashPatch",
+    "file": "js/050-vsxRoyalThreeJerseyDashPatch.js"
+  },
+  {
+    "order": 95,
+    "type": "style",
+    "index": 45,
+    "id": "vsxRoyalThreeAuditedUI",
+    "file": "css/045-vsxRoyalThreeAuditedUI.css"
+  },
+  {
+    "order": 96,
+    "type": "script",
+    "index": 51,
+    "id": "vsxRoyalThreeAuditedUIScript",
+    "file": "js/051-vsxRoyalThreeAuditedUIScript.js"
+  },
+  {
+    "order": 97,
+    "type": "style",
+    "index": 46,
+    "id": "vsxRoyalThreeCardLayoutPolish",
+    "file": "css/046-vsxRoyalThreeCardLayoutPolish.css"
+  },
+  {
+    "order": 98,
+    "type": "style",
+    "index": 47,
+    "id": "vsxStarter12EconomyStyle",
+    "file": "css/047-vsxStarter12EconomyStyle.css"
+  },
+  {
+    "order": 99,
+    "type": "style",
+    "index": 48,
+    "id": "vsxCommon10Style",
+    "file": "css/048-vsxCommon10Style.css"
+  },
+  {
+    "order": 100,
+    "type": "script",
+    "index": 52,
+    "id": "vsxCommon10ExpansionScript",
+    "file": "js/052-vsxCommon10ExpansionScript.js"
+  },
+  {
+    "order": 101,
+    "type": "style",
+    "index": 49,
+    "id": "vsxExpansion16Style",
+    "file": "css/049-vsxExpansion16Style.css"
+  },
+  {
+    "order": 102,
+    "type": "script",
+    "index": 53,
+    "id": "vsxExpansion16Script",
+    "file": "js/053-vsxExpansion16Script.js"
+  },
+  {
+    "order": 103,
+    "type": "script",
+    "index": 54,
+    "id": "vsxR2E3Definitions",
+    "file": "js/054-vsxR2E3Definitions.js"
+  },
+  {
+    "order": 104,
+    "type": "script",
+    "index": 55,
+    "id": "vsxStarter12EconomyScript",
+    "file": "js/055-vsxStarter12EconomyScript.js"
+  },
+  {
+    "order": 105,
+    "type": "style",
+    "index": 50,
+    "id": "vsxArmorySeamlessShellStyle",
+    "file": "css/050-vsxArmorySeamlessShellStyle.css"
+  },
+  {
+    "order": 106,
+    "type": "style",
+    "index": 51,
+    "id": "vsxAllShopCoreStyles",
+    "file": "css/051-vsxAllShopCoreStyles.css"
+  },
+  {
+    "order": 107,
+    "type": "script",
+    "index": 56,
+    "id": "vsxAllShopCoreScript",
+    "file": "js/056-vsxAllShopCoreScript.js"
+  },
+  {
+    "order": 108,
+    "type": "script",
+    "index": 57,
+    "id": "vsxExpansion16IntegrationBridge",
+    "file": "js/057-vsxExpansion16IntegrationBridge.js"
+  },
+  {
+    "order": 109,
+    "type": "style",
+    "index": 52,
+    "id": "vsxAutoUnlockBrazilPatchStyle",
+    "file": "css/052-vsxAutoUnlockBrazilPatchStyle.css"
+  },
+  {
+    "order": 110,
+    "type": "script",
+    "index": 58,
+    "id": "vsxAutoUnlockBrazilPatch",
+    "file": "js/058-vsxAutoUnlockBrazilPatch.js"
+  },
+  {
+    "order": 111,
+    "type": "style",
+    "index": 53,
+    "id": "vsxBrazilEffectRefinedStyle",
+    "file": "css/053-vsxBrazilEffectRefinedStyle.css"
+  },
+  {
+    "order": 112,
+    "type": "script",
+    "index": 59,
+    "id": "vsxBrazilEffectRefinedPatch",
+    "file": "js/059-vsxBrazilEffectRefinedPatch.js"
+  },
+  {
+    "order": 113,
+    "type": "style",
+    "index": 54,
+    "id": "vsxR2E3Style",
+    "file": "css/054-vsxR2E3Style.css"
+  },
+  {
+    "order": 114,
+    "type": "script",
+    "index": 60,
+    "id": "vsxR2E3Runtime",
+    "file": "js/060-vsxR2E3Runtime.js"
+  },
+  {
+    "order": 115,
+    "type": "script",
+    "index": 61,
+    "id": "vsxRuntimeStabilityGuard",
+    "file": "js/061-vsxRuntimeStabilityGuard.js"
+  },
+  {
+    "order": 116,
+    "type": "style",
+    "index": 55,
+    "id": "vsxTrialFencerEncounterStabilityStyle",
+    "file": "css/055-vsxTrialFencerEncounterStabilityStyle.css"
+  },
+  {
+    "order": 117,
+    "type": "script",
+    "index": 62,
+    "id": "vsxTrialFencerEncounterStabilityPatch",
+    "file": "js/062-vsxTrialFencerEncounterStabilityPatch.js"
+  },
+  {
+    "order": 118,
+    "type": "style",
+    "index": 56,
+    "id": "vsxEncounterRailV3Style",
+    "file": "css/056-vsxEncounterRailV3Style.css"
+  },
+  {
+    "order": 119,
+    "type": "script",
+    "index": 63,
+    "id": "vsxEncounterRailV3Patch",
+    "file": "js/063-vsxEncounterRailV3Patch.js"
+  },
+  {
+    "order": 120,
+    "type": "style",
+    "index": 57,
+    "id": "vsxFullRosterSafetyStyle",
+    "file": "css/057-vsxFullRosterSafetyStyle.css"
+  },
+  {
+    "order": 121,
+    "type": "script",
+    "index": 64,
+    "id": "vsxFullRosterRuntimeSafety",
+    "file": "js/064-vsxFullRosterRuntimeSafety.js"
+  },
+  {
+    "order": 122,
+    "type": "style",
+    "index": 58,
+    "id": "vsxEncounterSideEventEnemyHpStyle",
+    "file": "css/058-vsxEncounterSideEventEnemyHpStyle.css"
+  },
+  {
+    "order": 123,
+    "type": "script",
+    "index": 65,
+    "id": "vsxEncounterSideEventEnemyHpPatch",
+    "file": "js/065-vsxEncounterSideEventEnemyHpPatch.js"
+  },
+  {
+    "order": 124,
+    "type": "script",
+    "index": 66,
+    "id": "vsxArchitectureAuthorityCore",
+    "file": "js/066-vsxArchitectureAuthorityCore.js"
+  },
+  {
+    "order": 125,
+    "type": "script",
+    "index": 67,
+    "id": "vsxFootballAuraDashBallFinalPatch",
+    "file": "js/067-vsxFootballAuraDashBallFinalPatch.js"
+  },
+  {
+    "order": 126,
+    "type": "script",
+    "index": 68,
+    "id": "vsxVoidRelaySeriesExpansion",
+    "file": "js/068-vsxVoidRelaySeriesExpansion.js"
+  },
+  {
+    "order": 127,
+    "type": "style",
+    "index": 59,
+    "id": "vsxNovelAlliesStyle",
+    "file": "css/059-vsxNovelAlliesStyle.css"
+  },
+  {
+    "order": 128,
+    "type": "script",
+    "index": 69,
+    "id": "vsxTenNovelAlliesExpansion",
+    "file": "js/069-vsxTenNovelAlliesExpansion.js"
+  },
+  {
+    "order": 129,
+    "type": "style",
+    "index": 60,
+    "id": "vsxEncounterDirectorStyle",
+    "file": "css/060-vsxEncounterDirectorStyle.css"
+  },
+  {
+    "order": 130,
+    "type": "script",
+    "index": 70,
+    "id": "vsxFairEncounterDirectorV2",
+    "file": "js/070-vsxFairEncounterDirectorV2.js"
+  },
+  {
+    "order": 131,
+    "type": "script",
+    "index": 71,
+    "id": "vsxEncounterLifecycleDiagnosticPatch",
+    "file": "js/071-vsxEncounterLifecycleDiagnosticPatch.js"
+  },
+  {
+    "order": 132,
+    "type": "style",
+    "index": 61,
+    "id": "vsxGameplayClarityPatchStyle",
+    "file": "css/061-vsxGameplayClarityPatchStyle.css"
+  },
+  {
+    "order": 133,
+    "type": "script",
+    "index": 72,
+    "id": "vsxGameplayClarityPatch",
+    "file": "js/072-vsxGameplayClarityPatch.js"
+  },
+  {
+    "order": 134,
+    "type": "style",
+    "index": 62,
+    "id": "vsxKeybindSettingsStyle",
+    "file": "css/062-vsxKeybindSettingsStyle.css"
+  },
+  {
+    "order": 135,
+    "type": "script",
+    "index": 73,
+    "id": "vsxKeybindAuthority",
+    "file": "js/073-vsxKeybindAuthority.js"
+  },
+  {
+    "order": 136,
+    "type": "style",
+    "index": 63,
+    "id": "vsxFinal8AlliesStyle",
+    "file": "css/063-vsxFinal8AlliesStyle.css"
+  },
+  {
+    "order": 137,
+    "type": "script",
+    "index": 74,
+    "id": "vsxFinal8AlliesExpansion",
+    "file": "js/074-vsxFinal8AlliesExpansion.js"
+  },
+  {
+    "order": 138,
+    "type": "script",
+    "index": 75,
+    "id": "vsxWorldObjectRegistryCore",
+    "file": "js/075-vsxWorldObjectRegistryCore.js"
+  },
+  {
+    "order": 139,
+    "type": "style",
+    "index": 64,
+    "id": "vsxWorldObjectAuthority38Style",
+    "file": "css/064-vsxWorldObjectAuthority38Style.css"
+  },
+  {
+    "order": 140,
+    "type": "script",
+    "index": 76,
+    "id": "vsxWorldObjectAuthority38",
+    "file": "js/076-vsxWorldObjectAuthority38.js"
+  },
+  {
+    "order": 141,
+    "type": "style",
+    "index": 65,
+    "id": "vsxSettingsControlCenterStyle",
+    "file": "css/065-vsxSettingsControlCenterStyle.css"
+  },
+  {
+    "order": 142,
+    "type": "style",
+    "index": 66,
+    "id": "vsxPlayerExperienceSettingsV4Style",
+    "file": "css/066-vsxPlayerExperienceSettingsV4Style.css"
+  },
+  {
+    "order": 143,
+    "type": "script",
+    "index": 77,
+    "id": "vsxSettingsControlCenterAuthority",
+    "file": "js/077-vsxSettingsControlCenterAuthority.js"
+  },
+  {
+    "order": 144,
+    "type": "style",
+    "index": 67,
+    "id": "vsxMutationContractFixStyle",
+    "file": "css/067-vsxMutationContractFixStyle.css"
+  },
+  {
+    "order": 145,
+    "type": "script",
+    "index": 78,
+    "id": "vsxMutationContractFixPatch",
+    "file": "js/078-vsxMutationContractFixPatch.js"
+  },
+  {
+    "order": 146,
+    "type": "style",
+    "index": 68,
+    "id": "vsxEchoFragmentMutationB01Style",
+    "file": "css/068-vsxEchoFragmentMutationB01Style.css"
+  },
+  {
+    "order": 147,
+    "type": "script",
+    "index": 79,
+    "id": "vsxEchoFragmentMutationBatch01Patch",
+    "file": "js/079-vsxEchoFragmentMutationBatch01Patch.js"
+  },
+  {
+    "order": 148,
+    "type": "style",
+    "index": 69,
+    "id": "vsxMutationV3Style",
+    "file": "css/069-vsxMutationV3Style.css"
+  },
+  {
+    "order": 149,
+    "type": "script",
+    "index": 80,
+    "id": "vsxMutationV3BespokePatch",
+    "file": "js/080-vsxMutationV3BespokePatch.js"
+  },
+  {
+    "order": 150,
+    "type": "style",
+    "index": 70,
+    "id": "vsxStabilityGameplayPatchStyle",
+    "file": "css/070-vsxStabilityGameplayPatchStyle.css"
+  },
+  {
+    "order": 151,
+    "type": "script",
+    "index": 81,
+    "id": "vsxStabilityGameplayPatch",
+    "file": "js/081-vsxStabilityGameplayPatch.js"
+  },
+  {
+    "order": 152,
+    "type": "script",
+    "index": 82,
+    "id": "vsxFeatureAndHudAuthority",
+    "file": "js/082-vsxFeatureAndHudAuthority.js"
+  },
+  {
+    "order": 153,
+    "type": "script",
+    "index": 83,
+    "id": "vsxEncounterTimerLifecycleQA",
+    "file": "js/083-vsxEncounterTimerLifecycleQA.js"
+  },
+  {
+    "order": 154,
+    "type": "style",
+    "index": 71,
+    "id": "vsxMarvelAvengersAssembleStyle",
+    "file": "css/071-vsxMarvelAvengersAssembleStyle.css"
+  },
+  {
+    "order": 155,
+    "type": "script",
+    "index": 84,
+    "id": "vsxMarvelAvengersAssembleExpansion",
+    "file": "js/084-vsxMarvelAvengersAssembleExpansion.js"
+  },
+  {
+    "order": 156,
+    "type": "script",
+    "index": 85,
+    "id": "vsxDeveloperSourceIndex",
+    "file": "js/085-vsxDeveloperSourceIndex.js"
+  },
+  {
+    "order": 157,
+    "type": "style",
+    "index": 72,
+    "id": "vsxWorldObjectAuthority58Style",
+    "file": "css/072-vsxWorldObjectAuthority58Style.css"
+  },
+  {
+    "order": 158,
+    "type": "script",
+    "index": 86,
+    "id": "vsxWorldObjectAuthority58",
+    "file": "js/086-vsxWorldObjectAuthority58.js"
+  },
+  {
+    "order": 159,
+    "type": "script",
+    "index": 87,
+    "id": "vsxMinigameLifecycleGuardV2",
+    "file": "js/087-vsxMinigameLifecycleGuardV2.js"
+  },
+  {
+    "order": 160,
+    "type": "style",
+    "index": 73,
+    "id": "vsxSettingsAdvancedV5Style",
+    "file": "css/073-vsxSettingsAdvancedV5Style.css"
+  },
+  {
+    "order": 161,
+    "type": "script",
+    "index": 88,
+    "id": "vsxSettingsAdvancedV5",
+    "file": "js/088-vsxSettingsAdvancedV5.js"
+  }
+]

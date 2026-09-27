@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- VSX LOGICAL SOURCE FOLDERS
+  [01 CORE / LEGACY BASE] (anonymous-script-00), (anonymous-script-01), (anonymous-script-02), (anonymous-script-05), (anonymous-script-06), (anonymous-script-07), (anonymous-script-09), (anonymous-script-10), vsxSpaceQeHotkeyPatch, vsxMbappeRevive60Patch, vsxDifficultyGameOverBridge, vsxOfflineReadyMarker ...
+  [02 UI / HUD / COLLECTION / SHOP] vsxCompleteCyberUiBridge, vsxCyberCollisionLayoutFinal, vsxSurvivorShopExpansionPatch, vsxMinimalSkinPolicyAndLobbyBack, vsxCollectionUXFinalPatch, vsxShopCollectionPolishPatch, vsxN10GoatHudRepairPatch, vsxFootballN10LayoutPolishScript, vsxRoyalThreeAuditedUIScript, vsxAllShopCoreScript
+  [03 COMBAT / ENEMIES] vsxBigBossCycleAddon, vsxEnemy10Expansion, vsxEnemy31ThreatDirectorExpansion, vsxUnifiedEnemyAdminPatch
+  [04 CHARACTERS / COSMETICS] vsxVvdCombatRevivePatch, vsxFootballLegendsPackagePatch, vsxFootballRuntimeSkinPatch, vsxCharacterSelectRarityPatch, vsxDCHeroesExpansion, vsxCharacterPickerSearchAndSoccerSpeedPatch, vsxGoatRivalsPatch, vsxGoatPatternAndDashPatch, vsxGoatSkillsetV2Patch, vsxN10LastSambaPatch, vsxN10VietnameseLanguageSync, vsxN10BrazilsPrideAndLanguageRepair ...
+  [05 EVENTS / MINIGAMES / ENCOUNTERS] vsxCharacterRelicTrialsAddon, vsxAdvancedWorldEventsAddon, vsxEventBriefingGlobalPatch, vsxConcurrentEventMiniFixBridge, vsxSeparatedMinigameWorldEventBigUpdate, vsxTrialFencerEncounterStabilityPatch, vsxEncounterRailV3Patch, vsxEncounterSideEventEnemyHpPatch, vsxVoidRelaySeriesExpansion, vsxFairEncounterDirectorV2, vsxEncounterLifecycleDiagnosticPatch, vsxEncounterTimerLifecycleQA
+  [06 ALLIES] vsxAllyNetworkAddon
+  [07 MUTATION / WEAPONS] vsxMutationContractFixPatch, vsxEchoFragmentMutationBatch01Patch, vsxMutationV3BespokePatch
+  [08 WORLD OBJECTS] vsxWorldObjectRegistryCore, vsxWorldObjectAuthority38
+  [09 SETTINGS / INPUT] vsxKeybindAuthority, vsxSettingsControlCenterAuthority
+  [10 QA / SAFETY / STABILITY] vsxRuntimeStabilityGuard, vsxFullRosterRuntimeSafety, vsxStabilityGameplayPatch
+  NOTE: physical script order intentionally preserved.
+-->
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport"/>
+<title>Void Survivor</title>
+<link rel="stylesheet" href="css/001-inline-style-001.css">
+<link rel="stylesheet" id="vsxAllyUiStyle" href="css/002-vsxAllyUiStyle.css">
+<link rel="stylesheet" id="vsxLayoutSafetyStyle" href="css/003-vsxLayoutSafetyStyle.css">
+<link rel="stylesheet" id="vsxCleanMainScreenStyle" href="css/004-vsxCleanMainScreenStyle.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+<div class="screen active" id="titleScreen">
+<div class="panel vsxModernPanel vsxTitlePanel">
+<div class="vsxPanelEyebrow"><span class="vsxPulseDot"></span> A GAME BY KH4NG</div>
+<h1>VOID SURVIVOR</h1>
+<div class="sub">OUTLIVE THE VOID</div>
+<div class="vsxTitleRule"></div>
+<div class="controls vsxControlGrid">
+<div><b>MOVE</b><span>WASD / Arrow Keys</span></div>
+<div><b>ATTACK</b><span>Automatic</span></div>
+<div><b>PAUSE</b><span>ESC / P</span></div>
+<div><b>LEVEL UP</b><span>1 / 2 / 3 · Q Skip · E Reroll</span></div>
+<div><b>MUTE</b><span>M</span></div>
+<div><b>CONFIRM</b><span>SPACE</span></div>
+</div>
+<div class="records" id="records"></div>
+<div class="row vsxPrimaryRow"><button class="vsxPrimaryButton" id="startBtn">START GAME</button></div>
+</div>
+</div>
+<div class="screen" id="pauseScreen">
+<div class="panel vsxModernPanel vsxOverlayPanel">
+<div class="vsxPanelEyebrow">SYSTEM HALT</div>
+<h2>PAUSED</h2>
+<p class="vsxOverlayCopy">Combat simulation suspended. Resume when ready.</p>
+<div class="vsxShortcutGrid">
+<div><small>MOVEMENT</small><strong>W A S D / ARROWS</strong></div>
+<div><small>SOUND</small><strong>M — TOGGLE</strong></div>
+</div>
+<div class="vsxButtonStack"><button id="resumeBtn">RESUME</button><button id="vsxPauseSettingsBtn">SETTINGS</button><button id="pauseRestartBtn">RESTART</button><button id="pauseMenuBtn">MAIN MENU</button></div>
+</div>
+</div>
+<div class="screen" id="gameOverScreen">
+<div class="panel vsxModernPanel vsxOverlayPanel vsxGameOverPanel">
+<div class="vsxPanelEyebrow vsxDanger">SIGNAL LOST</div>
+<h2>GAME OVER</h2>
+<p class="vsxOverlayCopy">The Void consumed this run. Reconfigure and return.</p>
+<div class="vsxGameOverStats" id="gameOverStats"></div>
+<div class="row vsxOverlayActions"><button id="restartBtn">RESTART <span>(SPACE)</span></button><button id="menuBtn">MAIN MENU</button></div>
+</div>
+</div>
+<div class="modal" id="levelModal">
+<div class="panel vsxModernPanel vsxLevelPanel">
+<div class="vsxLevelHeader">
+<div><div class="vsxPanelEyebrow">POWER SPIKE DETECTED</div><h2>LEVEL UP</h2><p>Choose one upgrade. Cards stay separated for fast, safe selection.</p></div>
+<div class="vsxKeyGuide"><span><kbd>Q</kbd> SKIP</span><span><kbd>E</kbd> REROLL</span></div>
+</div>
+<div class="choices" id="choices"></div>
+<div class="levelActions"><button class="skipBtn" id="skipUpgradeBtn">Q — SKIP UPGRADE<span class="boost">Gain +10% permanent Energy / XP for this run</span></button><button class="rerollBtn" id="rerollUpgradeBtn">E — REROLL CHOICES (3/3)<span class="boost">Refresh all 3 choices • 3 uses per run</span></button></div>
+</div>
+</div>
+<div class="modal" id="chestModal">
+<div class="panel vsxModernPanel vsxChestPanel">
+<div class="vsxChestGlyph">CR</div>
+<div class="vsxPanelEyebrow">CHEST SIGNAL ACQUIRED</div>
+<h2>CHEST REWARD</h2>
+<div class="vsxChestReward" id="chestReward"></div>
+<button class="vsxPrimaryButton" id="chestContinue">SPACE — CONTINUE</button>
+</div>
+</div>
+<div id="hud">
+<div class="hudBox" id="statsHud"></div>
+<div class="hudBox" id="timerHud">00:00</div>
+<div class="hudBox" id="vsxCurrencyHud"></div>
+<div class="hudBox" id="inventoryHud"></div>
+<div id="bossWrap"><div id="bossName">BOSS</div><div id="bossBar"><div id="bossFill"></div></div></div>
+<div aria-label="Weapon loadout" id="vsxWeaponDock"></div>
+<div id="xpWrap"><div id="xpFill"></div><div id="xpText"></div></div>
+<div id="hint">MOVE: WASD / ARROW KEYS</div>
+<div id="muteBadge">M: SOUND ON</div>
+<div id="debugHud"></div>
+</div>
+<script src="js/001-inline-script-001.js"></script>
+<script src="js/002-inline-script-002.js"></script>
+<script src="js/003-inline-script-003.js"></script>
+<!-- VSX SOURCE :: [06 ALLIES] > [vsxAllyNetworkAddon] -->
+<script id="vsxAllyNetworkAddon" src="js/004-vsxAllyNetworkAddon.js"></script>
+<!-- VSX SOURCE :: [05 EVENTS / MINIGAMES / ENCOUNTERS] > [vsxCharacterRelicTrialsAddon] -->
+<script id="vsxCharacterRelicTrialsAddon" src="js/005-vsxCharacterRelicTrialsAddon.js"></script>
+<link rel="stylesheet" id="vsxArmorySettingsStyle" href="css/005-vsxArmorySettingsStyle.css">
+<script src="js/006-inline-script-006.js"></script>
+<link rel="stylesheet" href="css/006-inline-style-006.css">
+<script src="js/007-inline-script-007.js"></script>
+<script src="js/008-inline-script-008.js"></script>
+<!-- VSX SOURCE :: [03 COMBAT / ENEMIES] > [vsxBigBossCycleAddon] -->
+<script id="vsxBigBossCycleAddon" src="js/009-vsxBigBossCycleAddon.js"></script>
+<link rel="stylesheet" id="vsxMergedAllyHudStyle" href="css/007-vsxMergedAllyHudStyle.css">
+<script src="js/010-inline-script-010.js"></script>
+<link rel="stylesheet" id="vsxMajorUpdateStyle" href="css/008-vsxMajorUpdateStyle.css">
+<script src="js/011-inline-script-011.js"></script>
+<link rel="stylesheet" id="vsxAdvancedWorldEventStyle" href="css/009-vsxAdvancedWorldEventStyle.css">
+<!-- VSX SOURCE :: [05 EVENTS / MINIGAMES / ENCOUNTERS] > [vsxAdvancedWorldEventsAddon] -->
+<script id="vsxAdvancedWorldEventsAddon" src="js/012-vsxAdvancedWorldEventsAddon.js"></script>
+<link rel="stylesheet" id="vsxEventBriefingFontPatch" href="css/010-vsxEventBriefingFontPatch.css">
+<!-- VSX SOURCE :: [05 EVENTS / MINIGAMES / ENCOUNTERS] > [vsxEventBriefingGlobalPatch] -->
+<script id="vsxEventBriefingGlobalPatch" src="js/013-vsxEventBriefingGlobalPatch.js"></script>
+<link rel="stylesheet" id="vsxVvdCombatHudStyle" href="css/011-vsxVvdCombatHudStyle.css">
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxVvdCombatRevivePatch] -->
+<script id="vsxVvdCombatRevivePatch" src="js/014-vsxVvdCombatRevivePatch.js"></script>
+<!-- VSX SOURCE :: [01 CORE / LEGACY BASE] > [vsxSpaceQeHotkeyPatch] -->
+<script id="vsxSpaceQeHotkeyPatch" src="js/015-vsxSpaceQeHotkeyPatch.js"></script>
+<link rel="stylesheet" id="vsxAdminCollectionWeaponStyle" href="css/012-vsxAdminCollectionWeaponStyle.css">
+<link rel="stylesheet" id="vsxCompleteCyberUiSkin" href="css/013-vsxCompleteCyberUiSkin.css">
+<!-- VSX SOURCE :: [02 UI / HUD / COLLECTION / SHOP] > [vsxCompleteCyberUiBridge] -->
+<script id="vsxCompleteCyberUiBridge" src="js/016-vsxCompleteCyberUiBridge.js"></script>
+<!-- VSX SOURCE :: [02 UI / HUD / COLLECTION / SHOP] > [vsxCyberCollisionLayoutFinal] -->
+<script id="vsxCyberCollisionLayoutFinal" src="js/017-vsxCyberCollisionLayoutFinal.js"></script>
+<link rel="stylesheet" id="vsxRequestedUiPolishPatch" href="css/014-vsxRequestedUiPolishPatch.css">
+<link rel="stylesheet" id="vsxAdminSpaciousLayoutPatch" href="css/015-vsxAdminSpaciousLayoutPatch.css">
+<!-- VSX SOURCE :: [01 CORE / LEGACY BASE] > [vsxMbappeRevive60Patch] -->
+<script id="vsxMbappeRevive60Patch" src="js/018-vsxMbappeRevive60Patch.js"></script>
+<link rel="stylesheet" id="vsxSurvivorShopExpansionStyle" href="css/016-vsxSurvivorShopExpansionStyle.css">
+<!-- VSX SOURCE :: [02 UI / HUD / COLLECTION / SHOP] > [vsxSurvivorShopExpansionPatch] -->
+<script id="vsxSurvivorShopExpansionPatch" src="js/019-vsxSurvivorShopExpansionPatch.js"></script>
+<link rel="stylesheet" id="vsxConcurrentEventMiniFixStyle" href="css/017-vsxConcurrentEventMiniFixStyle.css">
+<!-- VSX SOURCE :: [05 EVENTS / MINIGAMES / ENCOUNTERS] > [vsxConcurrentEventMiniFixBridge] -->
+<script id="vsxConcurrentEventMiniFixBridge" src="js/020-vsxConcurrentEventMiniFixBridge.js"></script>
+<link rel="stylesheet" id="vsxDifficultyGameOverPolish" href="css/018-vsxDifficultyGameOverPolish.css">
+<!-- VSX SOURCE :: [01 CORE / LEGACY BASE] > [vsxDifficultyGameOverBridge] -->
+<script id="vsxDifficultyGameOverBridge" src="js/021-vsxDifficultyGameOverBridge.js"></script>
+<link rel="stylesheet" id="vsxFootballLegendsPackageStyle" href="css/019-vsxFootballLegendsPackageStyle.css">
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxFootballLegendsPackagePatch] -->
+<script id="vsxFootballLegendsPackagePatch" src="js/022-vsxFootballLegendsPackagePatch.js"></script>
+<link rel="stylesheet" id="vsxFootballRuntimeSkinPatchStyle" href="css/020-vsxFootballRuntimeSkinPatchStyle.css">
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxFootballRuntimeSkinPatch] -->
+<script id="vsxFootballRuntimeSkinPatch" src="js/023-vsxFootballRuntimeSkinPatch.js"></script>
+<link rel="stylesheet" id="vsxMinimalSkinAndBackHotkeyStyle" href="css/021-vsxMinimalSkinAndBackHotkeyStyle.css">
+<!-- VSX SOURCE :: [02 UI / HUD / COLLECTION / SHOP] > [vsxMinimalSkinPolicyAndLobbyBack] -->
+<script id="vsxMinimalSkinPolicyAndLobbyBack" src="js/024-vsxMinimalSkinPolicyAndLobbyBack.js"></script>
+<!-- VSX SOURCE :: [01 CORE / LEGACY BASE] > [vsxOfflineReadyMarker] -->
+<script id="vsxOfflineReadyMarker" src="js/025-vsxOfflineReadyMarker.js"></script>
+<!-- VSX SOURCE :: [01 CORE / LEGACY BASE] > [vsxArcadeCultureExpansion] -->
+<script id="vsxArcadeCultureExpansion" src="js/026-vsxArcadeCultureExpansion.js"></script>
+<link rel="stylesheet" id="vsxAdminPlayerTuningStyle" href="css/022-vsxAdminPlayerTuningStyle.css">
+<!-- VSX SOURCE :: [01 CORE / LEGACY BASE] > [vsxAdminPlayerTuningPatch] -->
+<script id="vsxAdminPlayerTuningPatch" src="js/027-vsxAdminPlayerTuningPatch.js"></script>
+<link rel="stylesheet" id="vsxCharacterSelectRarityPatchStyle" href="css/023-vsxCharacterSelectRarityPatchStyle.css">
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxCharacterSelectRarityPatch] -->
+<script id="vsxCharacterSelectRarityPatch" src="js/028-vsxCharacterSelectRarityPatch.js"></script>
+<link rel="stylesheet" id="vsxEpicSixPatchStyle" href="css/024-vsxEpicSixPatchStyle.css">
+<!-- VSX SOURCE :: [01 CORE / LEGACY BASE] > [vsxEpicSixExpansion] -->
+<script id="vsxEpicSixExpansion" src="js/029-vsxEpicSixExpansion.js"></script>
+<link rel="stylesheet" id="vsxEnemy10Styles" href="css/025-vsxEnemy10Styles.css">
+<!-- VSX SOURCE :: [03 COMBAT / ENEMIES] > [vsxEnemy10Expansion] -->
+<script id="vsxEnemy10Expansion" src="js/030-vsxEnemy10Expansion.js"></script>
+<link rel="stylesheet" id="vsxEnemy31Styles" href="css/026-vsxEnemy31Styles.css">
+<!-- VSX SOURCE :: [03 COMBAT / ENEMIES] > [vsxEnemy31ThreatDirectorExpansion] -->
+<script id="vsxEnemy31ThreatDirectorExpansion" src="js/031-vsxEnemy31ThreatDirectorExpansion.js"></script>
+<link rel="stylesheet" id="vsxUnifiedEnemyAdminStyle" href="css/027-vsxUnifiedEnemyAdminStyle.css">
+<!-- VSX SOURCE :: [03 COMBAT / ENEMIES] > [vsxUnifiedEnemyAdminPatch] -->
+<script id="vsxUnifiedEnemyAdminPatch" src="js/032-vsxUnifiedEnemyAdminPatch.js"></script>
+<link rel="stylesheet" id="vsxDCHeroesStyle" href="css/028-vsxDCHeroesStyle.css">
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxDCHeroesExpansion] -->
+<script id="vsxDCHeroesExpansion" src="js/033-vsxDCHeroesExpansion.js"></script>
+<link rel="stylesheet" id="vsxCollectionUXFinalStyle" href="css/029-vsxCollectionUXFinalStyle.css">
+<!-- VSX SOURCE :: [02 UI / HUD / COLLECTION / SHOP] > [vsxCollectionUXFinalPatch] -->
+<script id="vsxCollectionUXFinalPatch" src="js/034-vsxCollectionUXFinalPatch.js"></script>
+<link rel="stylesheet" id="vsxShopCollectionPolishStyle" href="css/030-vsxShopCollectionPolishStyle.css">
+<!-- VSX SOURCE :: [02 UI / HUD / COLLECTION / SHOP] > [vsxShopCollectionPolishPatch] -->
+<script id="vsxShopCollectionPolishPatch" src="js/035-vsxShopCollectionPolishPatch.js"></script>
+<!-- VSX SOURCE :: [01 CORE / LEGACY BASE] > [vsxSupermanManOfSteelInvulnerabilityPatch] -->
+<script id="vsxSupermanManOfSteelInvulnerabilityPatch" src="js/036-vsxSupermanManOfSteelInvulnerabilityPatch.js"></script>
+<link rel="stylesheet" id="vsxUltimateDurationSystemStyle" href="css/031-vsxUltimateDurationSystemStyle.css">
+<!-- VSX SOURCE :: [01 CORE / LEGACY BASE] > [vsxUltimateDurationSystemPatch] -->
+<script id="vsxUltimateDurationSystemPatch" src="js/037-vsxUltimateDurationSystemPatch.js"></script>
+<link rel="stylesheet" id="vsxCharacterPickerSearchAndMinigameFit" href="css/032-vsxCharacterPickerSearchAndMinigameFit.css">
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxCharacterPickerSearchAndSoccerSpeedPatch] -->
+<script id="vsxCharacterPickerSearchAndSoccerSpeedPatch" src="js/038-vsxCharacterPickerSearchAndSoccerSpeedPatch.js"></script>
+<link rel="stylesheet" id="vsxSeparatedMiniWorldStyles" href="css/033-vsxSeparatedMiniWorldStyles.css">
+<link rel="stylesheet" id="vsxWorldEventReliabilityStyle" href="css/034-vsxWorldEventReliabilityStyle.css">
+<!-- VSX SOURCE :: [05 EVENTS / MINIGAMES / ENCOUNTERS] > [vsxSeparatedMinigameWorldEventBigUpdate] -->
+<script id="vsxSeparatedMinigameWorldEventBigUpdate" src="js/039-vsxSeparatedMinigameWorldEventBigUpdate.js"></script>
+<link rel="stylesheet" id="vsxOddballUncommonStyle" href="css/035-vsxOddballUncommonStyle.css">
+<!-- VSX SOURCE :: [01 CORE / LEGACY BASE] > [vsxOddballUncommonPatch] -->
+<script id="vsxOddballUncommonPatch" src="js/040-vsxOddballUncommonPatch.js"></script>
+<link rel="stylesheet" id="vsxGoatRivalsStyle" href="css/036-vsxGoatRivalsStyle.css">
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxGoatRivalsPatch] -->
+<script id="vsxGoatRivalsPatch" src="js/041-vsxGoatRivalsPatch.js"></script>
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxGoatPatternAndDashPatch] -->
+<script id="vsxGoatPatternAndDashPatch" src="js/042-vsxGoatPatternAndDashPatch.js"></script>
+<link rel="stylesheet" id="vsxGoatSkillsetV2Style" href="css/037-vsxGoatSkillsetV2Style.css">
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxGoatSkillsetV2Patch] -->
+<script id="vsxGoatSkillsetV2Patch" src="js/043-vsxGoatSkillsetV2Patch.js"></script>
+<link rel="stylesheet" id="vsxN10LastSambaStyles" href="css/038-vsxN10LastSambaStyles.css">
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxN10LastSambaPatch] -->
+<script id="vsxN10LastSambaPatch" src="js/044-vsxN10LastSambaPatch.js"></script>
+<link rel="stylesheet" id="vsxN10GoatHudRepairStyle" href="css/039-vsxN10GoatHudRepairStyle.css">
+<!-- VSX SOURCE :: [02 UI / HUD / COLLECTION / SHOP] > [vsxN10GoatHudRepairPatch] -->
+<script id="vsxN10GoatHudRepairPatch" src="js/045-vsxN10GoatHudRepairPatch.js"></script>
+<link rel="stylesheet" id="vsxFootballN10LayoutPolish" href="css/040-vsxFootballN10LayoutPolish.css">
+<!-- VSX SOURCE :: [02 UI / HUD / COLLECTION / SHOP] > [vsxFootballN10LayoutPolishScript] -->
+<script id="vsxFootballN10LayoutPolishScript" src="js/046-vsxFootballN10LayoutPolishScript.js"></script>
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxN10VietnameseLanguageSync] -->
+<script id="vsxN10VietnameseLanguageSync" src="js/047-vsxN10VietnameseLanguageSync.js"></script>
+<link rel="stylesheet" id="vsxN10BrazilsPridePolish" href="css/041-vsxN10BrazilsPridePolish.css">
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxN10BrazilsPrideAndLanguageRepair] -->
+<script id="vsxN10BrazilsPrideAndLanguageRepair" src="js/048-vsxN10BrazilsPrideAndLanguageRepair.js"></script>
+<link rel="stylesheet" id="vsxN10PackageOverlapFix" href="css/042-vsxN10PackageOverlapFix.css">
+<link rel="stylesheet" id="vsxRoyalThreeStyles" href="css/043-vsxRoyalThreeStyles.css">
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxRoyalThreePatch] -->
+<script id="vsxRoyalThreePatch" src="js/049-vsxRoyalThreePatch.js"></script>
+<link rel="stylesheet" id="vsxRoyalThreeJerseyDashStyles" href="css/044-vsxRoyalThreeJerseyDashStyles.css">
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxRoyalThreeJerseyDashPatch] -->
+<script id="vsxRoyalThreeJerseyDashPatch" src="js/050-vsxRoyalThreeJerseyDashPatch.js"></script>
+<link rel="stylesheet" id="vsxRoyalThreeAuditedUI" href="css/045-vsxRoyalThreeAuditedUI.css">
+<!-- VSX SOURCE :: [02 UI / HUD / COLLECTION / SHOP] > [vsxRoyalThreeAuditedUIScript] -->
+<script id="vsxRoyalThreeAuditedUIScript" src="js/051-vsxRoyalThreeAuditedUIScript.js"></script>
+<link rel="stylesheet" id="vsxRoyalThreeCardLayoutPolish" href="css/046-vsxRoyalThreeCardLayoutPolish.css">
+<link rel="stylesheet" id="vsxStarter12EconomyStyle" href="css/047-vsxStarter12EconomyStyle.css">
+<link rel="stylesheet" id="vsxCommon10Style" href="css/048-vsxCommon10Style.css">
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxCommon10ExpansionScript] -->
+<script id="vsxCommon10ExpansionScript" src="js/052-vsxCommon10ExpansionScript.js"></script>
+<link rel="stylesheet" id="vsxExpansion16Style" href="css/049-vsxExpansion16Style.css">
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxExpansion16Script] -->
+<script id="vsxExpansion16Script" src="js/053-vsxExpansion16Script.js"></script>
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxR2E3Definitions] -->
+<script id="vsxR2E3Definitions" src="js/054-vsxR2E3Definitions.js"></script>
+<!-- VSX SOURCE :: [01 CORE / LEGACY BASE] > [vsxStarter12EconomyScript] -->
+<script id="vsxStarter12EconomyScript" src="js/055-vsxStarter12EconomyScript.js"></script>
+<link rel="stylesheet" id="vsxArmorySeamlessShellStyle" href="css/050-vsxArmorySeamlessShellStyle.css">
+<link rel="stylesheet" id="vsxAllShopCoreStyles" href="css/051-vsxAllShopCoreStyles.css">
+<!-- VSX SOURCE :: [02 UI / HUD / COLLECTION / SHOP] > [vsxAllShopCoreScript] -->
+<script id="vsxAllShopCoreScript" src="js/056-vsxAllShopCoreScript.js"></script>
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxExpansion16IntegrationBridge] -->
+<script id="vsxExpansion16IntegrationBridge" src="js/057-vsxExpansion16IntegrationBridge.js"></script>
+<link rel="stylesheet" id="vsxAutoUnlockBrazilPatchStyle" href="css/052-vsxAutoUnlockBrazilPatchStyle.css">
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxAutoUnlockBrazilPatch] -->
+<script id="vsxAutoUnlockBrazilPatch" src="js/058-vsxAutoUnlockBrazilPatch.js"></script>
+<link rel="stylesheet" id="vsxBrazilEffectRefinedStyle" href="css/053-vsxBrazilEffectRefinedStyle.css">
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxBrazilEffectRefinedPatch] -->
+<script id="vsxBrazilEffectRefinedPatch" src="js/059-vsxBrazilEffectRefinedPatch.js"></script>
+<link rel="stylesheet" id="vsxR2E3Style" href="css/054-vsxR2E3Style.css">
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxR2E3Runtime] -->
+<script id="vsxR2E3Runtime" src="js/060-vsxR2E3Runtime.js"></script>
+<!-- VSX SOURCE :: [10 QA / SAFETY / STABILITY] > [vsxRuntimeStabilityGuard] -->
+<script id="vsxRuntimeStabilityGuard" src="js/061-vsxRuntimeStabilityGuard.js"></script>
+<link rel="stylesheet" id="vsxTrialFencerEncounterStabilityStyle" href="css/055-vsxTrialFencerEncounterStabilityStyle.css">
+<!-- VSX SOURCE :: [05 EVENTS / MINIGAMES / ENCOUNTERS] > [vsxTrialFencerEncounterStabilityPatch] -->
+<script id="vsxTrialFencerEncounterStabilityPatch" src="js/062-vsxTrialFencerEncounterStabilityPatch.js"></script>
+<link rel="stylesheet" id="vsxEncounterRailV3Style" href="css/056-vsxEncounterRailV3Style.css">
+<!-- VSX SOURCE :: [05 EVENTS / MINIGAMES / ENCOUNTERS] > [vsxEncounterRailV3Patch] -->
+<script id="vsxEncounterRailV3Patch" src="js/063-vsxEncounterRailV3Patch.js"></script>
+<link rel="stylesheet" id="vsxFullRosterSafetyStyle" href="css/057-vsxFullRosterSafetyStyle.css">
+<!-- VSX SOURCE :: [10 QA / SAFETY / STABILITY] > [vsxFullRosterRuntimeSafety] -->
+<script id="vsxFullRosterRuntimeSafety" src="js/064-vsxFullRosterRuntimeSafety.js"></script>
+<link rel="stylesheet" id="vsxEncounterSideEventEnemyHpStyle" href="css/058-vsxEncounterSideEventEnemyHpStyle.css">
+<!-- VSX SOURCE :: [05 EVENTS / MINIGAMES / ENCOUNTERS] > [vsxEncounterSideEventEnemyHpPatch] -->
+<script id="vsxEncounterSideEventEnemyHpPatch" src="js/065-vsxEncounterSideEventEnemyHpPatch.js"></script>
+<!-- VSX SOURCE :: [00 ARCHITECTURE / AUTHORITY] > [vsxArchitectureAuthorityCore] -->
+<script id="vsxArchitectureAuthorityCore" src="js/066-vsxArchitectureAuthorityCore.js"></script>
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxFootballAuraDashBallFinalPatch] -->
+<script id="vsxFootballAuraDashBallFinalPatch" src="js/067-vsxFootballAuraDashBallFinalPatch.js"></script>
+<!-- VOID RELAY SERIES EXPANSION -->
+<!-- VSX SOURCE :: [05 EVENTS / MINIGAMES / ENCOUNTERS] > [vsxVoidRelaySeriesExpansion] -->
+<script id="vsxVoidRelaySeriesExpansion" src="js/068-vsxVoidRelaySeriesExpansion.js"></script>
+<link rel="stylesheet" id="vsxNovelAlliesStyle" href="css/059-vsxNovelAlliesStyle.css">
+<!-- VSX SOURCE :: [01 CORE / LEGACY BASE] > [vsxTenNovelAlliesExpansion] -->
+<script id="vsxTenNovelAlliesExpansion" src="js/069-vsxTenNovelAlliesExpansion.js"></script>
+<link rel="stylesheet" id="vsxEncounterDirectorStyle" href="css/060-vsxEncounterDirectorStyle.css">
+<!-- VSX SOURCE :: [05 EVENTS / MINIGAMES / ENCOUNTERS] > [vsxFairEncounterDirectorV2] -->
+<script id="vsxFairEncounterDirectorV2" src="js/070-vsxFairEncounterDirectorV2.js"></script>
+<!-- VSX SOURCE :: [05 EVENTS / MINIGAMES / ENCOUNTERS] > [vsxEncounterLifecycleDiagnosticPatch] -->
+<script id="vsxEncounterLifecycleDiagnosticPatch" src="js/071-vsxEncounterLifecycleDiagnosticPatch.js"></script>
+<link rel="stylesheet" id="vsxGameplayClarityPatchStyle" href="css/061-vsxGameplayClarityPatchStyle.css">
+<!-- VSX SOURCE :: [01 CORE / LEGACY BASE] > [vsxGameplayClarityPatch] -->
+<script id="vsxGameplayClarityPatch" src="js/072-vsxGameplayClarityPatch.js"></script>
+<link rel="stylesheet" id="vsxKeybindSettingsStyle" href="css/062-vsxKeybindSettingsStyle.css">
+<!-- VSX SOURCE :: [09 SETTINGS / INPUT] > [vsxKeybindAuthority] -->
+<script id="vsxKeybindAuthority" src="js/073-vsxKeybindAuthority.js"></script>
+<link rel="stylesheet" id="vsxFinal8AlliesStyle" href="css/063-vsxFinal8AlliesStyle.css">
+<!-- VSX SOURCE :: [01 CORE / LEGACY BASE] > [vsxFinal8AlliesExpansion] -->
+<script id="vsxFinal8AlliesExpansion" src="js/074-vsxFinal8AlliesExpansion.js"></script>
+<!-- VSX SOURCE :: [08 WORLD OBJECTS] > [vsxWorldObjectRegistryCore] -->
+<script id="vsxWorldObjectRegistryCore" src="js/075-vsxWorldObjectRegistryCore.js"></script>
+<link rel="stylesheet" id="vsxWorldObjectAuthority38Style" href="css/064-vsxWorldObjectAuthority38Style.css">
+<!-- VSX SOURCE :: [08 WORLD OBJECTS] > [vsxWorldObjectAuthority38] -->
+<script id="vsxWorldObjectAuthority38" src="js/076-vsxWorldObjectAuthority38.js"></script>
+<link rel="stylesheet" id="vsxSettingsControlCenterStyle" href="css/065-vsxSettingsControlCenterStyle.css">
+
+<link rel="stylesheet" id="vsxPlayerExperienceSettingsV4Style" href="css/066-vsxPlayerExperienceSettingsV4Style.css">
+<!-- VSX SOURCE :: [09 SETTINGS / INPUT] > [vsxSettingsControlCenterAuthority] -->
+<script id="vsxSettingsControlCenterAuthority" src="js/077-vsxSettingsControlCenterAuthority.js"></script>
+<link rel="stylesheet" id="vsxMutationContractFixStyle" href="css/067-vsxMutationContractFixStyle.css">
+<!-- VSX SOURCE :: [07 MUTATION / WEAPONS] > [vsxMutationContractFixPatch] -->
+<script id="vsxMutationContractFixPatch" src="js/078-vsxMutationContractFixPatch.js"></script>
+<link rel="stylesheet" id="vsxEchoFragmentMutationB01Style" href="css/068-vsxEchoFragmentMutationB01Style.css">
+<!-- VSX SOURCE :: [07 MUTATION / WEAPONS] > [vsxEchoFragmentMutationBatch01Patch] -->
+<script id="vsxEchoFragmentMutationBatch01Patch" src="js/079-vsxEchoFragmentMutationBatch01Patch.js"></script>
+<link rel="stylesheet" id="vsxMutationV3Style" href="css/069-vsxMutationV3Style.css">
+<!-- VSX SOURCE :: [07 MUTATION / WEAPONS] > [vsxMutationV3BespokePatch] -->
+<script id="vsxMutationV3BespokePatch" src="js/080-vsxMutationV3BespokePatch.js"></script>
+<link rel="stylesheet" id="vsxStabilityGameplayPatchStyle" href="css/070-vsxStabilityGameplayPatchStyle.css">
+<!-- VSX SOURCE :: [10 QA / SAFETY / STABILITY] > [vsxStabilityGameplayPatch] -->
+<script id="vsxStabilityGameplayPatch" src="js/081-vsxStabilityGameplayPatch.js"></script>
+<!-- VSX SOURCE :: [00 ARCHITECTURE / AUTHORITY] > [vsxFeatureAndHudAuthority] -->
+<script id="vsxFeatureAndHudAuthority" src="js/082-vsxFeatureAndHudAuthority.js"></script>
+<!-- VSX SOURCE :: [05 EVENTS / MINIGAMES / ENCOUNTERS] > [vsxEncounterTimerLifecycleQA] -->
+<script id="vsxEncounterTimerLifecycleQA" src="js/083-vsxEncounterTimerLifecycleQA.js"></script>
+<!-- ================================================================
+ VSX RELEASE-CANDIDATE SOURCE MAP
+ This is a single-file build. "Folders" are logical labels only; runtime
+ order is preserved to avoid changing wrapper/patch semantics.
+ See window.VSX_DEV_INDEX for nested subsystem -> scripts -> authority map.
+================================================================ -->
+<!-- VSX SOURCE :: [04 CHARACTERS / COSMETICS] > [vsxMarvelAvengersAssembleExpansion] -->
+<link rel="stylesheet" id="vsxMarvelAvengersAssembleStyle" href="css/071-vsxMarvelAvengersAssembleStyle.css">
+<script id="vsxMarvelAvengersAssembleExpansion" src="js/084-vsxMarvelAvengersAssembleExpansion.js"></script>
+<!-- VSX SOURCE :: [99 LEGACY / UNMAPPED] > [vsxDeveloperSourceIndex] -->
+<script id="vsxDeveloperSourceIndex" src="js/085-vsxDeveloperSourceIndex.js"></script>
+
+<link rel="stylesheet" id="vsxWorldObjectAuthority58Style" href="css/072-vsxWorldObjectAuthority58Style.css">
+<script id="vsxWorldObjectAuthority58" src="js/086-vsxWorldObjectAuthority58.js"></script>
+<script id="vsxMinigameLifecycleGuardV2" src="js/087-vsxMinigameLifecycleGuardV2.js"></script>
+
+
+<!-- VSX SOURCE :: [09 SETTINGS / INPUT] > [vsxSettingsAdvancedV5] -->
+<link rel="stylesheet" id="vsxSettingsAdvancedV5Style" href="css/073-vsxSettingsAdvancedV5Style.css">
+<script id="vsxSettingsAdvancedV5" src="js/088-vsxSettingsAdvancedV5.js"></script>
+</body>
+</html>

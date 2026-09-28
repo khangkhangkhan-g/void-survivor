@@ -809,8 +809,4 @@ License của project chỉ áp dụng cho những nội dung mà Nguyen Khang c
 Được tạo ra để xem một browser game có thể bị đẩy xa tới đâu trước khi Void chiến thắng.
 
 </div>
-'''
 
-out = Path("/mnt/data/README_VOID_SURVIVOR_BILINGUAL.md")
-out.write_text(readme, encoding="utf-8")
-print(f"Created: {out}")
